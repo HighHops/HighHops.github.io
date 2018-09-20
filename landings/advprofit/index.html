@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<link rel="shortcut icon" href="img/icon.ico">
+	<title>ADVPROFIT</title>
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<script>
+		$(window).on('load', function () {
+			var $preloader = $('#page-preloader'),
+			$spinner   = $preloader.find('.spinner');
+			$spinner.fadeOut();
+			$preloader.delay(350).fadeOut('slow');
+		});
+	</script>
+	<style>
+	#page-preloader {
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: #206db4;
+		z-index: 999;
+	}
+	.wrapper {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin: -150px 0 0 -150px;
+		width: 300px;
+		height: 300px;
+		background: #206db4;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	.loader-circle svg{
+		width: 100px;
+		height: 100px;
+		margin: 20px;
+		display:inline-block;
+	}
+</style>
+</head>
+<body>
+	<div id="page-preloader">
+		<div class="wrapper">
+			<div class="loader-circle"><svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+				<path fill="#fff" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3
+				c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z">
+				<animateTransform 
+				attributeName="transform" 
+				attributeType="XML" 
+				type="rotate"
+				dur="2s" 
+				from="0 50 50"
+				to="360 50 50" 
+				repeatCount="indefinite" />
+			</path>
+			<path fill="#fff" d="M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7
+			c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z">
+			<animateTransform 
+			attributeName="transform" 
+			attributeType="XML" 
+			type="rotate"
+			dur="1s" 
+			from="0 50 50"
+			to="-360 50 50" 
+			repeatCount="indefinite" />
+		</path>
+		<path fill="#fff" d="M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5
+		L82,35.7z">
+		<animateTransform 
+		attributeName="transform" 
+		attributeType="XML" 
+		type="rotate"
+		dur="2s" 
+		from="0 50 50"
+		to="360 50 50" 
+		repeatCount="indefinite" />
+	</path>
+</svg></div>
+</div>
+</div>
+<section class="main">
+	<div class="main-inner">
+		<div class="menu">
+			<div class="container">
+				<div class="desktop-menu">
+					<p class="logo">advprofit</p>
+					<div class="hamburger">
+						<i class="fas fa-bars"></i>
+					</div>
+					<ul>
+						<li><a href="#"><object type="image/svg+xml" data="img/icon-menu-1.svg" width="30" height="30"></object> Установить</a></li>
+						<li><a href="#"><object type="image/svg+xml" data="img/icon-menu-2.svg" width="30" height="30"></object> Войти</a></li>
+						<li><a href="#"><object type="image/svg+xml" data="img/icon-menu-3.svg" width="30" height="30"></object> Регистрация</a></li>
+					</ul>
+				</div>
+				<div class="mobile-menu">
+					<ul>
+						<li><a href="#"><span class="mn-1"></span> Установить</a></li>
+						<li><a href="#"><span class="mn-2"></span> Войти</a></li>
+						<li><a href="#"><span class="mn-3"></span> Регистрация</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="text">
+			<div class="container">
+				<h1 class="animated">Зарабатывай деньги просматривая рекламу</h1>
+				<p class="desc mb-hide">Просмотр рекламы засчитывается только после <br> 12 секунды это означает что каждый успеет <br> увидеть то, что вы рекламируете</p>
+				<p class="desc mb-show">Просмотр рекламы засчитывается только после 12 секунды это означает что каждый успеет увидеть то, что вы рекламируете</p>
+				<button class="btn">Попробовать сейчас</button>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="ways-pay">
+	<div class="container">
+		<h1>Способы выплаты</h1>
+		<div class="row ways-block">
+			<div class="col-sm-6 col-md-3"><div class="item item-1"></div></div>
+			<div class="col-sm-6 col-md-3"><div class="item item-2"></div></div>
+			<div class="col-sm-6 col-md-3"><div class="item item-3"></div></div>
+			<div class="col-sm-6 col-md-3"><div class="item item-4"></div></div>
+			<div class="col-sm-6 col-md-3"><div class="item item-5"></div></div>
+			<div class="col-sm-6 col-md-3"><div class="item item-6"></div></div>
+			<div class="col-sm-6 col-md-3"><div class="item item-7"></div></div>
+			<div class="col-sm-6 col-md-3"><div class="item item-8"></div></div>
+		</div>
+	</div>
+</section>
+<section class="plus">
+	<div class="container">
+		<h1>Наши преимущества</h1>
+		<div class="plus-block">
+			<div class="some-plus">
+				<h2>Реклама <br>
+				не отвлекает</h2>
+				<p>Начните рекламную кампанию,<br> 
+					даже не имея баннеров.<br> 
+					Текстовое объявление<br>
+				создается за 1 минуту.</p>
+			</div>
+			<div class="some-plus">
+				<h2>смотрите рекламу <br>
+				и получайте деньги</h2>
+				<p>Начните рекламную кампанию, <br> 
+					даже не имея баннеров. <br>
+					Текстовое объявление <br>
+				создается за 1 минуту.</p>
+			</div>
+			<div class="some-plus">
+				<h2>Заменяет блоки <br>
+				на странице</h2>
+				<p>Начните рекламную кампанию, <br>
+					даже не имея баннеров. <br>
+					Текстовое объявление <br>
+				создается за 1 минуту.</p>
+			</div>
+		</div>
+		<button class="btn">Попробовать сейчас</button>
+	</div>
+</section>
+<section class="work">
+	<div class="container">
+		<h1>Порядок работы</h1>
+		<div class="row work-inner">
+			<div class="col-lg-4">
+				<div class="work-part" id="part-1">
+					<p class="num">1</p>
+					<div class="desc">
+						<p class="title">Создайте аккаунт на нашем сайте</p>
+						<p class="more">Создайте своё рекламное 
+							объявление, настройте 
+							фильтры целевой 
+							аудитории и выберите 
+						стратегию показов.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="work-part" id="part-2">
+					<p class="num">2</p>
+					<div class="desc">
+						<p class="title">Установите расширение</p>
+						<p class="more">Создайте своё рекламное 
+							объявление, настройте 
+							фильтры целевой 
+							аудитории и выберите 
+						стратегию показов.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="work-part" id="part-3">
+					<p class="num">3</p>
+					<div class="desc">
+						<p class="title">Получайте деньги за рекламу</p>
+						<p class="more">Создайте своё рекламное 
+							объявление, настройте 
+							фильтры целевой 
+							аудитории и выберите 
+						стратегию показов.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="watch">
+	<div class="container">
+		<h1>Смотри рекламу и получай деньги</h1>
+		<p class="platforms">На youtube, vk, yandex и прочих популярных платформах</p>
+		<div class="row watch-inner">
+			<div class="col-lg-7">
+				<img class="img-anim" src="img/watch.jpg" alt="">
+			</div>
+			<div class="col-lg-5">
+				<ul>
+					<li><object type="image/svg+xml" data="img/icon-li.svg" width="27" height="27"></object> <p>Реклама заменяет блоки <br>
+					на сайтах</p></li>
+					<li><object type="image/svg+xml" data="img/icon-li.svg" width="27" height="27"></object> <p>Не отвлекает и не занимает много места на странице</p></li>
+					<li><object type="image/svg+xml" data="img/icon-li.svg" width="27" height="27"></object> <p>Вы получаете деньги пользуясь браузером</p></li>
+				</ul>
+				<button class="btn">Попробовать сейчас</button>
+			</div>
+		</div>
+	</div>
+</section>
+<footer>
+	<div class="container">
+		<div class="footer-inner">
+			<ul>
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Оферта</a></li>
+				<li><a href="#">Помощь</a></li>
+				<li><a href="#">Соглашение</a></li>
+			</ul>
+			<div class="webmoney wb-1"></div>
+			<div class="webmoney wb-2"></div>
+			<p class="logo">AdvProfit, 2017</p>
+		</div>
+	</div>
+</footer>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/fontawesome-all.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<script src="js/waypoints.min.js"></script>
+<script src="js/animate-css.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

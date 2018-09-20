@@ -1,0 +1,1850 @@
+@import mixins
+@import media
+@import sprites
+@import normalize
+
+
+$font-weight: 400
+$font-size: 14px
+$line-height: 1.4
+$font-family: Raleway, sans-serif
+$font-family2: Antic, sans-serif
+$color: #7a7a7a
+$color2: #383838
+$color3: #00a99d
+$color4: #8a8a8a
+$color5: #606060
+$color6: #e4e4e4
+$wrapper: 1200px
+$container: 1400px
+
+
+body 	
+	color: $color
+	font: $font-weight $font-size/$line-height $font-family, Arial, sans-serif
+	background: #f9f9f9
+
+/* PRELOADER
+/* ================================================ */
+.preloader
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background: #1b1b1b
+	z-index: 9999999
+	transition: 1s all
+	opacity: 1
+	visibility: visible
+	.loader
+		width: 75px
+		height: 75px
+		border: 10px solid #272727
+		border-radius: 50%
+		border-top-color: #e2e2e2
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		animation: 1s spin infinite linear
+	&.done
+		opacity: 0
+		visibility: hidden	
+
+@keyframes spin
+	from
+		transform: translate(-50%,-50%) rotate(0deg)
+	to
+		transform: translate(-50%,-50%) rotate(360deg)	
+/* MAIN STYLES
+/* ================================================ */
+
+.main-wrapper
+	padding: 0
+	min-width: 320px
+	position: relative 
+	overflow: hidden
+	opacity: 1
+	min-height: 100% 
+
+.wrapper 
+	max-width: $wrapper
+	padding-right: 40px
+	margin: 0 auto
+	position: relative
+
+
+
+.container 
+	max-width: $container
+	padding-right: 40px
+	margin: 0 auto
+	position: relative
+
+
+section 
+	position: relative	
+
+
+img
+	display: block
+	max-width: 100%
+
+span 
+	display: inline-block
+
+
+h1 
+	color: $color6
+	font-size: 4.57rem
+	font-weight: 800
+	text-transform: uppercase
+	letter-spacing: 0.45px
+
+h2 
+	color: $color2
+	font-size: 1.85rem
+	font-weight: 800
+	line-height: 20px
+	text-transform: uppercase
+	padding-bottom: 20px
+	padding-top: 80px
+	&:before
+		content: url(../img/Start/left-shapes.svg)
+		vertical-align: bottom
+		padding-right: 20px
+	&:after
+		content: url(../img/Start/right-shapes.svg)
+		vertical-align: top
+		padding-left: 20px
+
+h3 
+	color: $color5
+	font-weight: 800
+	text-transform: uppercase
+	font-size: 1rem
+
+
+h4 
+	color: #e8e8e8
+	font-size: 0.9rem
+	font-weight: 500
+	text-transform: uppercase
+
+p
+	color: $color4
+	font-size: 1rem
+	font-weight: 500
+	line-height: 1.14rem
+	padding-bottom: 50px
+.btn-main
+	padding: 10px
+	background: $color3
+	color: $color6
+	font-weight: 800
+	font-size: 0.9rem
+	border: none	
+	font-size: 0.9rem
+	font-weight: 800
+	text-transform: uppercase	
+	border-radius: 5px
+	text-align: center
+	cursor: pointer
+	&:hover
+		background: $color2
+		color: #ffffff
+
+.btn
+	padding: 11px
+	color: $color4
+	font-size: 0.71rem
+	font-weight: 800
+	text-transform: uppercase	
+	border: 1px solid #dedede
+	border-radius: 5px
+	&:hover
+		background: $color3
+		color: #e3e3e3
+.purchase_btn
+	background: #e4e4e4
+	padding: 15px
+	border-radius: 8px	
+	color: #606060
+	font-size: 1.1rem
+	font-weight: 800
+	text-transform: uppercase
+	&:hover
+		color: $color3
+.name
+	color: $color6
+	font-size: 13px
+	font-weight: 800
+	text-transform: uppercase	
+	background: $color3
+	border-radius: 5px
+	padding: 12px 16px		
+	&_black
+		background: $color2
+
+.img-center
+	width: 50px
+	height: 50px
+	background: $color3
+	border-radius: 5px
+	transform: rotate(45deg)
+	position: absolute
+	left: 50%
+	margin-left: -50px
+	margin-top: -25px
+	&_black
+		background: $color2
+	[class*='icon']
+		font-size: 25px
+		color: #e3e3e3
+		text-transform: uppercase
+		padding: 8px
+		transform:  rotate(-45deg)
+		&:first-child
+			padding: 14px
+		&:last-child
+			padding: 12px	
+
+
+/* TEXT COLOR
+/* ================================================ */
+.green
+	color: $color3		
+.white 
+	color: #ffffff	
+
+
+/* SQUARES
+/* ================================================ */
+.grey,.black
+	img  
+		transform: rotate(-45deg)
+		padding: 11px
+	[class*='icon']	
+		font-size: 16px
+		font-weight: 400
+		text-transform: uppercase
+		transform: rotate(-45deg)
+		padding: 10px 8px 10px 8px
+.grey
+	width: 35px
+	height: 35px
+	background: $color6
+	border-radius: 5px
+	transform: rotate(45deg)	
+	[class*='icon']	
+		color: $color3
+	&:hover
+		background: $color2	
+		[class*='icon']	
+			color: #e3e3e3	
+.black
+	width: 35px
+	height: 35px
+	z-index: 2
+	background: $color2
+	border-radius: 5px
+	transform: rotate(45deg)
+	[class*='icon']	
+		color: #e3e3e3	
+
+
+/* SLICK SLIDER
+/* ================================================ */
+.slick-slide
+	outline: none	
+
+button 
+	border: none
+	background: transparent
+	width: 30px
+	height: 30px
+.prev, .next
+	border-radius: 5px
+	position: absolute
+	top: 12%
+	background: $color3
+	color: $color6
+	&:hover
+		background: $color2
+		color: #ffffff
+	[class*='icon']
+		font-size: 1.5rem
+		margin-left: -2px
+.prev
+	left: 0
+.next
+	right: 0
+
+
+.prev2, .next2	
+	border-radius: 5px
+	position: absolute
+	top: 80%
+	background: $color2
+	color: #ffffff
+	&:hover
+		background: $color6
+		color: $color3
+	[class*='icon']
+		font-size: 1.5rem
+		margin-left: -2px	
+.prev2
+	left: 47.5%
+
+.next2
+	left: 49.5%
+	
+
+.prev3,.next3
+	border-radius: 5px
+	position: absolute
+	top: 40%
+	background: $color3
+	color: $color6
+	&:hover, 
+		background: $color6
+		color: $color3
+	[class*='icon']
+		font-size: 1.5rem
+		margin-left: -2px	
+.prev3
+	left: 5%
+.next3
+	right: 5%
+			
+
+
+
+
+
+
+
+/* text position */
+
+.text-left
+	text-align: left !important
+
+.text-center
+	text-align: center !important
+
+.text-right
+	text-align: right !important
+
+	/* Icons
+//====================== */
+.ic 
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	// background: $icons no-repeat
+
+// @each $i in next, prev
+// 	.ic--#{$i}
+// 		+s(ic--#{$i})
+
+
+
+
+/* HOME
+/* ================================================ */
+
+.home
+	background-image: url('../img/bglogo/header_bg.jpg')
+	background-size: cover
+	background-position: center top 
+	background-repeat: no-repeat
+	padding: 223px 0 225px 80px
+	&__content
+		h4 
+			padding-left: 180px
+	&_proposal
+		background: #333333
+		color: $color6
+		border-radius: 5px
+		padding: 10px 12px
+		margin-bottom: 51px
+		&-S 
+			color: $color3
+			font-size: 1.2rem
+			font-weight: 800
+		&-tartuprr
+			font-size: 1.2rem
+			font-weight: 800	
+			letter-spacing: -1px
+		&-next	
+			font-weight: 500
+			font-size: 1.3rem
+			text-transform: uppercase
+			margin-left: 5px
+	.start
+		width: 62%
+		text-align: center
+		margin-bottom: 70px
+		color: $color6
+		font-size: 1.85rem
+		font-weight: 800
+		line-height: 1rem
+		text-transform: uppercase
+		&:before
+			content: url(../img/Start/left-shapes.svg)
+			vertical-align: bottom
+			padding-right: 20px
+		&:after
+			content: url(../img/Start/right-shapes.svg)
+			vertical-align: top
+			padding-left: 20px
+	.slide		
+		width: 60%
+		text-align: center
+		&-down
+			margin: 0 auto
+			border: 5px solid $color3
+			padding: 20px	15px	
+			border-radius: 50%
+			svg
+				text-align: center
+				vertical-align: middle
+/* HEADER
+/* ================================================ */
+.header
+	border-bottom: 2px solid #dedede
+	&__content
+		display: flex
+		align-items: center
+	&-logo
+		margin-left: 130px	
+.main__menu
+	list-style: none
+	display: flex
+	margin-left: 200px
+	z-index: 999
+	&__item
+		position: relative
+		margin-left: 30px
+		&:hover
+			.dropdown-content
+				display: block
+	&__link
+		color: #606060
+		font-size: 0.9rem
+		font-weight: 800
+		line-height: 100px
+		text-transform: uppercase
+		transition: all ease 0.5s
+		padding:  10px 13px
+		border-radius: 5px
+		&:hover
+			background: $color3
+			border-radius: 5px
+			color: #ffffff
+
+.dropdown-content
+	position: absolute
+	background: #ffffff
+	display: none
+	width: 200px
+	top: 100px
+	left: -40px
+	.dropdown__menu
+		list-style: none
+		border: 1px solid #ebebeb
+		border-top: 0
+		border-radius: 5px
+		&__item
+			padding: 15px 55px 15px 20px
+			border-top: 1px solid #ebebeb
+			position: relative
+			background: #f9f9f9
+			&:hover
+				background: #ebebeb
+				.dropdown-content2
+					display: block	
+		&__link
+			color: #606060
+			font-size: 14px
+			font-weight: 800
+			line-height: 20px	
+
+.dropdown-content2	
+	position: absolute
+	background: #ffffff
+	display: none
+	width: 200px
+	left: 198px
+	top: -2px
+	.dropdown__menu2
+		list-style: none
+		border: 1px solid #ebebeb
+		border-radius: 5px
+		&__item
+			padding: 15px 55px 15px 20px
+			line-height: 30px
+			background: #f9f9f9
+			&:hover
+				background: $color3
+		&__link
+			font-size: 14px
+			font-weight: 800
+			line-height: 30px	
+			&:hover
+				color: #ffffff
+.search
+	position: relative
+	width: 18px
+	margin-left: 20px
+	&__img
+		display: block
+		cursor: pointer
+		width: 18px
+		height: 17px
+	&__button
+		background: none
+		border: none
+		appearance: none
+		box-shadow: none
+		outline: none
+		cursor: pointer
+		z-index: 2
+		padding: 0
+		margin: 0
+		width: 18px
+		position: relative
+		display: none
+		img
+			width: 18px
+			height: 17px	
+	&__input 
+		width: 170px
+		padding: 5px 10px 5px 35px
+		position: absolute
+		border: 1px solid #dedede
+		box-sizing: border-box
+		border-radius: 5px
+		color: #8a8a8a
+		font-size: 13px
+		font-weight: 500
+		font-style: italic
+		z-index: -1
+		opacity: 0
+		top: 2px
+		left: -5px
+		transition-duration: opacity
+		transition-property: 0.5s
+.search--active
+	input 
+		opacity: 1
+		z-index: 1
+	button
+		display: block
+	.search__img	
+		display: none
+
+/* OFFERS
+/* ================================================ */
+.what-we-have
+	.offers-text
+		text-align: center
+		padding-bottom: 50px	
+	.offers
+		display: flex
+		margin-bottom: 110px
+		&__item
+			text-align: center
+			margin-left: 35px
+			&:first-child
+				margin-left: 0
+			&:nth-child(2)
+				.offers__item__font
+					background: $color3	
+					[class*='icon']
+						padding: 32px 35px 31px 30px
+			&:nth-child(3)
+				[class*='icon']
+					padding: 32px 35px 31px 33px		
+			&__font
+				margin: 0 auto
+				background: $color2
+				border-radius: 50%	
+				width: 100px
+				height: 100px
+
+				[class*='icon']
+					padding: 35px 31px 32px 31px
+					color: $color6
+					font-size: 36px
+					font-weight: 400
+					text-transform: uppercase
+
+			.offers__item__font	.green-bg
+				background: $color3
+			&__img 
+				padding-bottom: 35px
+				margin: 0 auto
+			&__title
+				padding-top: 35px
+				padding-bottom: 20px
+			&__p
+				font-size: 0.85rem
+/* FEATURE
+/* ================================================ */
+.feature	
+	position: relative
+	background: $color2		
+	&-text
+		text-align: center	
+		padding-bottom: 90px
+	&__device
+		position: absolute
+		bottom: 0
+		left: 50%
+.features	
+	&__item
+		display: flex		
+	&__img 
+		width: 41px
+		height: 41px
+		margin-right: 40px
+		margin-top: 20px
+	h3
+		color: #ffffff
+		padding-bottom: 25px	
+	
+/* ADVANCE
+/* ================================================ */
+.advance 
+	padding-top: 110px	
+	padding-bottom: 80px
+.advances
+	display: flex
+	flex-wrap: wrap
+	&__item	
+		display: flex
+		margin-left: 28px
+		img
+			height: 70px
+			width: 40px
+			margin-right: 20px
+			margin-top: 10px
+		h3 
+			padding-bottom: 5px	
+		p
+			font-size: 0.85rem
+		&__offer
+			color: #aaaaaa
+			font-size: 0.75rem
+			font-weight: 400	
+			padding-bottom: 20px
+
+/* SKILLS
+/* ================================================ */		
+.skill
+	background: $color2	
+	&-text 
+		text-align: center
+.diagram
+	display: flex
+	&__items
+		&-text 
+			text-align: center
+			color: #8a8a8a
+			font-size: 1rem
+			font-weight: 800
+			line-height: 16px
+			text-transform: uppercase	
+	
+.chart-text 
+	fill: #e4e4e4
+	transform: translateY(0.25rem)
+.chart-number
+	color: $color6
+	font-size: 0.5rem
+	font-weight: 800
+	line-height: 1rem
+	text-anchor: middle
+	text-transform: uppercase
+	transform: translateY(-0.25rem)
+
+
+		
+
+/* SAMPLE-WORKS
+/* ================================================ */	
+.sample-works
+	padding-top: 40px
+	padding-bottom: 100px
+	&_text
+		text-align: center
+
+.box-works
+	display: flex		
+	flex-wrap: wrap
+
+.works
+	display: flex
+	position: relative
+	width: 16.42%
+	margin-left: 2px
+	margin-top: 2px
+	text-align: center
+	&:hover
+		.works__card
+			opacity: 1
+			visibility: visible
+			z-index: 2
+		&:before
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0	
+	&:before
+		content: ''
+		display: block
+		z-index: 1
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 0
+		height: 0
+		background: $color3
+	&__img_main
+		height: 250px
+		width: 317px
+	&__card
+		opacity: 0
+		visibility: hidden
+		position: absolute
+		left: 0
+		right: 0
+		top: 20%
+		.square
+			display: flex
+			position: absolute
+			left: 38%
+		.brochure
+			color: $color6
+			font-size: 1rem
+			font-weight: 800	
+			padding-top: 80px
+		.print
+			color: $color6
+			font-size: 0.85rem
+			font-weight: 400
+			line-height: 22px		
+		.heart
+			display: flex
+			align-items: center
+			position: absolute
+			bottom: -25%
+			left: 42% 
+			[class*='icon']
+				color: $color6
+				font-size: 0.75rem
+			&_number
+				color: $color6
+				font-size: 0.85rem
+				font-weight: 400
+				line-height: 22px
+				margin-left: 10px	
+				vertical-align: middle	
+	&__button	
+		margin: 0 auto
+		padding: 55px	20px	
+		&_btn
+			color: $color6
+			font-size: 13px
+			font-weight: 800
+			line-height: 20px
+			text-transform: uppercase
+			padding: 15px 529px
+			border-radius: 5px
+			background: $color3
+			&:hover
+				background: $color2
+				color: #ffffff
+		
+	
+/* FACTS
+/* ================================================ */
+.company
+	background: $color2
+	&-text
+		text-align: center
+		padding-bottom: 50px
+
+.facts
+	display: flex
+	padding-bottom: 95px
+	&__items
+		text-align: center
+		margin-left: 130px
+		&:first-child
+			margin-left: 40px
+		&:last-child
+			margin-left: 150px		
+		&_numbers
+			position: relative
+			color: $color6
+			font-size: 5.71rem
+			font-weight: 400
+			font-style: italic
+			text-transform: uppercase
+			padding-bottom: 12px
+			&:before
+				content: url('../img/symbols/left-square.svg')
+				position: absolute
+				top: -20%
+				left: -25%
+			&:after
+				content: url('../img/symbols/right-square.svg')
+				position: absolute
+				top: -20%
+				right: -25%
+		.shape_green
+			&:before
+				content: url('../img/symbols/left-squaregreen.svg')
+				position: absolute
+				top: -20%
+				left: -25%
+			&:after
+				content: url('../img/symbols/left-squaregreen.svg')
+				position: absolute
+				top: -20%
+				right: -25%	
+		&_text
+			font-size: 1rem
+			color: #606060
+			font-weight: 800
+			line-height: 16px
+			text-transform: uppercase	
+			.mounth
+				font-size: 0.7rem	
+		&_img
+			height: 22px
+			width: 20px
+			margin: 0 auto	
+			margin-bottom: 12px
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 25%
+				left: 35px
+				height: 3px
+				width: 100px
+				background: #484848
+			&:after	
+				content: ''
+				position: absolute
+				top: 25%
+				right: 35px
+				height: 3px
+				width: 100px
+				background: #484848
+	
+		
+/* PURCHASE
+/* ================================================ */
+	
+.purchase
+	background: $color3
+	padding: 35px 0
+	&__content
+		display: flex
+		justify-content: space-between
+	&_text
+		color: $color6
+		font-size: 1.28rem
+		font-weight: 800
+		text-transform: uppercase
+	&_buttons
+		a
+			margin-left: 12px	
+
+
+/* TEAM
+/* ================================================ */
+.team
+	padding-bottom: 110px
+	&-text
+		text-align: center
+
+.members
+	&__card
+		display: flex	
+		&__item
+			text-align: center
+			border: 1px solid #dedede
+			padding-bottom: 10px
+			margin: 0 auto
+			.position
+				color: #606060
+				font-size: 0.75rem
+				font-weight: 400
+				line-height: 1.375rem
+				border-bottom: 1px solid #ebebeb
+				margin-top: 25px
+				padding-bottom: 10px
+		&_img
+			position: relative
+			&:hover
+				.name
+					background: $color2
+					color: #ffffff
+				.squares
+					opacity: 1
+					visibility: visible
+					z-index: 2	
+				&:before
+					width: 100%
+					height: 100%
+					top: 0
+					left: 0
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				z-index: 1
+				top: 50%
+				left: 50%
+				width: 0
+				height: 0
+				background: $color3
+			.name
+				position: absolute
+				top: 90%
+				left: 25%	
+				z-index: 2	
+			.squares
+				display: flex	
+				opacity: 0
+				visibility: hidden
+				position: absolute
+				top: 40%
+				left: 18%
+		&__contacts	
+			margin-top: 15px
+			color: #aaaaaa
+			font-size: 0.75rem
+			font-weight: 500
+			line-height: 2rem
+			[class*='icon']
+				margin-right: 10px
+				font-size: 1rem
+					
+
+/* QUOTE
+/* ================================================ */
+
+.box-quote
+	background: $color3
+.quote
+	&__content
+		&_text
+			text-align: center
+			padding-top: 92px
+			.human
+				background: $color6
+				padding: 15px
+				border-radius: 5px
+				.green
+				font-size: 15px
+				font-weight: 800
+				text-transform: uppercase
+				.advances__item__offer
+					font-size: 12px
+					padding: 0
+			p
+				padding: 30px 0 110px 0
+				color: $color6
+				font-size: 20px		
+
+/* SPONSORS
+/* ================================================ */
+.box-sponsors
+	position: relative
+	background: $color2		
+.sponsors
+	display: flex
+	padding-top: 50px
+	padding-bottom: 50px
+	&__items
+		display: flex	
+		img
+			height: 75px
+			width: 150px
+
+
+
+/* PRICES
+/* ================================================ */
+.prices
+	&__text
+		text-align: center
+.box-price
+
+.price
+	display: flex
+	&__item
+		position: relative
+		padding: 0 57px 40px 56px
+		margin: 40px 0 80px 30px
+		border: 1px solid #dedede
+		text-align: center
+		&:first-child
+			margin-left: 80px
+		&:nth-child(3)
+			.name	
+				left: 18%
+				[class*='icon']
+					vertical-align: text-bottom
+					color: $color3
+					font-size: 1rem
+					&:first-child
+						padding-right: 10px
+					&:nth-child(2)
+						padding-left: 10px	
+		.name
+			position: absolute
+			top: -3%
+			left: 25%
+		&__value
+			padding: 40px 0 25px 0
+			border-bottom: 1px solid #dedede	
+			.dollar
+				font-size: 1rem
+				padding-right: 9px
+				color: #8a8a8a
+			.number
+				position: relative
+				color: $color2
+				font-size: 3.75rem
+				font-weight: 800
+				text-transform: uppercase	
+				&:after
+					content: url('../img/symbols/right-square.svg')
+					position: absolute
+					right: 5%
+				sup
+					vertical-align: top
+					font-size: 1rem
+					padding-left: 0.4rem
+			.monthly
+				color: #8a8a8a
+				font-size: 0.8rem
+				padding-left: 0.5rem
+		&__description
+			padding-top: 25px	
+			margin-bottom: 40px
+			border-bottom: 1px solid #dedede
+
+
+/* BUBBLE
+/* ================================================ */
+.box-bubble
+	background-image: url('../img/bglogo/header_bg.jpg')
+	background-size: cover
+	background-position: center top
+	background-repeat: no-repeat
+	padding: 72px 0
+
+.bubble
+	display: flex
+	justify-content: space-between
+	&__item
+		&:first-child
+			margin-left: 80px
+			font-size: 1.68rem
+			color: $color6
+			font-weight: 800
+			line-height: 1.25rem
+			[class*='icon']
+				color: $color3
+				font-size: 1.5rem
+		.Unique
+			text-transform: uppercase
+			font-size: 1.7rem	
+		&:nth-child(2)
+			.btn-main
+				background: $color2
+				color: #ffffff
+				margin-right: 25px
+				&:hover
+					background: $color3
+					color: $color6
+				[class*='icon']	
+					color: $color6
+					font-size: 1.25rem
+					margin-left: 10px
+					vertical-align: bottom
+
+/* FOOTER
+/* ================================================ */
+.footer__top
+	background: $color2
+	padding-top: 60px
+	padding-bottom: 77px
+	&_logo
+		margin-bottom: 67px
+		a 
+			img
+				margin: 0px auto	
+	&__item
+		margin: 0 auto					
+	&_social
+		display: flex
+		a
+			margin-left: 10px
+			&:first-child
+				margin-left: 0	
+			span
+				padding: 15px 12px
+				border: 1px solid #606060
+				border-radius: 5px
+				color: $color6
+				font-size: 1rem
+				&:hover
+					background: $color3
+
+
+.footer__center
+	position: relative
+	background-image: url('../img/bglogo/map.png')
+	background-position: center top
+	background-size: cover
+	background-repeat: no-repeat
+	padding: 3rem 0
+	[class*='icon']		
+		position: absolute
+		top: 65%
+		left: 48%
+		transform: translate(0,-50%)
+		font-size: 3rem
+		color: $color2
+	.main-form
+		background: #f9f9f9
+		border: 1px solid #dedede
+		border-radius: 5px
+		padding: 1.5rem 1.25rem
+		max-width: 30%
+		text-align: center
+		&-input, &-textarea
+			max-width: 100%
+			display: block
+			border: 1px solid #dedede
+			border-radius: 5px
+			padding: 1rem 11rem 0.93rem 1.18rem
+			margin-bottom: 1.4rem
+			&:placeholder
+				background: #f9f9f9
+		.btn-main
+			padding: 10px 120px
+
+
+	
+
+.footer__bottom	
+	position: relative
+	padding: 60px 0 45px 0
+	background: $color2		
+	.img-center
+		top: 0
+	&_text
+		text-align: center
+		.copyright
+			color: #cccccc
+			font-size: 1rem
+			font-weight: 800
+				
+/* MEDIA
+/* ================================================ */				
+							
++max-screen(1414px)		
+	.members
+		&__card
+			&__item
+				margin-left: 60px
+	.prev
+		left: 4.5%
+	.next
+		right: 3.5%	
+	.prev2
+		left: 47%
+	.next2
+		left: 50%	
+	.prev3
+		left: 0.5%
+	.next3
+		left: 98%	
+	.works
+		&__card
+			.square
+				left: 35%
+	.header
+		.search
+			display: none				
+
+	.footer__center
+		.main-form
+			margin-left: 40px
+			.btn-main
+				padding: 10px 70px
+				font-size: 1rem
+			
++max-screen(1285px)	
+	.header
+		.main__menu
+			margin-left: 150px
+			&__item
+				margin-left: 20px
+			&__link
+				font-size: 0.8rem
+	.features
+		&__img
+			margin-left: 35px	
+	.advances__item
+		h3
+			font-size: 0.85rem
+		p
+			font-size: 0.8rem					
+	.works
+		width: 24.8%
+		&__card
+			.square
+				left: 38%
+
+	.works__button
+		&_btn
+			padding: 15px 450px
+			margin-left: 30px		
+	.members
+		&__card
+			&__img	
+			.squares
+				left: 14%
+	.purchase
+		&_text
+			font-size: 1.1rem
+			margin-left: 40px
+		&_buttons
+			a
+				font-size: 0.8rem
+				padding: 13px	
+				margin-left: 10px
+
+
+	.price__item__description		
+		p
+			font-size: 0.9rem
+	.price__item
+		&:nth-child(3)
+			[class*='icon']
+				display: none
+		&__value
+			.number
+				font-size: 2.7rem		
+		.btn-main
+			font-size: 0.8rem	
+	
+	.box-quote
+		.img-center
+			left: 52%
+	.footer__bottom
+		.img-center
+			left: 52%
+
++max-screen(1143px)
+	.prev
+		left: 2%
+		top: 10%
+	.next
+		right: 2%
+		top: 10%	
+	.prev2
+		left: 46%
+	.next2
+		left: 51%		
+	.prev3
+		display: none !important
+	.next3 
+		display: none !important
+	.home__content	
+		text-align: center
+		h1
+			font-size: 3.2rem
+		h4
+			padding: 0
+			font-size: 1.1rem
+		.home_proposal
+			margin-top: 20px
+			&-tartuprr
+				font-size: 1rem
+			&-next
+				font-size: 1.1rem	
+	.header
+		&__content
+			justify-content: space-between
+		&-logo
+			max-width: none
+			margin-left: 25px
+		.main__menu
+			&__item
+				margin-left: 5px
+			&__link
+				font-size: 0.75rem
+	.prices
+		.container
+			max-width: 100%
+			padding-right: 0
+		&__text
+			margin-left: 30px
+	.price	
+		&__item
+			margin-left: 20px
+			padding-bottom: 20px
+			&__description
+				border: none
+				p
+					padding: 15px 15px 10px 15px
+					display: flex
+					justify-content: center
+					align-items: center
+					font-size: 0.85rem
+			&:first-child
+				margin-left: 15px
+			.btn-main
+				position: absolute
+				top: 90%
+				left: 20%
+				display: flex
+				justify-content: center
+				align-items: center
+				flex: 1
+				width: 60%
+				font-size: 0.7rem	
+	.what-we-have			
+		.offers__item
+			&:first-child
+				margin-left: 35px
+			&__title
+				font-size: 0.9rem	
+			&__p
+				font-size: 0.8rem	
+	.purchase
+		&_text
+			font-size: 0.9rem	
+			margin-left: 35px
+		&_buttons
+			a 
+				padding: 11px
+				font-size: 0.7rem
+				margin-left: 8px	
+	.sample-works
+		padding-bottom: 40px
+		.works
+			width: 33%
+			&:nth-child(odd)
+				display: none
+			&__img
+				img
+					width: 370px	
+			&__card
+				.square
+					left: 38%	
+	.company
+		.wrapper
+			max-width: none
+	.facts
+		max-width: none
+		justify-content: space-between
+		&__items
+			&_img
+				&:before, &:after
+					width: 70px
+			&_numbers
+				font-size: 4.2rem
+	.dropdown-content 
+		.dropdown__menu
+			.dropdown-content2
+				.dropdown__menu2
+					&__item
+						padding: 10px 45px 10px 16px
+			&__item
+				padding: 12px 50px 12px 18px
+	.advances__item
+		margin: 0 auto
+		p
+			font-size: 0.75rem
+	
+	.works__button
+		&_btn
+			padding: 15px 300px
+			margin: 0 auto
+	.members
+		&__card
+			&_img
+				.squares
+					left: 18%
+				.name
+					top: 92%	
+					left: 26%
+			&__item
+				&:nth-child(4)
+					display: none
+
+					
+	.footer__center
+		background: none
+		[class*='icon']
+			display: none
+		.main-form
+			border: none
+			text-align: center
+			max-width: 100%
+			padding: 2rem 5rem
+			&-input, &-textarea
+				max-width: none
+				width: 100%
+			&-textarea
+				margin-bottom: 50px	
+			.btn-main
+				padding: 15px 150px
+				font-size: 1rem
+		
++max-screen(939px)
+	.prev
+		display: none!important
+	.next
+		display: none!important
+	.prev2
+		display: none!important
+	.next2
+		display: none!important			
+	.header
+		.main__menu
+			margin: 0 auto
+			&__link
+				font-size: 0.8rem
+		&-logo
+			display: none	
+	h2
+		font-size: 1.5rem
+	p
+		font-size: 0.9rem	
+	.diagram__items-text
+		font-size: 0.8rem	
+	.facts
+		padding-bottom: 40px
+		&__items
+			&_text
+				font-size: 0.9rem
+			&_numbers
+				font-size: 3rem
+	.price__item__value
+		.dollar
+			position: absolute
+			left: 20%
+			top: 12%
+	.quote__content_text 
+		p
+			font-size: 1rem
+	.members
+		&__card
+			margin-left: 50px
+			&__item
+				margin-left: 30px
+				&:nth-child(3)
+					display: none		
+	.team-text
+		h2
+			margin-left: 40px
+			padding-bottom: 40px
+		p
+			display: none			
+	.prices
+		.container
+			max-width: 650px		
+	.price
+		flex-wrap: wrap
+		margin-left: 40px
+		&__item
+			padding: 0 57px 60px 56px
+			margin-left: 30px
+			&:nth-child(3)
+				margin-left: 10px	
+			.btn-main
+				top: 85%	
+			&__value
+				.dollar
+					top: 15%
+					left: 17%	
+
+	.purchase
+		&__content
+			text-align: center
+			flex-direction: column	
+		&_text
+			padding-bottom: 40px		
+	.sample-works
+		padding-bottom: 40px
+		.works	
+			&__card
+				.square
+					left: 36%				
+	.works__button
+		.container
+			max-width: none
+		&_btn
+			padding: 15px 200px		
+				
+	.facts
+		&__items
+			&_text
+				font-size: 0.8rem
+			&_img
+				&:before, &:after
+					width: 100%
+			&_numbers
+				font-size: 2.8rem
+				&:before, &:after
+					display: none
+	.box-bubble
+		.container
+			max-width: none
+			padding-right: 0	
+			margin: 0			
+	.bubble
+		&__item
+			margin-left: 0
+			.Unique
+				font-size: 1.5rem
+			&:first-child
+				font-size: 1.3rem		
+				margin-left: 	30px
+		
+	.sponsors__items
+		img
+			width: 120px
+			height: 60px
+	.features
+		display: flex
+		justify-content: center
+		&__item
+			flex-direction: column
+			margin-left: 20px
+			&_text
+				text-align: center
+				margin-top: 20px
+				h3
+					font-size: 0.8rem
+				p 
+					font-size: 0.85rem	
+		&__img	
+			height: 36px 
+			width: 36px
+			margin: 0 auto	
+	.feature
+		&-text
+			padding-bottom: 40px
+			p
+				display: none
+		&__device
+			display: none		
+	.skill
+		.wrapper
+			max-width: none
+		.diagram
+			margin-left: 50px
+			text-align: center
+			flex-wrap: wrap		
+			&__items
+				height: 200px
+				width: 200px
+				&-text
+					font-size: 1rem
+					padding: 0	
+
+	.what-we-have
+		.offers__item__title
+			font-size: 0.8rem
+
+	
+	+max-screen(613px)
++max-screen(693px)
+	.what-we-have
+		.offers-text
+			p
+				display: none
+	.home
+		.start
+			font-size: 1.2rem
+			&:before,&:after
+				display: none
+	.sample-works
+		.works
+			width: 49%
+	.price
+		margin-left: 140px	
+
+	.footer__center .main-form .btn-main
+		padding: 10px 70px	
+
+	.footer__center
+		.container
+			.main-form
+				padding: 2rem 1.5rem
+				&-input,&-textarea
+					width: 280px	
+	.price__item
+		&:nth-child(even)
+			margin-left: 15px		
+	.works__button_btn
+		padding: 10px 100px	
+	.company
+		&-text
+			p
+				display: none
+		.facts
+			margin-left: 30px
+			flex-direction: column
+			&__items
+				margin: 0		
+	.header
+		.main__menu
+			&__item
+				margin-left: 15px
+				&:nth-child(2),&:nth-child(3),&:nth-child(6)
+					display: none	
+			&__link
+				padding: 5px 10px
+				font-size: 0.8rem
+	.members
+		&__card
+			&__item
+				&:nth-child(2)
+					display: none			
+				
+
++max-screen(425px)
+
+	h2
+		margin-left: 35px
+		&:before,&:after
+			display: none
+
+	.img-center,
+		left: 52%	
+	.footer__bottom
+		.img-center,
+			left: 58%			
+
+	.box-quote .img-center
+		left: 58%
+
+
+	.home
+		padding: 60px 60px 60px 80px
+		&__content
+			.home_proposal
+				&-S
+					font-size: 1.1rem
+				&-tartuprr
+					font-size: 1rem
+				&-next
+					font-size: 0.9rem	
+			h4
+				font-size: 0.95rem
+			h1
+				font-size: 2rem
+		.start
+			font-size: 1.2rem
+			width: 100%
+			&:before, &:after
+				display: none				
+
+	.what-we-have
+		.offers-text
+			padding-bottom: 0
+			p
+				display: none
+		.offers
+			flex-direction: column
+			&__item
+				&__font
+					margin-top: 50px
+
+	.features
+		flex-direction: column
+		&__item
+			&_text
+				h3
+					font-size: 1rem				
+	
+
+	.skill
+		&-text
+			p
+				display: none
+		.diagram
+			margin-left: 110px
+
+	.sample-works
+		padding: 0
+		&_text
+			h2
+				padding-top: 40px
+				padding-bottom: 40px
+			p
+				display: none		
+		.works
+			width: 49%	
+			&__card
+				.square
+					left: 34%
+			&__button
+				&_btn
+					padding: 10px 70px
+					margin-left: 20px			
+
+	
+
+
+	.sponsors__items	
+		img 
+			height: 60px	
+	.prices__text
+		h2 
+			margin: 0
+		p
+			display: none
+	.price
+		margin-left: 70px
+		&__item
+			&:nth-child(even),&:nth-child(3)
+				margin-left: 15px		
+
+
+	.bubble
+		flex-direction: column
+		&__item
+			&:first-child
+				font-size: 1.1rem
+				margin-bottom: 40px
+				.Unique
+					font-size: 1.3rem	
+			&:nth-child(2)
+				margin: 0 auto	
+
+
+	.footer__top
+		&__item
+			flex-wrap: wrap		
+			margin-left: 60px	
+			a
+				&:first-child
+					margin-left: 10px
+				&:nth-child(8),&:nth-child(9)
+					display: none
+				[class*='icon']
+					margin-top: 40px
+
+	.footer__center
+		.container
+			max-width: none		
+			.main-form
+				padding: 2rem
+				margin-left: 20px
+				&-input,&-textarea
+					width: 300px	
+				.btn-main
+					padding: 10px 20px	
+	
++max-screen(375px)						
+	.advances__item
+		margin-left: 15px
+	.skill .diagram
+		margin-left: 80px	
+
+	.img-center
+		left: 57%	
+
+	.sample-works
+		.works
+			width: 100%
+			margin-left: 1px
+			margin-right: 1px
+			&__card
+				.square
+					left: 40%	
+
+	.members__card
+		margin-left: 20px		
+
+	.price
+		margin-left: 40px	
+
+	.footer__center
+		.container
+			.main-form
+				margin-left: 15px
+				padding: 2rem 1.5rem
+				&-input,&-textarea
+					width: 280px
+
++max-screen(320px)
+	.home__content
+		h4
+			font-size: 0.7rem
+		h1
+			font-size: 1.5rem		
+		.home_proposal
+			&-next
+				font-size: 0.8rem		
+
+	.header
+		.main__menu
+			margin-left: 15px
+	.skill
+		.diagram
+			margin-left: 60px					
+
+	.sample-works
+		.works__card
+			.square
+				left: 38%
+		.works__button
+			&_btn
+				padding: 10px 45px
+				margin-left: 30px				
+
+	.purchase_buttons a
+		&:first-child
+			margin-left: 19px			
+
+	.members__card
+		margin-left: 15px		
+
+	.price
+		margin-left: 15px	
+
+	.footer__top
+		&__item
+			margin-left: 50px
+			a
+				&:nth-child(8),&:nth-child(9),&:nth-child(11)
+					display: none	
+
+	
+	.footer__center
+		.container	
+			.main-form
+				padding: 2rem 0
+				margin-left: 15px
+				&-input,&-textarea
+					width: 285px	
+					

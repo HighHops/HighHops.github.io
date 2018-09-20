@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Larsseit-Light';
+  src: url("../webfonts/32162C_0_0.eot");
+	src: url("../webfonts/32162C_0_0.eot?#iefix") format("embedded-opentype"), 
+	url("../webfonts/32162C_0_0.woff2") format("woff2"), 
+	url("../webfonts/32162C_0_0.woff") format("woff"), 
+	url("../webfonts/32162C_0_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Larsseit-Bold';
+  src: url("../webfonts/32162C_1_0.eot");
+	src: url("../webfonts/32162C_1_0.eot?#iefix") format("embedded-opentype"), 
+	url("../webfonts/32162C_1_0.woff2") format("woff2"), 
+	url("../webfonts/32162C_1_0.woff") format("woff"), 
+	url("../webfonts/32162C_1_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Larsseit-ExtraBold';
+  src: url("../webfonts/32162C_2_0.eot");
+	src: url("../webfonts/32162C_2_0.eot?#iefix") format("embedded-opentype"), 
+	url("../webfonts/32162C_2_0.woff2") format("woff2"),
+  url("../webfonts/32162C_2_0.woff") format("woff"), 
+  url("../webfonts/32162C_2_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Larsseit-Medium';
+  src: url("../webfonts/32162C_3_0.eot");
+	src: url("../webfonts/32162C_3_0.eot?#iefix") format("embedded-opentype"), 
+	url("../webfonts/32162C_3_0.woff2") format("woff2"), 
+	url("../webfonts/32162C_3_0.woff") format("woff"), 
+	url("../webfonts/32162C_3_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Larsseit-Thin';
+  src: url("../webfonts/32162C_4_0.eot");
+	src: url("../webfonts/32162C_4_0.eot?#iefix") format("embedded-opentype"), 
+	url("../webfonts/32162C_4_0.woff2") format("woff2"), 
+	url("../webfonts/32162C_4_0.woff") format("woff"), 
+	url("../webfonts/32162C_4_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Larsseit';
+  src: url("../webfonts/32162C_5_0.eot");
+	src: url("../webfonts/32162C_5_0.eot?#iefix") format("embedded-opentype"), 
+	url("../webfonts/32162C_5_0.woff2") format("woff2"), 
+	url("../webfonts/32162C_5_0.woff") format("woff"), 
+	url("../webfonts/32162C_5_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Noe Medium';
+  src: url("../webfonts/neo-medium.eot");
+	src: url("../webfonts/neo-medium.eot?#iefix") format("embedded-opentype"),
+  url("../webfonts/neo-medium.woff") format("woff"); }

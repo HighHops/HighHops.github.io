@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?a9xdq4');
+  src:  url('../fonts/icomoon.eot?a9xdq4#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?a9xdq4') format('truetype'),
+    url('../fonts/icomoon.woff?a9xdq4') format('woff'),
+    url('../fonts/icomoon.svg?a9xdq4#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Ellipse_1:before {
+  content: "\e913";
+  color: #256dc2;
+}
+.icon-Photo:before {
+  content: "\e901";
+}
+.icon-Behance:before {
+  content: "\e900";
+}
+.icon-Branding:before {
+  content: "\e902";
+}
+.icon-Dashbord:before {
+  content: "\e903";
+}
+.icon-Ellipse_2:before {
+  content: "\e904";
+}
+.icon-Ellipse_2_big:before {
+  content: "\e905";
+}
+.icon-Facebook:before {
+  content: "\e906";
+}
+.icon-Instagram:before {
+  content: "\e907";
+}
+.icon-king_1:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-king_2:before {
+  content: "\e909";
+  color: #fff;
+}
+.icon-king_3:before {
+  content: "\e90a";
+  color: #fff;
+}
+.icon-linkedn:before {
+  content: "\e90b";
+}
+.icon-Pintrest:before {
+  content: "\e90c";
+}
+.icon-play:before {
+  content: "\e90d";
+  color: #fff;
+}
+.icon-Print_design:before {
+  content: "\e90e";
+}
+.icon-Rectangle:before {
+  content: "\e90f";
+  color: #256dc2;
+}
+.icon-star_blue:before {
+  content: "\e910";
+}
+.icon-Twitter:before {
+  content: "\e912";
+}
