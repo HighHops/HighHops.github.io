@@ -1,0 +1,509 @@
+////////////////////////////////// FONTS //////////////////////
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');    
+
+
+////////////////////////////////// general styles /////////////////////////////////
+* 
+    padding: 0
+    margin: 0
+body 
+    overflow: hidden
+    font-family: 'Montserrat', sans-serif
+    font-size: 16px
+    color: #444444
+div 
+    box-sizing: border-box
+a 
+    text-decoration: none
+ul 
+    list-style-type: none
+.clip
+    z-index: -1
+    position: absolute
+    right: 0
+    top: 0
+    background: #D9B595
+    clip-path: polygon(73% 0, 100% 0, 100% 100%, 51% 100%);
+    height: 100vh
+    width: 100vw
+    background-image: url(../img/people.png)
+    background-repeat: no-repeat
+    background-position-x: right
+    background-position-y: bottom
+    &__img
+        position: absolute
+        right: 0
+        top: 93px
+  
+ 
+.container 
+    width: 1365px
+    margin: 0 auto
+    z-index: 2
+.btn
+    text-align: center
+    padding: 15px
+    color: #fff
+    font-weight: 500
+    &__welcome
+        background: rgb(242,192,183);
+        background: linear-gradient(90deg, rgba(242,192,183,1) 0%, rgba(221,84,62,1) 100%)
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+        &:hover
+            background: linear-gradient(90deg,rgba(221,84,62,1) 100%, rgba(242,192,183,1) 50%)      
+    &__reg
+        color: #444444
+        background: #FFFFFF
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px
+        &:hover
+            background: #444
+            color: #fff
+       
+
+/////////////////////////////////// section header //////////////////////////////// 
+
+.header
+    display: flex
+    justify-content: space-between
+    position: relative
+    padding-top: 48px
+    &__nav
+        display: flex
+        justify-content: space-between
+        align-content: center
+    &__menu
+        display: flex
+        justify-content: space-between
+        align-items: center
+        
+.menu
+    display: flex
+    &__item
+        margin-right: 30px   
+    &__link
+        font-size: 16px
+        font-weight: 500
+        color: #444444
+        padding-bottom: 2px
+        &:hover
+            border-bottom: 2px solid #444
+    &__btns
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-right: 265px
+        .btn__welcome 
+            clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%)
+        .btn__reg
+            position: absolute
+            left: 76%
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%)
+    &__mobile
+        display: none
+        position: absolute
+        z-index: 6
+        top: 0
+        left: 0
+        background: rgba(0,0,0,0.7)
+        width: 50%
+        height: 100vh
+        &.active
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        &-link
+            color: #ffffff
+            font-size: 26px
+        &-item 
+            margin-top: 45px
+.hamburger 
+    display: none
+    position: absolute
+    right: 20px
+    top: 55%
+    transform: translateY(-50%)
+    width: 26px
+    height: 26px
+    z-index: 5
+    span 
+        display: block
+        width: 100%
+        height: 2px
+        background-color: #fff
+        margin-bottom: 7px
+        transition: 0.5s all
+    &.active
+        top: 70%
+        span
+            margin-bottom: -2px
+            &:nth-child(1)
+                transform: rotate(-45deg)
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                transform: rotate(45deg)
+    &-menu
+        background: rgba(0,0,0,0.7)
+        position: fixed
+        top: 0
+        width: 100%
+        height: 50px
+        display: none
+
+  
+                
+     
+                  
+//////////////////////////////////////// section main ////////////////////////////////////////////////////////
+
+.main
+    margin-top: 260px
+    &__container-left
+        width: 906px
+    &__title
+        font-weight: 600
+        font-size: 38px
+        color: #F1513A
+        width: 730px
+    &__text
+        width: 640px
+        font-size: 22px
+        line-height: 29px
+        margin: 50px 0
+    .btn__welcome
+        display: block
+        width: 315px
+        &-mob
+            display: none
+    &__img-mobile
+        display: none
+
+    //////////////////////////////////////// media ////////////////////////////////////////////////////////
+
+@media screen and ( max-width: 1680px )
+    .menu__btns
+        margin-right: 314px
+    .clip
+        background-position-x: 108%
+    
+@media screen and ( max-width: 1660px )
+    .menu__btns
+        margin-right: 318px  
+    .clip
+        background-position-x: 114%
+@media screen and ( max-width: 1640px )
+    .menu__btns
+        margin-right: 322px  
+
+@media screen and ( max-width: 1620px )
+    .menu__btns
+        margin-right: 326px 
+
+@media screen and ( max-width: 1600px )
+    .menu__btns
+        margin-right: 330px 
+    .clip
+        background-position-x: 118%
+@media screen and ( max-width: 1580px )
+    .menu__btns
+        margin-right: 334px 
+@media screen and ( max-width: 1560px )
+    .menu__btns
+        margin-right: 338px 
+@media screen and ( max-width: 1540px )
+    .menu__btns
+        margin-right: 342px
+    .clip
+        background-position-x: 124%
+@media screen and ( max-width: 1500px )
+    .menu__btns
+        margin-right: 350px 
+    .clip
+        background-image: none
+    .main__img-mobile
+        display: block
+        margin-top: -20%
+        margin-left: 53%
+        width: 730px
+@media screen and ( max-width: 1480px )
+    .menu__btns
+        margin-right: 354px
+@media screen and ( max-width: 1460px )
+    .menu__btns
+        margin-right: 358px
+@media screen and ( max-width: 1440px )
+    .menu__btns
+        margin-right: 362px
+    .main__img-mobile
+        width: 623px
+        margin-top: -16%
+        margin-left: 55%
+@media screen and ( max-width: 1420px )
+    .menu__btns
+        margin-right: 366px
+@media screen and ( max-width: 1400px )
+    .menu__btns
+        margin-right: 370px
+@media screen and ( max-width: 1380px )
+    .menu__btns
+        margin-right: 374px
+    .main__img-mobile
+        margin-left: 48%
+@media screen and ( max-width: 1360px )
+    .menu__btns
+        margin-right: 378px
+@media screen and ( max-width: 1340px )
+    .menu__btns
+        margin-right: 370px
+    .clip 
+        clip-path: polygon(73% 0, 100% 0, 100% 100%, 51% 100%);
+    .main 
+        margin-left: 50px
+    .header 
+        margin-left: 50px
+    
+@media screen and ( max-width: 1320px )
+    .menu__btns
+        margin-right: 367px
+    .main__img-mobile
+        width: 580px
+        height: 500px
+        margin-top: -24%
+@media screen and ( max-width: 1300px )
+    .menu__btns
+        margin-right: 361px    
+@media screen and ( max-width: 1280px )
+    .menu__btns
+        margin-right: 355px 
+    .main__img-mobile
+        width: 550px
+        height: 470px
+        margin-top: -22%
+
+@media screen and ( max-width: 1260px )
+    .menu__btns
+        margin-right: 349px 
+    .main__img-mobile
+        margin-left: 46%
+@media screen and ( max-width: 1240px )
+    .menu__btns
+        margin-right: 343px 
+@media screen and ( max-width: 1220px )
+    .menu__btns
+        margin-right: 30px 
+        .btn__welcome
+            margin-right: 30px
+            clip-path: none
+        .btn__reg
+            position: initial
+            clip-path: none
+            border: 1px solid #444444
+    .btn
+        border-radius: 5px
+    .clip
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 51% 100%)
+        top: 30%
+    .main
+        margin-top: 70px
+        &__title
+            width: 700px
+        &__container-left
+            text-align: center
+        .btn__welcome
+            margin-left: 140px
+        &__img-mobile
+            width: 45%
+            height: 300px
+            margin-top: 51px
+    .main__img-mobile
+        height: 325px
+        margin-left: 34%
+
+ 
+@media screen and ( max-width: 1130px ) 
+    .main__img-mobile
+        margin-left: 29%
+        margin-top: 26px
+@media screen and ( max-width: 1080px )  
+    .main__img-mobile
+        margin-left: 24%    
+@media screen and ( max-width: 1000px )  
+    .main__img-mobile
+        margin-left: 18%    
+@media screen and ( max-width: 920px )  
+    .main__img-mobile
+        margin-left: 12%   
+@media screen and ( max-width: 860px ) 
+    .main__img-mobile
+        margin-left: 0
+@media screen and ( max-width: 780px )  
+    .header
+         margin-left: 20px 
+         &__nav
+             justify-content: end
+    .main
+        margin-left: 20px
+        &__container-left
+            text-align: left
+        &__text
+            width: 520px
+    .header
+        &__nav
+            justify-content: center
+    .logo__link
+        display: none
+    .main__img-mobile
+        margin-top: 26px
+        margin-left: 23%
+    .container 
+        width: 100vw
+@media screen and ( max-width: 630px ) 
+    body
+        overflow-x: hidden
+        overflow-y: auto 
+    .container
+        width: 630px
+    .header
+        margin-left: 3px
+        flex-direction: column
+        &__menu
+            flex-direction: column
+        &__nav
+            justify-content: space-around
+    .btn
+        width: 200px
+    .menu
+        order: 1
+        &__btns
+            margin-bottom: 50px
+        &__link  
+            width: 300px
+            padding: 10px 30px
+            border: 1px solid #DD543E
+            border-radius: 5px
+    .main__img-mobile
+        display: none
+    .main
+        margin-top: 140px
+        margin-left: 60px
+        .btn__welcome
+            margin-left: 40px
+        &__text
+            width: 56%
+            line-height: 40px
+            margin: 35px 0
+            
+    .clip
+        display: none
+
+@media screen and ( max-width: 571px ) 
+    .container
+       max-width: 570px
+       margin: 0
+    .header
+        padding-top: 20px
+    .main
+        margin-left: 40px
+        &__text
+            width: 56%
+            line-height: 40px
+            margin: 35px 0
+        &__img-mobile
+            margin-left: -45px
+    .clip
+        display: none
+        
+@media screen and ( max-width: 540px ) 
+    .header
+        margin-left: 0
+    .menu
+        display: none
+        &__btns
+            display: none
+    .main
+        margin-top: 125px
+        margin-left: 22px
+        .btn__welcome
+            margin-bottom: 20px  
+            &-mob
+                display: block
+        &__text
+            width: 100vw
+    .hamburger
+        display: block
+        &-menu
+            display: block
+
+@media screen and ( max-width: 520px ) 
+    .main
+        overflow-x: hidden
+        margin-left: 7px
+        &__container-left
+            width: 518px
+        &__text
+            width: 90%
+        &__title
+            width: 490px
+    .container
+        width: 520px
+@media screen and ( max-width: 490px )   
+    .main
+        &__title
+            font-size: 32px         
+@media screen and ( max-width: 490px ) 
+    .main
+        margin-left: 24px
+        &__text
+            width: 80%
+@media screen and ( max-width: 445px ) 
+    .main
+        margin: 0 auto
+        margin-top: 140px
+        &__container-left
+            text-align: center
+        &__title
+            width: 100vw
+@media screen and ( max-width: 425px )
+    .main
+        &__title
+            width: 100vw
+            font-size: 28px
+        &__container-left
+            display: flex
+            flex-direction: column
+            justify-content: end
+            align-items: center
+            width: 100vw
+        &__text
+            width: 100%
+            font-size: 18px
+    .container
+        width: 100vw
+@media screen and ( max-width: 400px )
+    .main
+        &__text
+            margin-left: 7px
+
+@media screen and ( max-width: 390px )    
+    .main
+        margin-top: 75px
+        &__text
+            margin-left: 0
+        .btn__welcome
+            margin-left: 0
+            width: 320px
+@media screen and ( max-width: 360px )  
+    .menu__mobile-link
+        font-size: 18px
+    .main__title
+        font-size: 23px
+    .main__text
+        font-size: 16px
+   
+
+
