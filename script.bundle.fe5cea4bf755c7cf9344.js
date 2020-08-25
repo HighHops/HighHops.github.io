@@ -9362,9 +9362,8 @@
         (new (n.n(Ot).a)(".me .i-am", {
           strings: [
             "I'm",
-            "I'm John Doe",
+            "I'm Ilya Malashenko",
             "I'm a Developer",
-            "I'm a Designer",
             "I'm a Freelancer",
           ],
           typeSpeed: 80,
