@@ -9362,7 +9362,7 @@
         (new (n.n(Ot).a)(".me .i-am", {
           strings: [
             "I'm",
-            "I'm Ilya Malashenko",
+            "I'm Ilya Malashenko :)",
             "I'm a Developer",
             "I'm a Freelancer",
           ],
