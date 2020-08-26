@@ -1,0 +1,43 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html lang='en'><!--<![endif]-->
+<head>
+    <meta charset='UTF-8'>
+    <title></title>
+    <script type='text/javascript'>
+        var ENV = {"lang":{"lang":"ru_RU","languageCode":"ru","countryCode":"RU"},"browser":{"name":"Chrome","version":"84.0.4147.135","base":"Chromium","engine":"WebKit","engineVersion":"537.36","osFamily":"Windows","osVersion":"10.0","isMobile":false,"isBrowser":true,"cssPrefix":"Webkit"},"hosts":{"api":{"maps":"https://yandex.ru/maps/","statCounter":"https://yandex.ru/clck/"}}};
+        (function (browser) {
+            browser.documentMode = document.documentMode;
+            browser.isIE = (browser.name == 'MSIE' || browser.name == 'IEMobile');
+            browser.oldIE = (browser.name == 'MSIE' && browser.documentMode < 9);
+            browser.isEdge = (browser.engine == 'Edge');
+            var isPointerBrowser = browser.engine == 'Edge' ||
+                (browser.name == 'MSIE' && browser.documentMode >= 10 && browser.osVersion > 6.1) ||
+                (browser.name == 'IEMobile' && browser.engineVersion >= 6);
+            if (isPointerBrowser) {
+                browser.eventMapper = 'pointer';
+            } else {
+                browser.eventMapper = 'touchMouse';
+            }
+            browser.androidBrokenBuild = browser.name == 'AndroidBrowser' && browser.engineVersion == '534.30';
+
+            var pendingMessages = [];
+            var onMessage = function (e) {
+                pendingMessages.push(e.data);
+            };
+
+            browser.flushMessages = function (callback) {
+                window.removeEventListener('message', onMessage, false);
+                for (var i = 0; i < pendingMessages.length; i++) {
+                    callback(pendingMessages[i]);
+                }
+            };
+
+            window.addEventListener('message', onMessage, false);
+        })(ENV.browser);
+    </script>
+    <script type='text/javascript' src='inception.js'></script>
+</head>
+<body>
+</body>
+</html>
