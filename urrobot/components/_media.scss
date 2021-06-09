@@ -1,0 +1,33 @@
+@media (max-width: 1888px) {
+    .settings__change  {
+        margin-right: 133px;
+    }
+}
+
+@media (max-width: 1860px) {
+    .settings__change  {
+        margin-right: 60px;
+    }
+    .sub_tabs__content__items .sub_tabs__content__main__item__info__item:nth-child(2) {
+        margin-left: 15px;
+    }
+    .settings__modal  {
+        left: 9%;
+    }
+    .house__modal  {
+        left: 27%;
+    }
+    .print__modal  {
+        left: 31%;
+    }
+}
+
+@media (max-width: 1740px) {
+    .sub_tabs__content__items .sub_tabs__content__main__item__info__item:nth-child(2) {
+        margin-left: -10px;
+        margin-right: -33px;
+    }
+    .settings_look  {
+        margin-right: 50px;
+    }
+}
