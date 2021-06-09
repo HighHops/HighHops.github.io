@@ -1,11 +1,12 @@
 export let modals = () => {
-    let notification = $('.settings__item__notification');
     let search = $('.settings__search svg');
     let settings = $('.setting')
     let print = $('.print')
     let house = $('.house')
     let panel = $('.panel')
     let display = $('.setting__display')
+    let sms = $('.sms')
+    let voice = $('.voice')
 
     $(document).click(function (e) {
         let thisElem = e.target;
@@ -58,6 +59,14 @@ export let modals = () => {
         $('.background').addClass('active')
         $('.display__modal').addClass('active')
         $('.setting__display').addClass('active')
+    })
+    sms.click(function () {
+        sms.toggleClass('active')
+        $('.sms__start').toggleClass('active')
+    })
+    voice.click(function () {
+        voice.toggleClass('active')
+        $('.voice__start').toggleClass('active')
     })
     $('.cancel').click(function () {
         $('.background').removeClass('active')

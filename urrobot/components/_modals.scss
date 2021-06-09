@@ -745,3 +745,67 @@ input::placeholder { color: $text_main; font-weight: 500; }
         }
     }
 }
+
+.window__start {
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 33px;
+    padding-left: 30px;
+    width: 406px;
+    height: 90px;
+    right: 17%;
+    top: 2%;
+    background: #5080CD;
+    border-radius: 10px 0px 0px 10px;
+    &__title {
+        color: $text_inDark
+    }
+    &__box {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        img {
+            height: 5px;
+            margin-right: 10px;
+        }
+        span {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.02em;
+            color: #333333;
+        }
+    }
+}
+.sms__start {
+    display: none;
+    &.active {
+        display: flex;
+    }
+}
+.sms {
+    &.active {
+        svg {
+                path {
+                    fill: #21317A;
+                }
+        }
+    }
+}
+
+.voice__start {
+    display: none;
+    &.active {
+        display: flex;
+    }
+}
+.voice {
+    &.active {
+        svg {
+                path {
+                    fill: #21317A;
+                }
+        }
+    }
+}

@@ -1827,6 +1827,80 @@ input::placeholder {
   fill: #21317A;
 }
 
+.window__start {
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 33px;
+  padding-left: 30px;
+  width: 406px;
+  height: 90px;
+  right: 17%;
+  top: 2%;
+  background: #5080CD;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.window__start__title {
+  color: #ffffff;
+}
+
+.window__start__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.window__start__box img {
+  height: 5px;
+  margin-right: 10px;
+}
+
+.window__start__box span {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  color: #333333;
+}
+
+.sms__start {
+  display: none;
+}
+
+.sms__start.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sms.active svg path {
+  fill: #21317A;
+}
+
+.voice__start {
+  display: none;
+}
+
+.voice__start.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.voice.active svg path {
+  fill: #21317A;
+}
+
 @media (max-width: 1888px) {
   .settings__change {
     margin-right: 133px;
