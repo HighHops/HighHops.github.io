@@ -24,6 +24,9 @@ $(document).ready( function () {
           $( this ).removeClass( "hints" );
         }
       );
-  
+        
+    $('.settings__item__notification').click(function () {
+        $('.settings__item__notification').toggleClass('active')
+    })
   
 })

@@ -1823,6 +1823,10 @@ input::placeholder {
   margin-right: 15px;
 }
 
+.settings__item__notification.active svg g path {
+  fill: #21317A;
+}
+
 @media (max-width: 1888px) {
   .settings__change {
     margin-right: 133px;

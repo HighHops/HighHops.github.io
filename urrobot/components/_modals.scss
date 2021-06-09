@@ -732,3 +732,16 @@ input::placeholder { color: $text_main; font-weight: 500; }
         }
     }
 }
+
+.settings__item__notification {
+    &.active {
+        svg {
+            g {
+                path {
+                    fill: #21317A
+                }
+            }
+           
+        }
+    }
+}
