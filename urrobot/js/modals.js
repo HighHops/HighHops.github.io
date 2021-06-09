@@ -5,6 +5,7 @@ export let modals = () => {
     let print = $('.print')
     let house = $('.house')
     let panel = $('.panel')
+    let display = $('.setting__display')
 
     $(document).click(function (e) {
         let thisElem = e.target;
@@ -17,6 +18,8 @@ export let modals = () => {
             $('.house').removeClass('active')
             $('.btns__modal').removeClass('active')
             $('.panel').removeClass('active')
+            $('.display__modal').removeClass('active')
+            $('.setting__display').removeClass('active')
         }
         
     })
@@ -51,6 +54,11 @@ export let modals = () => {
         $('.btns__modal').addClass('active')
         $('.panel').addClass('active')
     })
+    display.click(function () {
+        $('.background').addClass('active')
+        $('.display__modal').addClass('active')
+        $('.setting__display').addClass('active')
+    })
     $('.cancel').click(function () {
         $('.background').removeClass('active')
         $('.print__modal').removeClass('active')
@@ -59,6 +67,8 @@ export let modals = () => {
         $('.house').removeClass('active')
         $('.btns__modal').removeClass('active')
         $('.panel').removeClass('active')
+        $('.display__modal').removeClass('active')
+        $('.setting__display').removeClass('active')
     })
     $('.house__modal__btns .btn__drop').click(function (e) {
         e.preventDefault();
