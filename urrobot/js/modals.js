@@ -12,7 +12,6 @@ export let modals = () => {
         let thisElem = e.target;
         if(thisElem.classList.contains('active')) {                        
             $('.settings__modal').removeClass('active')
-            $('.background').removeClass('active')
             $('.print__modal').removeClass('active')
             $('.print').removeClass('active')
             $('.house__modal').removeClass('active')
@@ -21,6 +20,15 @@ export let modals = () => {
             $('.panel').removeClass('active')
             $('.display__modal').removeClass('active')
             $('.setting__display').removeClass('active')
+            if (!thisElem.classList.contains('debstor') 
+            &&  !thisElem.classList.contains('debstor__subtabs__link')  
+            &&  !thisElem.classList.contains('debstor__tabs__content__item') 
+            &&  !thisElem.classList.contains('debstor__subtabs__content__item')) {
+                $('.debstor').removeClass('active')
+                $('.background').removeClass('active')
+               
+            }
+           
         }
         
     })
@@ -69,7 +77,6 @@ export let modals = () => {
         $('.voice__start').toggleClass('active')
     })
     $('.cancel').click(function () {
-        $('.background').removeClass('active')
         $('.print__modal').removeClass('active')
         $('.print').removeClass('active')
         $('.house__modal').removeClass('active')
@@ -78,6 +85,11 @@ export let modals = () => {
         $('.panel').removeClass('active')
         $('.display__modal').removeClass('active')
         $('.setting__display').removeClass('active')
+        console.log($(this).parent())
+        if (!$(this).parent().parent().hasClass('notif__voice__content__items')) {
+            $('.debstor').removeClass('active')
+            $('.background').removeClass('active')
+        }
     })
     $('.house__modal__btns .btn__drop').click(function (e) {
         e.preventDefault();
@@ -85,6 +97,8 @@ export let modals = () => {
         $('.house__modal').removeClass('active')
         $('.house').removeClass('active')
     })
+  
+
 
 
 }
