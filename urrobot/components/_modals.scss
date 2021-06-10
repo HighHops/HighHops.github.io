@@ -393,8 +393,8 @@ input::placeholder { color: $text_main; font-weight: 500; }
 }
 .background2 {
     z-index: 2;
-    top: -1000%;
-    left: -3%;
+    top: -400%;
+    left: -2%;
 }
 
 .print__modal {
@@ -817,7 +817,7 @@ input::placeholder { color: $text_main; font-weight: 500; }
 
 .notif__voice__modal {
     position: absolute;
-    top: 50%;
+    top: -80%;
     left: 30%;
     width: 428px;
     background: #F9F9F9;

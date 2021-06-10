@@ -23,14 +23,18 @@ export let modals = () => {
             if (!thisElem.classList.contains('debstor') 
             &&  !thisElem.classList.contains('debstor__subtabs__link')  
             &&  !thisElem.classList.contains('debstor__tabs__content__item') 
-            &&  !thisElem.classList.contains('debstor__subtabs__content__item')) {
+            &&  !thisElem.classList.contains('debstor__subtabs__content__item') 
+            &&  !thisElem.classList.contains('notif__voice__modal') 
+            &&  !thisElem.classList.contains('background2')) {
                 $('.debstor').removeClass('active')
                 $('.background').removeClass('active')
+
+        
                
             }
            
         }
-        
+    
     })
     search.click(function (e) {
         e.preventDefault()
@@ -85,11 +89,17 @@ export let modals = () => {
         $('.panel').removeClass('active')
         $('.display__modal').removeClass('active')
         $('.setting__display').removeClass('active')
-        console.log($(this).parent())
-        if (!$(this).parent().parent().hasClass('notif__voice__content__items')) {
+        if (!$(this).parent().parent().hasClass('notif__voice__content__items') 
+            && !$(this).parent().hasClass('notif__voice__modal')) {
             $('.debstor').removeClass('active')
             $('.background').removeClass('active')
+
         }
+        if ($(this).parent().hasClass('notif__voice__modal')) {
+            $('.notif__voice__modal').removeClass('active')
+            $('.background2').removeClass('active')
+        }
+
     })
     $('.house__modal__btns .btn__drop').click(function (e) {
         e.preventDefault();
@@ -97,7 +107,11 @@ export let modals = () => {
         $('.house__modal').removeClass('active')
         $('.house').removeClass('active')
     })
-  
+    
+    $('.notif__voice__content__items').click(function () {
+        $(this).prev('.notif__voice__modal').addClass('active');
+        $(this).prevAll('.background2').addClass('active');
+    })
 
 
 
