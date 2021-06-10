@@ -94,6 +94,7 @@
         overflow-y: auto;
         height: 42vh;
         padding-right: 25px;
+        margin-top: 20px;
         &::-webkit-scrollbar {
             width: 6px;
             margin-left: 20px;
@@ -128,7 +129,16 @@
                         font-size: 14px;
                         margin-bottom: 10px;
                     }
+                    .hints__item {
+                        width: max-content;
+                        top: -40px;
+                        display: none;
+                        &.active {
+                            display: block;
+                        }
+                    }
                     &__item {
+                        position: relative;
                         &:first-child {
                             display: flex;
                             flex-direction: column;

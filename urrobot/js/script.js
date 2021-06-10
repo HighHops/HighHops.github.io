@@ -18,6 +18,14 @@ $(document).ready( function () {
           $( this ).removeClass( "hints" );
         }
       );
+      $( ".sub_tabs__content__main__item__info__ls__item" ).hover(
+        function() {
+          $( this ).children('.hints__item').addClass( "active" );
+        }, function() {
+          $( this ).children('.hints__item').removeClass( "active" );
+        }
+      );
+   
 
       $( ".hint" ).hover(
         function() {

@@ -609,6 +609,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow-y: auto;
   height: 42vh;
   padding-right: 25px;
+  margin-top: 20px;
 }
 
 .sub_tabs__content__items::-webkit-scrollbar {
@@ -664,6 +665,22 @@ h1, h2, h3, h4, h5, h6 {
   color: #5080CD;
   font-size: 14px;
   margin-bottom: 10px;
+}
+
+.sub_tabs__content__items .sub_tabs__content__main__item__info__ls .hints__item {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  top: -40px;
+  display: none;
+}
+
+.sub_tabs__content__items .sub_tabs__content__main__item__info__ls .hints__item.active {
+  display: block;
+}
+
+.sub_tabs__content__items .sub_tabs__content__main__item__info__ls__item {
+  position: relative;
 }
 
 .sub_tabs__content__items .sub_tabs__content__main__item__info__ls__item:first-child {
