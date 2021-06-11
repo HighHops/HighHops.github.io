@@ -2028,9 +2028,10 @@ button:focus {
 .modal-print-pre .modal__form {
   height: 430px;
   top: 20%;
+  max-width: 840px;
 }
 .modal__printeform__send-print-pre {
-  right: 140%!important;
+  right: 120%!important;
   bottom: -38%!important;
 }
 .window__start__box__btn::after {

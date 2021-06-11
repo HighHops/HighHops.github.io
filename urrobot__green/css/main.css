@@ -3472,9 +3472,10 @@ th.num-th {
 .modal-print-pre .modal__form {
   height: 430px;
   top: 20%;
+  max-width: 840px;
 }
 .modal__printeform__send-print-pre {
-  right: 140%!important;
+  right: 120%!important;
   bottom: -38%!important;
 }
 .modal__printeform__row {
