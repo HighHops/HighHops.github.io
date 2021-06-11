@@ -3014,7 +3014,10 @@ th.num-th {
   font-size: 12px;
   background-color: #e0e0e0;
 }
-
+.__select__title-pre, .__select__title-pre {
+  background: #e0e0e0!important;
+  border: transparent!important;;
+}
 .dark .__select__title,
 .dark .__select__content {
   background: #828282 !important;
