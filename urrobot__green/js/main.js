@@ -360,18 +360,18 @@ let selservisTitle = document.querySelector(
 );
 let checkSer = document.querySelectorAll('.check-ser');
 
-selservisTitle.addEventListener('click', function () {
-  this.classList.toggle('active');
-  if (this.classList.contains('active')) {
-    for (let i = 0; i < checkSer.length; i++) {
-      checkSer[i].checked = true;
-    }
-  } else {
-    for (let i = 0; i < checkSer.length; i++) {
-      checkSer[i].checked = false;
-    }
-  }
-});
+// selservisTitle.addEventListener('click', function () {
+//   this.classList.toggle('active');
+//   if (this.classList.contains('active')) {
+//     for (let i = 0; i < checkSer.length; i++) {
+//       checkSer[i].checked = true;
+//     }
+//   } else {
+//     for (let i = 0; i < checkSer.length; i++) {
+//       checkSer[i].checked = false;
+//     }
+//   }
+// });
 
 let printSett = document.querySelectorAll(
   'ul.modal__printeform__printsett > li > span'
@@ -575,5 +575,25 @@ voice__item.forEach(item => {
 document.querySelector('.notif__voice__modal > .modal__close').addEventListener('click', (e) => {
   document.querySelector('.notif__voice__modal').classList.remove('active')
 });
+
+
+let settingInputs = document.querySelectorAll('.settings__modal__item__range__input__notification');
+let sumInputs = document.querySelectorAll('.settings__modal__item__range__input__sum')
+
+settingInputs.forEach(item => {
+  item.addEventListener('input', function () {
+    let value = this.value
+    let output = this.nextSibling.nextSibling
+    output.innerHTML = value
+  })
+})
+
+sumInputs.forEach(item => {
+  item.addEventListener('input', function () {
+    let value = this.value
+    let output = this.parentNode.nextSibling.nextSibling
+    output.innerHTML = value
+  })
+})
 
 

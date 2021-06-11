@@ -147,8 +147,8 @@
           <div class="main__user-panel__left">
             <div class="main__opt">
               <ul>
-                <li><span class="main__opt__link printer tooltip"
-                    data-title="Уведомления"></span>
+                <li><span class="main__opt__link printer tooltip link-modal"
+                    data-title="Уведомления" data-modal="modal-print"></span>
                 </li>
                 <li><span class="main__opt__link document tooltip link-modal" data-modal="print__modal" data-title="Свод начислений по ЛС"></span>
                 </li>
@@ -1182,285 +1182,206 @@
       </div>
    </div>
 
-    <div class="modal modal-print">
-      <div class="modal__form">
-        <span class="modal__close"></span>
-        <div class="modal__head">
-          <div class="modal__head-title">Работа с печатной формой</div>
-        </div>
-        <div class="modal__body">
-          <div class="modal__printeform">
-            <div class="modal__printeform__left">
-              <div class="modal__printeform__title"> Список документов в приложении</div>
+   <div class="modal modal-print modal-print-pre">
+    <div class="modal__form">
+      <span class="modal__close"></span>
+      <div class="modal__head">
+        <div class="modal__head-title">Работа с печатной формой</div>
+      </div>
+      <div class="modal__body">
+        <div class="modal__printeform">
+          <div class="modal__printeform__left">
+            <div class="modal__printeform__title"> Список документов в приложении</div>
 
-              <ul class="modal__printeform__printsett">
-                <li><span></span></li>
-                <li><span></span></li>
-                <li>Настройка печати</li>
-              </ul>
-              <div class="modal__printeform__row">
-                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-1" />
-                <label for="toggle-1">1. Устав</label>
-              </div>
-              <div class="modal__printeform__row">
-                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-2" />
-                <label for="toggle-2">2. Свидетельство о гос. регистрации</label>
-              </div>
-              <div class="modal__printeform__row">
-                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-3" />
-                <label for="toggle-3">4. ЕГРЮЛ</label>
-              </div>
-              <div class="modal__printeform__row">
-                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-4" />
-                <label for="toggle-4">5. Представитель по доверенности</label>
-              </div>
-              <div class="modal__printeform__row">
-                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-5" />
-                <label for="toggle-5">3. Протокол</label>
-              </div>
-              <div class="modal__printeform__row">
-                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-6" />
-                <label for="toggle-6">6. Выписка из паспортного стола</label>
-              </div>
-              <div class="modal__printeform__row">
-                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-7" />
-                <label for="toggle-7">7. Выписка из ЕГРН</label>
-              </div>
-              <div class="modal__printeform__row">
-                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-8" />
-                <label for="toggle-8">8. ПП об оплате госпошлины</label>
-              </div>
-              <div class="modal__printeform__row">
-                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-9" />
-                <label for="toggle-9">9. История начислений за период</label>
-              </div>
-              <div class="modal__printeform__row">
-                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-10" />
-                <label for="toggle-10">10. Расчет пени за коммунальные услуги</label>
-              </div>
-              <div class="modal__printeform__row">
-                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-11" />
-                <label for="toggle-11">11. Выписка о переходе прав из ЕГРН</label>
-              </div>
+            <ul class="modal__printeform__printsett">
+              <li><span></span></li>
+              <li><span></span></li>
+              <li>Настройка печати</li>
+            </ul>
+            <div class="modal__printeform__row">
+              <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-1" />
+              <label for="toggle-1">1. Досудебное требование</label>
+            </div>
+            <div class="modal__printeform__row">
+              <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-2" />
+              <label for="toggle-2">2. Уведомление</label>
+            </div>
+            <div class="modal__printeform__row">
+              <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-3" />
+              <label for="toggle-3">3. Соглашение</label>
+            </div>
 
 
-              <div class="modal__printeform__selservis">
-                <div class="modal__printeform__selservis-title">Выбор услуги</div>
-                <div class="modal__printeform__col">
-                  <div class="modal__printeform__row">
-                    <input type="checkbox" name="" id="selservis-1"
-                      class="modal__printeform__checkbox checkbox check-ser">
-                    <label for="selservis-1">Электроснабжение</label>
-                  </div>
-                  <div class="modal__printeform__row">
-                    <input type="checkbox" name="" id="selservis-2"
-                      class="modal__printeform__checkbox checkbox check-ser">
-                    <label for="selservis-2">Газоснабжение</label>
-                  </div>
-                  <div class="modal__printeform__row">
-                    <input type="checkbox" name="" id="selservis-3"
-                      class="modal__printeform__checkbox checkbox check-ser">
-                    <label for="selservis-3">Холодное в/с</label>
-                  </div>
-                  <div class="modal__printeform__row">
-                    <input type="checkbox" name="" id="selservis-4"
-                      class="modal__printeform__checkbox checkbox check-ser">
-                    <label for="selservis-4">Содержание ж/ф</label>
+          
+          </div>
+          <div class="modal__printeform__right">
+            <div class="modal__printeform__title"> Период расчета</div>
+            <div class="modal__printeform__row">
+              <input type="checkbox" name="all" id="all"
+                class="modal__printeform__checkbox checkbox for-entire-period">
+              <label for="all">За весь период</label>
+            </div>
+            <div class="modal__printeform__period">
+              <div class="modal__printeform__period-row">
+                <div class="modal__printeform__period-select">
+                  <div class="__select __select--full" data-state="">
+                    <div class="__select__title" data-default="Январь">Январь</div>
+                    <div class="__select__content">
+                      <input id="s0" class="__select__input" type="radio" name="sel-6" checked />
+                      <label for="s0" class="__select__label">Январь</label>
+
+                      <input id="s1" class="__select__input" type="radio" name="sel-6" />
+                      <label for="s1" class="__select__label">Февраль</label>
+
+                      <input id="s2" class="__select__input" type="radio" name="sel-6" />
+                      <label for="s2" class="__select__label">Март</label>
+
+                      <input id="s3" class="__select__input" type="radio" name="sel-6" />
+                      <label for="s3" class="__select__label">Апрель</label>
+
+                      <input id="s4" class="__select__input" type="radio" name="sel-6" />
+                      <label for="s4" class="__select__label">Май</label>
+
+                      <input id="s5" class="__select__input" type="radio" name="sel-6" />
+                      <label for="s5" class="__select__label">Июнь</label>
+
+                      <input id="s6" class="__select__input" type="radio" name="sel-6" />
+                      <label for="s6" class="__select__label">Апрель</label>
+
+                      <input id="s7" class="__select__input" type="radio" name="sel-6" />
+                      <label for="s7" class="__select__label">Июль</label>
+
+                      <input id="s8" class="__select__input" type="radio" name="sel-6" />
+                      <label for="s8" class="__select__label">Август</label>
+
+                      <input id="s9" class="__select__input" type="radio" name="sel-6" />
+                      <label for="s9" class="__select__label">Сентябрь</label>
+
+                      <input id="s10" class="__select__input" type="radio" name="sel-6" />
+                      <label for="s10" class="__select__label">Октябрь</label>
+
+                      <input id="s11" class="__select__input" type="radio" name="sel-6" />
+                      <label for="s11" class="__select__label">Ноябрь</label>
+
+                      <input id="s12" class="__select__input" type="radio" name="sel-6" />
+                      <label for="s12" class="__select__label">Декабрь</label>
+
+                    </div>
                   </div>
                 </div>
-                <div class="modal__printeform__col">
-                  <div class="modal__printeform__row">
-                    <input type="checkbox" name="" id="selservis-5"
-                      class="modal__printeform__checkbox checkbox check-ser">
-                    <label for="selservis-5">Водоотведение</label>
+                <span class="modal__printeform__period-span">По</span>
+                <div class="modal__printeform__period-select">
+                  <div class="__select __select--full" data-state="">
+                    <div class="__select__title" data-default="Январь">Январь</div>
+                    <div class="__select__content">
+                      <input id="s0" class="__select__input" type="radio" name="sel-7" checked />
+                      <label for="s0" class="__select__label">Январь</label>
+                      <input id="s1" class="__select__input" type="radio" name="sel-7" />
+                      <label for="s1" class="__select__label">Февраль</label>
+                      <input id="s2" class="__select__input" type="radio" name="sel-7" />
+                      <label for="s2" class="__select__label">Март</label>
+                      <input id="s3" class="__select__input" type="radio" name="sel-7" />
+                      <label for="s3" class="__select__label">Апрель</label>
+                      <input id="s4" class="__select__input" type="radio" name="sel-7" />
+                      <label for="s4" class="__select__label">Май</label>
+                      <input id="s5" class="__select__input" type="radio" name="sel-7" />
+                      <label for="s5" class="__select__label">Июнь</label>
+                      <input id="s6" class="__select__input" type="radio" name="sel-7" />
+                      <label for="s6" class="__select__label">Апрель</label>
+                      <input id="s7" class="__select__input" type="radio" name="sel-7" />
+                      <label for="s7" class="__select__label">Июль</label>
+                      <input id="s8" class="__select__input" type="radio" name="sel-7" />
+                      <label for="s8" class="__select__label">Август</label>
+                      <input id="s9" class="__select__input" type="radio" name="sel-7" />
+                      <label for="s9" class="__select__label">Сентябрь</label>
+                      <input id="s10" class="__select__input" type="radio" name="sel-7" />
+                      <label for="s10" class="__select__label">Октябрь</label>
+                      <input id="s11" class="__select__input" type="radio" name="sel-7" />
+                      <label for="s11" class="__select__label">Ноябрь</label>
+                      <input id="s12" class="__select__input" type="radio" name="sel-7" />
+                      <label for="s12" class="__select__label">Декабрь</label>
+                    </div>
                   </div>
-                  <div class="modal__printeform__row">
-                    <input type="checkbox" name="" id="selservis-6"
-                      class="modal__printeform__checkbox checkbox check-ser">
-                    <label for="selservis-6">Отопление</label>
+                </div>
+              </div>
+              <div class="modal__printeform__period-row">
+                <div class="modal__printeform__period-select">
+                  <div class="__select __select--full" data-state="">
+                    <div class="__select__title" data-default="2021">2021</div>
+                    <div class="__select__content">
+                      <input id="s0" class="__select__input" type="radio" name="sel-8" checked />
+                      <label for="s0" class="__select__label">2021</label>
+                      <input id="s1" class="__select__input" type="radio" name="sel-8" />
+                      <label for="s1" class="__select__label">2020</label>
+                      <input id="s2" class="__select__input" type="radio" name="sel-8" />
+                      <label for="s2" class="__select__label">2019</label>
+                      <input id="s3" class="__select__input" type="radio" name="sel-8" />
+                      <label for="s3" class="__select__label">2018</label>
+                      <input id="s4" class="__select__input" type="radio" name="sel-8" />
+                      <label for="s4" class="__select__label">2017</label>
+                      <input id="s5" class="__select__input" type="radio" name="sel-8" />
+                      <label for="s5" class="__select__label">2016</label>
+                      <input id="s6" class="__select__input" type="radio" name="sel-8" />
+                      <label for="s6" class="__select__label">2015</label>
+                      <input id="s7" class="__select__input" type="radio" name="sel-8" />
+                      <label for="s7" class="__select__label">2014</label>
+                      <input id="s8" class="__select__input" type="radio" name="sel-8" />
+                      <label for="s8" class="__select__label">2013</label>
+                      <input id="s9" class="__select__input" type="radio" name="sel-8" />
+                      <label for="s9" class="__select__label">2012</label>
+                      <input id="s10" class="__select__input" type="radio" name="sel-8" />
+                      <label for="s10" class="__select__label">2011</label>
+                      <input id="s11" class="__select__input" type="radio" name="sel-8" />
+                      <label for="s11" class="__select__label">2010</label>
+                    </div>
                   </div>
-                  <div class="modal__printeform__row">
-                    <input type="checkbox" name="" id="selservis-7"
-                      class="modal__printeform__checkbox checkbox check-ser">
-                    <label for="selservis-7">Горячее в/с</label>
-                  </div>
-                  <div class="modal__printeform__row">
-                    <input type="checkbox" name="" id="selservis-8"
-                      class="modal__printeform__checkbox checkbox check-ser">
-                    <label for="selservis-8">ТКО</label>
+                </div>
+
+                <div class="modal__printeform__period-select">
+                  <div class="__select __select--full" data-state="">
+                    <div class="__select__title" data-default="2021">2021</div>
+                    <div class="__select__content">
+                      <input id="s0" class="__select__input" type="radio" name="sel-9" checked />
+                      <label for="s0" class="__select__label">2021</label>
+                      <input id="s1" class="__select__input" type="radio" name="sel-9" />
+                      <label for="s1" class="__select__label">2020</label>
+                      <input id="s2" class="__select__input" type="radio" name="sel-9" />
+                      <label for="s2" class="__select__label">2019</label>
+                      <input id="s3" class="__select__input" type="radio" name="sel-9" />
+                      <label for="s3" class="__select__label">2018</label>
+                      <input id="s4" class="__select__input" type="radio" name="sel-9" />
+                      <label for="s4" class="__select__label">2017</label>
+                      <input id="s5" class="__select__input" type="radio" name="sel-9" />
+                      <label for="s5" class="__select__label">2016</label>
+                      <input id="s6" class="__select__input" type="radio" name="sel-9" />
+                      <label for="s6" class="__select__label">2015</label>
+                      <input id="s7" class="__select__input" type="radio" name="sel-9" />
+                      <label for="s7" class="__select__label">2014</label>
+                      <input id="s8" class="__select__input" type="radio" name="sel-9" />
+                      <label for="s8" class="__select__label">2013</label>
+                      <input id="s9" class="__select__input" type="radio" name="sel-9" />
+                      <label for="s9" class="__select__label">2012</label>
+                      <input id="s10" class="__select__input" type="radio" name="sel-9" />
+                      <label for="s10" class="__select__label">2011</label>
+                      <input id="s11" class="__select__input" type="radio" name="sel-9" />
+                      <label for="s11" class="__select__label">2010</label>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="modal__printeform__right">
-              <div class="modal__printeform__title"> Период расчета</div>
-              <div class="modal__printeform__row">
-                <input type="checkbox" name="all" id="all"
-                  class="modal__printeform__checkbox checkbox for-entire-period">
-                <label for="all">За весь период</label>
-              </div>
-              <div class="modal__printeform__period">
-                <div class="modal__printeform__period-row">
-                  <div class="modal__printeform__period-select">
-                    <div class="__select __select--full" data-state="">
-                      <div class="__select__title" data-default="Январь">Январь</div>
-                      <div class="__select__content">
-                        <input id="s0" class="__select__input" type="radio" name="sel-6" checked />
-                        <label for="s0" class="__select__label">Январь</label>
-
-                        <input id="s1" class="__select__input" type="radio" name="sel-6" />
-                        <label for="s1" class="__select__label">Февраль</label>
-
-                        <input id="s2" class="__select__input" type="radio" name="sel-6" />
-                        <label for="s2" class="__select__label">Март</label>
-
-                        <input id="s3" class="__select__input" type="radio" name="sel-6" />
-                        <label for="s3" class="__select__label">Апрель</label>
-
-                        <input id="s4" class="__select__input" type="radio" name="sel-6" />
-                        <label for="s4" class="__select__label">Май</label>
-
-                        <input id="s5" class="__select__input" type="radio" name="sel-6" />
-                        <label for="s5" class="__select__label">Июнь</label>
-
-                        <input id="s6" class="__select__input" type="radio" name="sel-6" />
-                        <label for="s6" class="__select__label">Апрель</label>
-
-                        <input id="s7" class="__select__input" type="radio" name="sel-6" />
-                        <label for="s7" class="__select__label">Июль</label>
-
-                        <input id="s8" class="__select__input" type="radio" name="sel-6" />
-                        <label for="s8" class="__select__label">Август</label>
-
-                        <input id="s9" class="__select__input" type="radio" name="sel-6" />
-                        <label for="s9" class="__select__label">Сентябрь</label>
-
-                        <input id="s10" class="__select__input" type="radio" name="sel-6" />
-                        <label for="s10" class="__select__label">Октябрь</label>
-
-                        <input id="s11" class="__select__input" type="radio" name="sel-6" />
-                        <label for="s11" class="__select__label">Ноябрь</label>
-
-                        <input id="s12" class="__select__input" type="radio" name="sel-6" />
-                        <label for="s12" class="__select__label">Декабрь</label>
-
-                      </div>
-                    </div>
-                  </div>
-                  <span class="modal__printeform__period-span">По</span>
-                  <div class="modal__printeform__period-select">
-                    <div class="__select __select--full" data-state="">
-                      <div class="__select__title" data-default="Январь">Январь</div>
-                      <div class="__select__content">
-                        <input id="s0" class="__select__input" type="radio" name="sel-7" checked />
-                        <label for="s0" class="__select__label">Январь</label>
-                        <input id="s1" class="__select__input" type="radio" name="sel-7" />
-                        <label for="s1" class="__select__label">Февраль</label>
-                        <input id="s2" class="__select__input" type="radio" name="sel-7" />
-                        <label for="s2" class="__select__label">Март</label>
-                        <input id="s3" class="__select__input" type="radio" name="sel-7" />
-                        <label for="s3" class="__select__label">Апрель</label>
-                        <input id="s4" class="__select__input" type="radio" name="sel-7" />
-                        <label for="s4" class="__select__label">Май</label>
-                        <input id="s5" class="__select__input" type="radio" name="sel-7" />
-                        <label for="s5" class="__select__label">Июнь</label>
-                        <input id="s6" class="__select__input" type="radio" name="sel-7" />
-                        <label for="s6" class="__select__label">Апрель</label>
-                        <input id="s7" class="__select__input" type="radio" name="sel-7" />
-                        <label for="s7" class="__select__label">Июль</label>
-                        <input id="s8" class="__select__input" type="radio" name="sel-7" />
-                        <label for="s8" class="__select__label">Август</label>
-                        <input id="s9" class="__select__input" type="radio" name="sel-7" />
-                        <label for="s9" class="__select__label">Сентябрь</label>
-                        <input id="s10" class="__select__input" type="radio" name="sel-7" />
-                        <label for="s10" class="__select__label">Октябрь</label>
-                        <input id="s11" class="__select__input" type="radio" name="sel-7" />
-                        <label for="s11" class="__select__label">Ноябрь</label>
-                        <input id="s12" class="__select__input" type="radio" name="sel-7" />
-                        <label for="s12" class="__select__label">Декабрь</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal__printeform__period-row">
-                  <div class="modal__printeform__period-select">
-                    <div class="__select __select--full" data-state="">
-                      <div class="__select__title" data-default="2021">2021</div>
-                      <div class="__select__content">
-                        <input id="s0" class="__select__input" type="radio" name="sel-8" checked />
-                        <label for="s0" class="__select__label">2021</label>
-                        <input id="s1" class="__select__input" type="radio" name="sel-8" />
-                        <label for="s1" class="__select__label">2020</label>
-                        <input id="s2" class="__select__input" type="radio" name="sel-8" />
-                        <label for="s2" class="__select__label">2019</label>
-                        <input id="s3" class="__select__input" type="radio" name="sel-8" />
-                        <label for="s3" class="__select__label">2018</label>
-                        <input id="s4" class="__select__input" type="radio" name="sel-8" />
-                        <label for="s4" class="__select__label">2017</label>
-                        <input id="s5" class="__select__input" type="radio" name="sel-8" />
-                        <label for="s5" class="__select__label">2016</label>
-                        <input id="s6" class="__select__input" type="radio" name="sel-8" />
-                        <label for="s6" class="__select__label">2015</label>
-                        <input id="s7" class="__select__input" type="radio" name="sel-8" />
-                        <label for="s7" class="__select__label">2014</label>
-                        <input id="s8" class="__select__input" type="radio" name="sel-8" />
-                        <label for="s8" class="__select__label">2013</label>
-                        <input id="s9" class="__select__input" type="radio" name="sel-8" />
-                        <label for="s9" class="__select__label">2012</label>
-                        <input id="s10" class="__select__input" type="radio" name="sel-8" />
-                        <label for="s10" class="__select__label">2011</label>
-                        <input id="s11" class="__select__input" type="radio" name="sel-8" />
-                        <label for="s11" class="__select__label">2010</label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="modal__printeform__period-select">
-                    <div class="__select __select--full" data-state="">
-                      <div class="__select__title" data-default="2021">2021</div>
-                      <div class="__select__content">
-                        <input id="s0" class="__select__input" type="radio" name="sel-9" checked />
-                        <label for="s0" class="__select__label">2021</label>
-                        <input id="s1" class="__select__input" type="radio" name="sel-9" />
-                        <label for="s1" class="__select__label">2020</label>
-                        <input id="s2" class="__select__input" type="radio" name="sel-9" />
-                        <label for="s2" class="__select__label">2019</label>
-                        <input id="s3" class="__select__input" type="radio" name="sel-9" />
-                        <label for="s3" class="__select__label">2018</label>
-                        <input id="s4" class="__select__input" type="radio" name="sel-9" />
-                        <label for="s4" class="__select__label">2017</label>
-                        <input id="s5" class="__select__input" type="radio" name="sel-9" />
-                        <label for="s5" class="__select__label">2016</label>
-                        <input id="s6" class="__select__input" type="radio" name="sel-9" />
-                        <label for="s6" class="__select__label">2015</label>
-                        <input id="s7" class="__select__input" type="radio" name="sel-9" />
-                        <label for="s7" class="__select__label">2014</label>
-                        <input id="s8" class="__select__input" type="radio" name="sel-9" />
-                        <label for="s8" class="__select__label">2013</label>
-                        <input id="s9" class="__select__input" type="radio" name="sel-9" />
-                        <label for="s9" class="__select__label">2012</label>
-                        <input id="s10" class="__select__input" type="radio" name="sel-9" />
-                        <label for="s10" class="__select__label">2011</label>
-                        <input id="s11" class="__select__input" type="radio" name="sel-9" />
-                        <label for="s11" class="__select__label">2010</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
 
-              <div class="modal__printeform__send-print">
-                <span class="modal__printeform-send"> Подписать и отправить по ЭЦП</span>
-                <span class="modal__printeform-print">Формирование и печать</span>
-              </div>
-
+            <div class="modal__printeform__send-print modal__printeform__send-print-pre">
+              <span class="modal__printeform-print">печать</span>
             </div>
+
           </div>
         </div>
-
       </div>
+
     </div>
+  </div>
 
     <div class="modal modal-deb">
       <div class="modal__form">
