@@ -1,0 +1,3140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЮРОБОТ</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="libs/nouislider.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+
+  </head>
+
+  <body class="body">
+    <header class="header">
+      <div class="header__logo"><img src="img/logo.png" class="logo" alt=""></div>
+      <div class="header__info-block">
+        <div>
+          <span>132178469</span>
+          <span>Вынесено решение</span>
+        </div>
+        <div>
+          <span>16537</span>
+          <span>Подано в суд</span>
+        </div>
+        <div>
+          <span>73648</span>
+          <span>В работе</span>
+        </div>
+        <div>
+          <span>726487</span>
+          <span>Новый</span>
+        </div>
+        <div>
+          <span>3142536</span>
+          <span>Отозвано</span>
+        </div>
+      </div>
+      <div class="header__lk">
+        <div class="header-right">
+          <div class="header__email dropdown-email">
+            <button class="def-btn" onclick="renderPopup('#popup1')" type="button">
+              <div class="header__email-1"></div>
+            </button>
+
+            <div class="dropdown-email__content">
+              <div class="dropdown-email__item">
+                <div class="dropdown-email__item-left">
+                  <img src="img/Ellipse_8.png" alt="ellipse" />
+                </div>
+                <div class="dropdown-email__item-right">
+                  <div class="dropdown-email__item-heading">ЮРРОБОТ</div>
+                  <div class="dropdown-email__item-text">
+                    <p>Кузовенковой Л.Н. выставлен счет на оплату</p>
+                  </div>
+                  <div class="dropdown-email__item-date">
+                    <p class="dropdown-email__item-day">19.03.2021</p>
+                    <p class="dropdown-email__item-time">09:43</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown-email__item">
+                <div class="dropdown-email__item-left">
+                  <img src="img/Ellipse_8.png" alt="ellipse" />
+                </div>
+                <div class="dropdown-email__item-right">
+                  <div class="dropdown-email__item-heading">ЮРРОБОТ</div>
+                  <div class="dropdown-email__item-text">
+                    <p>Кузовенковой Л.Н. выставлен счет на оплату</p>
+                  </div>
+                  <div class="dropdown-email__item-date">
+                    <p class="dropdown-email__item-day">19.03.2021</p>
+                    <p class="dropdown-email__item-time">09:43</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="def-btn" onclick="renderPopup('#popup2')" type="button">
+            <div class="header__bell"></div>
+          </button>
+        </div>
+
+        <div class="header__user dropdown__user">
+          <div class="header__user-data header__my-info">
+            <img src="img/avatar.svg" class="header__avatar" alt="" />
+            <div class="header__name-summ">
+              <p class="header__name">МП ГПЩ "ДЕЗ ЖКХ"</p>
+              <p class="header__summ">50 300 ₽</p>
+            </div>
+            <button onclick="dropdownUser()" class="header__user-arrow"></button>
+          </div>
+
+          <div id="dropdown-user" class="dropdown__user-content">
+            <div class="chekbox">
+              <p class="dropdown__user-content--name">Тёмная тема</p>
+              <label class="switch" for="dark__theme">
+                <input id="dark__theme" type="checkbox">
+                <span class="slider round header__dark__theme-span"></span>
+              </label>
+            </div>
+            <div>
+              <button class="dropdown__user-btn" type="button">
+                Сменить пароль
+              </button>
+            </div>
+            <div>
+              <button class="dropdown__user-btn" type="button">Выход</button>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="header__exit"></a>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <span class="sidebar__button"></span>
+      <ul class="sidebar__menu">
+        <li><a class="sidebar__link" href="#"><span>Рабочий стол</span></a></li>
+        <li><a class="sidebar__link" href="#"><span>Организации</span></a></li>
+        <li><a class="sidebar__link" href="#"><span>Работа с должниками</span></a></li>
+        <li><a class="sidebar__link" href="#"><span>Обмен данными</span></a></li>
+        <li><a class="sidebar__link" href="#"><span>Панель управления</span></a></li>
+      </ul>
+      <div class="copyright">
+        © Юрробот 2017-2021
+        <span>Версия 1.4.2 (pre-release)</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="main__head">
+        <div class="main__message error">
+          Ошибка!<br>
+          Попробуйте снова
+        </div>
+        <ul class="main__download-tabs">
+          <li class="active">Досудебное производство</li>
+          <li>Судебное производство</li>
+          <li>Исполнительное производство</li>
+        </ul>
+        <div class="main__user-panel">
+          <div class="main__user-panel__left">
+            <div class="main__opt">
+              <ul>
+                <li><span class="main__opt__link printer tooltip"
+                    data-title="Уведомления"></span>
+                </li>
+                <li><span class="main__opt__link document tooltip link-modal" data-modal="print__modal" data-title="Свод начислений по ЛС"></span>
+                </li>
+                <li><span class="main__opt__link messages tooltip" data-title="Сообщения"></span>
+                </li>
+                <li><span class="main__opt__link voice_messages tooltip" data-title="Голосовые сообщения"></span>
+                </li>
+                <li><span class="main__opt__link court tooltip link-modal" data-modal="house__modal"
+                    data-title="Перевод в судебное производство"></span></li>
+              </ul>
+            </div>
+            <div class="main__opt">
+              <ul>
+                <li><span class="main__opt__link fillter tooltip link-modal" data-modal="d-sett"
+                    data-title="Настройки отображения"></span></li>
+                <li><span class="main__opt__link more tooltip link-modal" data-modal="keyboard-shortcuts"
+                    data-title="Горячие клавиши"></span></li>
+              </ul>
+            </div>
+            <div class="main__user-panel__setting">
+              <span class="main__user-panel__setting-link tooltip link-popup" data-title="Настройки"></span>
+
+              <div class="main__user-panel__setting-box modal-popup setttings__pre-proces">
+
+                  <div class="settings__modal__items">
+                    <div class="settings__modal__item">
+
+                        <div class="settings__modal__item__range settings__modal__subitem">
+                            <h3 class="settings__modal__item__range__title">
+                                Сумма для отправления SMS-уведомления должнику
+                            </h3>
+                            <input type="range" class="settings__modal__item__range__input" min="1000" max="100000" value="12000" id="sms_range">
+                            <span class="settings__modal__item__range__value sms_output">12000</span>
+                        </div>
+                        <div class="settings__modal__item__checkboxs settings__modal__subitem">
+                            <h3 class="settings__modal__item__range__title">
+                                Параметры SMS-уведомления
+                            </h3>
+                            <label>
+                                <input type="checkbox" class="settings__modal__item__checkboxs__selectAll settings__modal__item__checkboxs__checkbox">
+                                <span class="checkbox__fake"></span>
+                                Выбрать все
+                            </label>
+                            <div class="box">
+                                <label>
+                                    <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                    <span class="checkbox__fake"></span>
+                                    ФИО
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                    <span class="checkbox__fake"></span>
+                                    Адрес
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                    <span class="checkbox__fake"></span>
+                                    Задолженность
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                    <span class="checkbox__fake"></span>
+                                    Пени
+                                </label>
+                            </div>
+                        </div>
+                        <div class="settings__modal__subitem">
+                            <h3 class="settings__modal__item__range__title">
+                                Период рассылки*
+                            </h3>
+                            <div class="__select __select--full" data-state="">
+                              <div class="__select__title" data-default="Сколько раз в месяц">1 раз в месяц</div>
+                              <div class="__select__content">
+                                <input id="s0" class="__select__input" type="radio" name="sel-1" checked />
+                                <label for="s0" class="__select__label">2 раз в месяц</label>
+                                <input id="s1" class="__select__input" type="radio" name="sel-1" />
+                                <label for="s1" class="__select__label">1 раз в месяц</label>
+                                <input id="s2" class="__select__input" type="radio" name="sel-1" />
+                                <label for="s2" class="__select__label">2 раз в месяц</label>
+                                <input id="s3" class="__select__input" type="radio" name="sel-1" />
+                                <label for="s3" class="__select__label">3 раз в месяц</label>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="settings__modal__subitem">
+                            <h3 class="settings__modal__item__range__title">
+                                Время рассылки*
+                            </h3>
+                            <label class="settings__modal__subitem__time">
+                                <span>с</span> 
+                                <input type="text" name="" class="main__user-panel__search-box_input" placeholder="">
+                                <span>по</span>
+                                <input type="text" name="" class="main__user-panel__search-box_input" placeholder="">
+                            </label>
+                        </div>
+                        <div class="settings__modal__subitem">
+                            <h3 class="settings__modal__item__range__title">
+                                Выбор номера для уведомлений**
+                            </h3>
+                            <div class="__select __select--full" data-state="">
+                              <div class="__select__title" data-default="Номер">+74999565304</div>
+                              <div class="__select__content">
+                                <input id="s0" class="__select__input" type="radio" name="sel-1" checked />
+                                <label for="s0" class="__select__label">+74999565305</label>
+                                <input id="s1" class="__select__input" type="radio" name="sel-1" />
+                                <label for="s1" class="__select__label">+74999565306</label>
+                                <input id="s2" class="__select__input" type="radio" name="sel-1" />
+                                <label for="s2" class="__select__label">+74243653041</label>
+                                <input id="s3" class="__select__input" type="radio" name="sel-1" />
+                                <label for="s3" class="__select__label">+74321530422</label>
+                              </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="settings__modal__item">
+
+                      <div class="settings__modal__item__range settings__modal__subitem">
+                          <h3 class="settings__modal__item__range__title">
+                            Сумма для отправления голосового уведомления должнику
+                          </h3>
+                          <input type="range" class="settings__modal__item__range__input" min="1000" max="100000" value="12000" id="sms_range">
+                          <span class="settings__modal__item__range__value sms_output">12000</span>
+                      </div>
+                      <div class="settings__modal__item__checkboxs settings__modal__subitem">
+                          <h3 class="settings__modal__item__range__title">
+                            Параметры голосового уведомления
+                          </h3>
+                          <label>
+                              <input type="checkbox" class="settings__modal__item__checkboxs__selectAll settings__modal__item__checkboxs__checkbox">
+                              <span class="checkbox__fake"></span>
+                              Выбрать все
+                          </label>
+                          <div class="box">
+                              <label>
+                                  <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                  <span class="checkbox__fake"></span>
+                                  ФИО
+                              </label>
+                              <label>
+                                  <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                  <span class="checkbox__fake"></span>
+                                  Адрес
+                              </label>
+                              <label>
+                                  <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                  <span class="checkbox__fake"></span>
+                                  Задолженность
+                              </label>
+                              <label>
+                                  <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                  <span class="checkbox__fake"></span>
+                                  Пени
+                              </label>
+                          </div>
+                      </div>
+                      <div class="settings__modal__subitem">
+                          <h3 class="settings__modal__item__range__title">
+                              Период рассылки*
+                          </h3>
+                          <div class="__select __select--full" data-state="">
+                            <div class="__select__title" data-default="Сколько раз в месяц">1 раз в месяц</div>
+                            <div class="__select__content">
+                              <input id="s0" class="__select__input" type="radio" name="sel-1" checked />
+                              <label for="s0" class="__select__label">2 раз в месяц</label>
+                              <input id="s1" class="__select__input" type="radio" name="sel-1" />
+                              <label for="s1" class="__select__label">1 раз в месяц</label>
+                              <input id="s2" class="__select__input" type="radio" name="sel-1" />
+                              <label for="s2" class="__select__label">2 раз в месяц</label>
+                              <input id="s3" class="__select__input" type="radio" name="sel-1" />
+                              <label for="s3" class="__select__label">3 раз в месяц</label>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="settings__modal__subitem">
+                          <h3 class="settings__modal__item__range__title">
+                              Время рассылки*
+                          </h3>
+                          <label class="settings__modal__subitem__time">
+                              <span>с</span> 
+                              <input type="text" name="" class="main__user-panel__search-box_input" placeholder="">
+                              <span>по</span>
+                              <input type="text" name="" class="main__user-panel__search-box_input" placeholder="">
+                          </label>
+                      </div>
+                      <div class="settings__modal__subitem">
+                          <h3 class="settings__modal__item__range__title">
+                              Выбор номера для уведомлений**
+                          </h3>
+                          <div class="__select __select--full" data-state="">
+                            <div class="__select__title" data-default="Номер">+74999565304</div>
+                            <div class="__select__content">
+                              <input id="s0" class="__select__input" type="radio" name="sel-1" checked />
+                              <label for="s0" class="__select__label">+74999565305</label>
+                              <input id="s1" class="__select__input" type="radio" name="sel-1" />
+                              <label for="s1" class="__select__label">+74999565306</label>
+                              <input id="s2" class="__select__input" type="radio" name="sel-1" />
+                              <label for="s2" class="__select__label">+74243653041</label>
+                              <input id="s3" class="__select__input" type="radio" name="sel-1" />
+                              <label for="s3" class="__select__label">+74321530422</label>
+                            </div>
+                          </div>
+                      </div>
+
+                  </div>
+                    <div class="settings__modal__item">
+                        <div class="settings__modal__item__checkboxs settings__modal__subitem">
+                            <h3 class="settings__modal__item__range__title">
+                                Приоритетное уведомление
+                            </h3>
+                            <div class="box">
+                                <label>
+                                    <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                    <span class="checkbox__fake"></span>
+                                    SMS
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                    <span class="checkbox__fake"></span>
+                                    Голосовое
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                    <span class="checkbox__fake"></span>
+                                    E-mail
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                    <span class="checkbox__fake"></span>
+                                    Мессенджеры
+                                </label>
+                            </div>
+                        </div>
+                        <div class="settings__modal__subitem">
+                            <h3 class="settings__modal__item__range__title">
+                                Перевод в судебное производство по количеству месяцев просрочки
+                            </h3>
+                            <div class="settings__modal__subitem__box">
+                                <label>
+                                    <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                    <span class="checkbox__fake"></span>
+                                </label>
+                                <div class="__select __select--full" data-state="">
+                                  <div class="__select__title" data-default="Сколько раз в месяц">1 раз в месяц</div>
+                                  <div class="__select__content">
+                                    <input id="s0" class="__select__input" type="radio" name="sel-1" checked />
+                                    <label for="s0" class="__select__label">2 раз в месяц</label>
+                                    <input id="s1" class="__select__input" type="radio" name="sel-1" />
+                                    <label for="s1" class="__select__label">1 раз в месяц</label>
+                                    <input id="s2" class="__select__input" type="radio" name="sel-1" />
+                                    <label for="s2" class="__select__label">2 раз в месяц</label>
+                                    <input id="s3" class="__select__input" type="radio" name="sel-1" />
+                                    <label for="s3" class="__select__label">3 раз в месяц</label>
+                                  </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                        <div class="settings__modal__item__range settings__modal__subitem">
+                            <h3 class="settings__modal__item__range__title">
+                                Сумма для отправления голосового уведомления должнику
+                            </h3>
+                            <div class="sum">
+                                <div class="sum__box">
+                                    <span>от</span>
+                                    <span>Для физ. лиц</span>
+                                </div>
+                                <label>
+                                    <input type="checkbox" class="settings__modal__item__checkboxs__checkbox">
+                                    <span class="checkbox__fake"></span>
+                                    <input type="range" class="settings__modal__item__range__input" min="1000" max="100000" value="12000" id="voice_range">
+                                </label>
+                                <span class="settings__modal__item__range__value">12000</span>
+                            </div>
+                            <div class="sum sum_ur">
+                                <div class="sum__box">
+                                    <span>от</span>
+                                    <span>Для юр. лиц</span>
+                                </div>
+                                <label>
+                                    <input type="range" class="settings__modal__item__range__input" min="1000" max="100000" value="12000" id="voice_range">
+                                </label>
+                                <span class="settings__modal__item__range__value">12000</span>
+                            </div>
+                          
+                          
+                        </div>
+                    </div>
+                    <div class="settings__modal__item">
+                        <div class="settings__modal__subitem">
+                          <div class="__select __select--full" data-state="">
+                            <div class="__select__title" data-default="Да">Да</div>
+                            <div class="__select__content">
+                              <input id="s0" class="__select__input" type="radio" name="sel-1" checked />
+                              <label for="s0" class="__select__label">+74999565305</label>
+                              <input id="s1" class="__select__input" type="radio" name="sel-1" />
+                              <label for="s1" class="__select__label">Да</label>
+                              <input id="s2" class="__select__input" type="radio" name="sel-1" />
+                              <label for="s2" class="__select__label">Нет</label>
+                        
+                            </div>
+                          </div>
+                            <span> Отправка смс-увдомления, если номер занят/недоступен</span>
+                          
+                        </div>
+                        <div class="settings__modal__subitem">
+                          <div class="__select __select--full" data-state="">
+                            <div class="__select__title" data-default="Да">Да</div>
+                            <div class="__select__content">
+                              <input id="s0" class="__select__input" type="radio" name="sel-1" checked />
+                              <label for="s0" class="__select__label">+74999565305</label>
+                              <input id="s1" class="__select__input" type="radio" name="sel-1" />
+                              <label for="s1" class="__select__label">Да</label>
+                              <input id="s2" class="__select__input" type="radio" name="sel-1" />
+                              <label for="s2" class="__select__label">Нет</label>
+                        
+                            </div>
+                          </div>
+                            <span>Автоматическое формирование досубного требования</span>
+                          
+                        </div>
+                        <div class="settings__modal__subitem">
+                            <div class="sum__box">
+                                <span>от</span>
+                            </div>
+                            <label>
+                                <input type="range" class="settings__modal__item__range__input" min="1000" max="100000" value="12000" id="voice_range">
+                            </label>
+                            <span class="settings__modal__item__range__value">12000</span>
+                          
+                        </div>
+                        <div class="sum sum_ur">
+                            
+                        </div>
+                    </div>
+                  </div>
+                <div class="settings__modal__items">
+                    <div class="settings__modal__items__box">
+                        <span>*Кроме выходных и праздничных дней</span>
+                        <span>**Настройка номера происходит в <a href="#" target="_blank">“Интеграция”</a></span>
+                    </div>
+                    <div class="settings__modal__items__btns">
+                        <button class="btn__drop">Сбросить</button>
+                        <button class="btn__apply">Применить</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <span class="main__user-panel__edit-status link-modal" data-modal="modal-status"><i>Изменить
+                статус
+                выбранных должников</i></span>
+          </div>
+          <div class="main__user-panel__right">
+            <div class="main__user-panel__fx">
+              <span class="main__user-panel__span p-select">Выбрано <span class="m-select"></span> из
+                <span class="b-select"></span></span>
+              <span class="main__user-panel__span"> Показаны 6 из 6</span>
+            </div>
+            <a href="#" class="main__user-panel__search-link tooltip link-popup" data-title="Поиск"></a>
+            <div class="main__user-panel__search-box modal-popup">
+              <div class="main__user-panel__search-box__row">
+                <input type="text" name="" class="main__user-panel__search-box_input" placeholder="ФИО">
+              </div>
+              <div class="main__user-panel__search-box__row">
+                <input type="text" name="" class="main__user-panel__search-box_input" placeholder="Адрес">
+              </div>
+              <div class="main__user-panel__search-box__row">
+                <input type="text" name="" class="main__user-panel__search-box_input" placeholder="№ ЛС">
+              </div>
+              <div class="main__user-panel__search-box__row">
+              
+                  <div class="__select __select--full" data-state="">
+                    <div class="__select__title __select__title-pre" data-default="Статус">Статус</div>
+                    <div class="__select__content">
+                      <input id="s0" class="__select__input" type="radio" name="sel-1" checked />
+                      <label for="s0" class="__select__label">Новый</label>
+                      <input id="s1" class="__select__input" type="radio" name="sel-1" />
+                      <label for="s1" class="__select__label">Подано в суд</label>
+                      <input id="s2" class="__select__input" type="radio" name="sel-1" />
+                      <label for="s2" class="__select__label">Вынесено решение</label>
+                      <input id="s3" class="__select__input" type="radio" name="sel-1" />
+                      <label for="s3" class="__select__label">В работе</label>
+                    </div>
+                  </div>
+               
+    
+              </div>
+              <div class="main__user-panel__search-box__row">
+                <div class="main__user-panel__search-box__col">
+                  <div class="__select __select--full" data-state="">
+                    <div class="__select__title __select__title-pre" data-default="Номер приложения">Рейтинг от</div>
+                    <div class="__select__content">
+                      <input id="s0" class="__select__input" type="radio" name="sel-3" checked />
+                      <label for="s0" class="__select__label">Рейтинг от</label>
+                      <input id="s1" class="__select__input" type="radio" name="sel-3" />
+                      <label for="s1" class="__select__label">Рейтинг от</label>
+                      <input id="s2" class="__select__input" type="radio" name="sel-3" />
+                      <label for="s2" class="__select__label">Рейтинг от</label>
+                      <input id="s3" class="__select__input" type="radio" name="sel-3" />
+                      <label for="s3" class="__select__label">Рейтинг от</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__user-panel__search-box__col">
+                  <div class="__select __select--full" data-state="">
+                    <div class="__select__title __select__title-pre" data-default="Номер приложения">Рейтинг до</div>
+                    <div class="__select__content">
+                      <input id="s0" class="__select__input" type="radio" name="sel-4" checked />
+                      <label for="s0" class="__select__label">Рейтинг до</label>
+                      <input id="s1" class="__select__input" type="radio" name="sel-4" />
+                      <label for="s1" class="__select__label">Рейтинг до</label>
+                      <input id="s2" class="__select__input" type="radio" name="sel-4" />
+                      <label for="s2" class="__select__label">Рейтинг до</label>
+                      <input id="s3" class="__select__input" type="radio" name="sel-4" />
+                      <label for="s3" class="__select__label">Рейтинг до</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main__user-panel__search-box__row">
+                <div class="main__user-panel__search-box__col">
+                  <input type="text" name="" class="main__user-panel__search-box_input" placeholder="Сумма долга от">
+                </div>
+                <div class="main__user-panel__search-box__col">
+                  <input type="text" name="" class="main__user-panel__search-box_input" placeholder="Сумма долга до">
+                </div>
+              </div>
+              <div class="main__user-panel__search-box__row">
+              </div>
+              <div class="main__user-panel__search-box__row">
+                <button class="main__user-panel__search-box_button">Сбросить</button>
+                <input type="submit" value="Поиск" class="main__user-panel__search-box_submit">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main__tabs">
+        <div class="main__wrapper scroll-hidden tabs-head">
+          <div class="main__tabs__head">
+            <div class="main__tabs__tr">
+              <div class="main__tabs__th th-td-status select-all__label">Выделить все</div>
+              <div class="main__tabs__th th-td-check">
+                <input type="checkbox" name="" id="select-all" class="main__tabs__checkbox-all checkbox">
+                <label for="select-all"></label>
+              </div>
+              <div class="main__tabs__th th-ls col">№ ЛС</div>
+              <div class="main__tabs__th">ФИО</div>
+              <div class="main__tabs__th col">Адрес</div>
+              <div class="main__tabs__th td-pirce"><span class="main__tabs__sort">Начислено</span></div>
+              <div class="main__tabs__th td-pirce col"><span class="main__tabs__sort">Оплачено</span>
+              </div>
+              <div class="main__tabs__th td-pirce"><span class="main__tabs__sort">Задолженность</span>
+              </div>
+              <div class="main__tabs__th td-pirce"><span class="main__tabs__sort">Пеня</span></div>
+              <div class="main__tabs__th td-pirce"><span class="main__tabs__sort">Общий долг</span></div>
+              <div class="main__tabs__th td-pirce"><span class="main__tabs__sort">Пошлина</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="main__wrapper center">
+          <div class="main__tabs__body">
+            <div class="main__tabs__tr item-debtor">
+              <div class="main__tabs__td th-td-status">
+                <span class="main__tabs__status blue link-modal" data-modal="modal-status">
+                  <span>
+                    <i>Новый</i>
+                  </span>
+                </span>
+              </div>
+              <div class="main__tabs__td th-td-check">
+                <input type="checkbox" name="" id="select-1" class="main__tabs__checkbox checkbox">
+                <label for="select-1"></label>
+              </div>
+              <div class="main__tabs__ts link-modal" data-modal="modal-deb">
+                <div class="main__tabs__td td-ls">
+                  <div class="main__tabs__ls">
+                    <div class="main__tabs__lt">
+                      <span class="main__tabs__nomber"> 3130116961</span>
+                      <span class="main__tabs__rating"></span>
+                    </div>
+                    <div class="main__tabs__doc-img">
+                      <span class="main__tabs__doc-icon done tooltip" data-title="Документ готов к подаче"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__name">Иванов Иван Иванович</div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__adress">г Москва,проезд Студёный, д 12 кв. 82</div>
+                </div>
+                <div class="main__tabs__td td-pirce">30 873.72 ₽</div>
+                <div class="main__tabs__td td-pirce">0.00 ₽</div>
+                <div class="main__tabs__td td-pirce">26 545.97 ₽</div>
+                <div class="main__tabs__td td-pirce">14 182.66 ₽</div>
+                <div class="main__tabs__td td-pirce">12 325.33 ₽</div>
+                <div class="main__tabs__td td-pirce">710.93 ₽</div>
+              </div>
+            </div>
+            <div class="main__tabs__tr item-debtor">
+              <div class="main__tabs__td th-td-status">
+                <span class="main__tabs__status green link-modal" data-modal="modal-status">
+                  <span>
+                    <i>Готов</i>
+                  </span>
+                </span>
+              </div>
+              <div class="main__tabs__td th-td-check">
+                <input type="checkbox" name="" id="select-11" class="main__tabs__checkbox checkbox">
+                <label for="select-11"></label>
+              </div>
+              <div class="main__tabs__ts link-modal" data-modal="modal-deb">
+                <div class="main__tabs__td td-ls">
+                  <div class="main__tabs__ls">
+                    <div class="main__tabs__lt">
+                      <span class="main__tabs__nomber"> 3130116961</span>
+                      <span class="main__tabs__rating"></span>
+                    </div>
+                    <div class="main__tabs__doc-img">
+                      <span class="main__tabs__doc-icon message__tool tooltip" data-title="Почта доставлена получателю"></span>
+                      <span class="main__tabs__doc-icon message__tool-blue tooltip" data-title="Почта доставлена получателю"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__name">Иванов Иван Иванович</div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__adress">г Москва,проезд Студёный, д 12 кв. 82</div>
+                </div>
+                <div class="main__tabs__td td-pirce">30 873.72 ₽</div>
+                <div class="main__tabs__td td-pirce">0.00 ₽</div>
+                <div class="main__tabs__td td-pirce">26 545.97 ₽</div>
+                <div class="main__tabs__td td-pirce">14 182.66 ₽</div>
+                <div class="main__tabs__td td-pirce">12 325.33 ₽</div>
+                <div class="main__tabs__td td-pirce">710.93 ₽</div>
+              </div>
+            </div>
+            <div class="main__tabs__tr item-debtor">
+              <div class="main__tabs__td th-td-status">
+                <span class="main__tabs__status grey link-modal" data-modal="modal-status">
+                  <span>
+                    <i>В работе</i>
+                  </span>
+                </span>
+              </div>
+              <div class="main__tabs__td th-td-check">
+                <input type="checkbox" name="" id="select-12" class="main__tabs__checkbox checkbox">
+                <label for="select-12"></label>
+              </div>
+              <div class="main__tabs__ts link-modal" data-modal="modal-deb">
+                <div class="main__tabs__td td-ls">
+                  <div class="main__tabs__ls">
+                    <div class="main__tabs__lt">
+                      <span class="main__tabs__nomber"> 3130116961</span>
+                      <span class="main__tabs__rating"></span>
+                    </div>
+                    <div class="main__tabs__doc-img">
+                      <span class="main__tabs__doc-icon done tooltip" data-title="Документ готов к подаче"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__name">Иванов Иван Иванович</div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__adress">г Москва,проезд Студёный, д 12 кв. 82</div>
+                </div>
+                <div class="main__tabs__td td-pirce">30 873.72 ₽</div>
+                <div class="main__tabs__td td-pirce">0.00 ₽</div>
+                <div class="main__tabs__td td-pirce">26 545.97 ₽</div>
+                <div class="main__tabs__td td-pirce">14 182.66 ₽</div>
+                <div class="main__tabs__td td-pirce">12 325.33 ₽</div>
+                <div class="main__tabs__td td-pirce">710.93 ₽</div>
+              </div>
+            </div>
+            <div class="main__tabs__tr item-debtor">
+              <div class="main__tabs__td th-td-status">
+                <span class="main__tabs__status purple link-modal" data-modal="modal-status">
+                  <span>
+                    <i>Погашено</i>
+                  </span>
+                </span>
+              </div>
+              <div class="main__tabs__td th-td-check">
+                <input type="checkbox" name="" id="select-13" class="main__tabs__checkbox checkbox">
+                <label for="select-13"></label>
+              </div>
+              <div class="main__tabs__ts link-modal" data-modal="modal-deb">
+                <div class="main__tabs__td td-ls">
+                  <div class="main__tabs__ls">
+                    <div class="main__tabs__lt">
+                      <span class="main__tabs__nomber"> 3130116961</span>
+                      <span class="main__tabs__rating"></span>
+                    </div>
+                    <div class="main__tabs__doc-img">
+                      <span class="main__tabs__doc-icon paid tooltip" data-title="Голосовое уведомление доставлено"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__name">Иванов Иван Иванович</div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__adress">г Москва,проезд Студёный, д 12 кв. 82</div>
+                </div>
+                <div class="main__tabs__td td-pirce">30 873.72 ₽</div>
+                <div class="main__tabs__td td-pirce">0.00 ₽</div>
+                <div class="main__tabs__td td-pirce">26 545.97 ₽</div>
+                <div class="main__tabs__td td-pirce">14 182.66 ₽</div>
+                <div class="main__tabs__td td-pirce">12 325.33 ₽</div>
+                <div class="main__tabs__td td-pirce">710.93 ₽</div>
+              </div>
+            </div>
+            <div class="main__tabs__tr item-debtor">
+              <div class="main__tabs__td th-td-status">
+                <span class="main__tabs__status biruza link-modal" data-modal="modal-status">
+                  <span>
+                    <i>Выгружено</i>
+                  </span>
+                </span>
+              </div>
+              <div class="main__tabs__td th-td-check">
+                <input type="checkbox" name="" id="select-14" class="main__tabs__checkbox checkbox">
+                <label for="select-14"></label>
+              </div>
+              <div class="main__tabs__ts link-modal" data-modal="modal-deb">
+                <div class="main__tabs__td td-ls">
+                  <div class="main__tabs__ls">
+                    <div class="main__tabs__lt">
+                      <span class="main__tabs__nomber"> 3130116961</span>
+                      <span class="main__tabs__rating"></span>
+                    </div>
+                    <div class="main__tabs__doc-img">
+                      <span class="main__tabs__doc-icon reedmead tooltip" data-title="Уведомление доставлено через мессенджер"></span>
+                      <span class="main__tabs__doc-icon reedmead__blue tooltip" data-title="Уведомление доставлено через мессенджер"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__name">Иванов Иван Иванович</div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__adress">г Москва,проезд Студёный, д 12 кв. 82</div>
+                </div>
+                <div class="main__tabs__td td-pirce">30 873.72 ₽</div>
+                <div class="main__tabs__td td-pirce">0.00 ₽</div>
+                <div class="main__tabs__td td-pirce">26 545.97 ₽</div>
+                <div class="main__tabs__td td-pirce">14 182.66 ₽</div>
+                <div class="main__tabs__td td-pirce">12 325.33 ₽</div>
+                <div class="main__tabs__td td-pirce">710.93 ₽</div>
+              </div>
+            </div>
+            <div class="main__tabs__tr item-debtor">
+              <div class="main__tabs__td th-td-status">
+                <span class="main__tabs__status blue link-modal" data-modal="modal-status">
+                  <span>
+                    <i>Новый</i>
+                  </span>
+                </span>
+              </div>
+              <div class="main__tabs__td th-td-check">
+                <input type="checkbox" name="" id="select-15" class="main__tabs__checkbox checkbox">
+                <label for="select-15"></label>
+              </div>
+              <div class="main__tabs__ts link-modal" data-modal="modal-deb">
+                <div class="main__tabs__td td-ls">
+                  <div class="main__tabs__ls">
+                    <div class="main__tabs__lt">
+                      <span class="main__tabs__nomber"> 3130116961</span>
+                      <span class="main__tabs__rating"></span>
+                    </div>
+                    <div class="main__tabs__doc-img">
+                      <span class="main__tabs__doc-icon done tooltip" data-title="Документ готов к подаче"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__name">Иванов Иван Иванович</div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__adress">г Москва,проезд Студёный, д 12 кв. 82</div>
+                </div>
+                <div class="main__tabs__td td-pirce">30 873.72 ₽</div>
+                <div class="main__tabs__td td-pirce">0.00 ₽</div>
+                <div class="main__tabs__td td-pirce">26 545.97 ₽</div>
+                <div class="main__tabs__td td-pirce">14 182.66 ₽</div>
+                <div class="main__tabs__td td-pirce">12 325.33 ₽</div>
+                <div class="main__tabs__td td-pirce">710.93 ₽</div>
+              </div>
+            </div>
+            <div class="main__tabs__tr item-debtor">
+              <div class="main__tabs__td th-td-status">
+                <span class="main__tabs__status green link-modal" data-modal="modal-status">
+                  <span>
+                    <i>Готов</i>
+                  </span>
+                </span>
+              </div>
+              <div class="main__tabs__td th-td-check">
+                <input type="checkbox" name="" id="select-16" class="main__tabs__checkbox checkbox">
+                <label for="select-16"></label>
+              </div>
+              <div class="main__tabs__ts link-modal" data-modal="modal-deb">
+                <div class="main__tabs__td td-ls">
+                  <div class="main__tabs__ls">
+                    <div class="main__tabs__lt">
+                      <span class="main__tabs__nomber"> 3130116961</span>
+                      <span class="main__tabs__rating"></span>
+                    </div>
+                    <div class="main__tabs__doc-img">
+                      <span class="main__tabs__doc-icon message__tool tooltip" data-title="Почта доставлена получателю"></span>
+                      <span class="main__tabs__doc-icon message__tool-blue tooltip" data-title="Почта доставлена получателю"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__name">Иванов Иван Иванович</div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__adress">г Москва,проезд Студёный, д 12 кв. 82</div>
+                </div>
+                <div class="main__tabs__td td-pirce">30 873.72 ₽</div>
+                <div class="main__tabs__td td-pirce">0.00 ₽</div>
+                <div class="main__tabs__td td-pirce">26 545.97 ₽</div>
+                <div class="main__tabs__td td-pirce">14 182.66 ₽</div>
+                <div class="main__tabs__td td-pirce">12 325.33 ₽</div>
+                <div class="main__tabs__td td-pirce">710.93 ₽</div>
+              </div>
+            </div>
+            <div class="main__tabs__tr item-debtor">
+              <div class="main__tabs__td th-td-status">
+                <span class="main__tabs__status grey link-modal" data-modal="modal-status">
+                  <span>
+                    <i>В работе</i>
+                  </span>
+                </span>
+              </div>
+              <div class="main__tabs__td th-td-check">
+                <input type="checkbox" name="" id="select-17" class="main__tabs__checkbox checkbox">
+                <label for="select-17"></label>
+              </div>
+              <div class="main__tabs__ts link-modal" data-modal="modal-deb">
+                <div class="main__tabs__td td-ls">
+                  <div class="main__tabs__ls">
+                    <div class="main__tabs__lt">
+                      <span class="main__tabs__nomber"> 3130116961</span>
+                      <span class="main__tabs__rating"></span>
+                    </div>
+                    <div class="main__tabs__doc-img">
+                      <span class="main__tabs__doc-icon done tooltip" data-title="Документ готов к подаче"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__name">Иванов Иван Иванович</div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__adress">г Москва,проезд Студёный, д 12 кв. 82</div>
+                </div>
+                <div class="main__tabs__td td-pirce">30 873.72 ₽</div>
+                <div class="main__tabs__td td-pirce">0.00 ₽</div>
+                <div class="main__tabs__td td-pirce">26 545.97 ₽</div>
+                <div class="main__tabs__td td-pirce">14 182.66 ₽</div>
+                <div class="main__tabs__td td-pirce">12 325.33 ₽</div>
+                <div class="main__tabs__td td-pirce">710.93 ₽</div>
+              </div>
+            </div>
+            <div class="main__tabs__tr item-debtor">
+              <div class="main__tabs__td th-td-status">
+                <span class="main__tabs__status purple link-modal" data-modal="modal-status">
+                  <span>
+                    <i>Погашено</i>
+                  </span>
+                </span>
+              </div>
+              <div class="main__tabs__td th-td-check">
+                <input type="checkbox" name="" id="select-18" class="main__tabs__checkbox checkbox">
+                <label for="select-18"></label>
+              </div>
+              <div class="main__tabs__ts link-modal" data-modal="modal-deb">
+                <div class="main__tabs__td td-ls">
+                  <div class="main__tabs__ls">
+                    <div class="main__tabs__lt">
+                      <span class="main__tabs__nomber"> 3130116961</span>
+                      <span class="main__tabs__rating"></span>
+                    </div>
+                    <div class="main__tabs__doc-img">
+                      <span class="main__tabs__doc-icon paid tooltip" data-title="Голосовое уведомление доставлено"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__name">Иванов Иван Иванович</div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__adress">г Москва,проезд Студёный, д 12 кв. 82</div>
+                </div>
+                <div class="main__tabs__td td-pirce">30 873.72 ₽</div>
+                <div class="main__tabs__td td-pirce">0.00 ₽</div>
+                <div class="main__tabs__td td-pirce">26 545.97 ₽</div>
+                <div class="main__tabs__td td-pirce">14 182.66 ₽</div>
+                <div class="main__tabs__td td-pirce">12 325.33 ₽</div>
+                <div class="main__tabs__td td-pirce">710.93 ₽</div>
+              </div>
+            </div>
+            <div class="main__tabs__tr item-debtor">
+              <div class="main__tabs__td th-td-status">
+                <span class="main__tabs__status biruza link-modal" data-modal="modal-status">
+                  <span>
+                    <i>Выгружено</i>
+                  </span>
+                </span>
+              </div>
+              <div class="main__tabs__td th-td-check">
+                <input type="checkbox" name="" id="select-19" class="main__tabs__checkbox checkbox">
+                <label for="select-19"></label>
+              </div>
+              <div class="main__tabs__ts link-modal" data-modal="modal-deb">
+                <div class="main__tabs__td td-ls">
+                  <div class="main__tabs__ls">
+                    <div class="main__tabs__lt">
+                      <span class="main__tabs__nomber"> 3130116961</span>
+                      <span class="main__tabs__rating"></span>
+                    </div>
+                    <div class="main__tabs__doc-img">
+                      <span class="main__tabs__doc-icon reedmead tooltip" data-title="Уведомление доставлено через мессенджер"></span>
+                      <span class="main__tabs__doc-icon reedmead__blue tooltip" data-title="Уведомление доставлено через мессенджер"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__name">Иванов Иван Иванович</div>
+                </div>
+                <div class="main__tabs__td">
+                  <div class="main__tabs__adress">г Москва,проезд Студёный, д 12 кв. 82</div>
+                </div>
+                <div class="main__tabs__td td-pirce">30 873.72 ₽</div>
+                <div class="main__tabs__td td-pirce">0.00 ₽</div>
+                <div class="main__tabs__td td-pirce">26 545.97 ₽</div>
+                <div class="main__tabs__td td-pirce">14 182.66 ₽</div>
+                <div class="main__tabs__td td-pirce">12 325.33 ₽</div>
+                <div class="main__tabs__td td-pirce">710.93 ₽</div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+        <ul class="main__tabs-dott">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div class="main__wrapper scroll-hidden tabs-foot">
+          <div class="main__tabs_foot">
+            <div class="main__tabs__tr">
+              <div class="main__tabs__td th-td-status"></div>
+              <div class="main__tabs__td th-td-check"></div>
+              <div class="main__tabs__td  th-ls">ИТОГО:</div>
+              <div class="main__tabs__td"></div>
+              <div class="main__tabs__td"></div>
+              <div class="main__tabs__td">30 873.72 ₽</div>
+              <div class="main__tabs__td">0.00 ₽</div>
+              <div class="main__tabs__td">26 545.97 ₽</div>
+              <div class="main__tabs__td">14 182.66 ₽</div>
+              <div class="main__tabs__td">28 987.33 ₽</div>
+              <div class="main__tabs__td">710.93 ₽</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="main__pagination">
+        <li class="start"></li>
+        <li class="prev"></li>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li class="next"></li>
+        <li class="end"></li>
+      </ul>
+    </main>
+    <div class="modal modal-status">
+      <div class="modal__form">
+        <span class="modal__close"></span>
+        <div class="modal__head">
+          <div class="modal__head-title">Статус работы с должником</div>
+        </div>
+        <div class="modal__body">
+          <div class="modal__row">
+            <div class="__select __select--full" data-state="">
+              <div class="__select__title" data-default="Новый">Новый</div>
+              <div class="__select__content">
+                <input id="s0" class="__select__input" type="radio" name="sel-19" checked />
+                <label for="s0" class="__select__label">Новый</label>
+                <input id="s1" class="__select__input" type="radio" name="sel-19" />
+                <label for="s1" class="__select__label">Новый</label>
+                <input id="s2" class="__select__input" type="radio" name="sel-19" />
+                <label for="s2" class="__select__label">Новый</label>
+                <input id="s3" class="__select__input" type="radio" name="sel-19" />
+              </div>
+            </div>
+          </div>
+          <div class="modal__row">
+            <div class="__select __select--full" data-state="">
+              <div class="__select__title" data-default="Принято к производству">Принято к производству
+              </div>
+              <div class="__select__content">
+                <input id="s0" class="__select__input" type="radio" name="sel-20" checked />
+                <label for="s0" class="__select__label">Принято к производству</label>
+                <input id="s1" class="__select__input" type="radio" name="sel-20" />
+                <label for="s1" class="__select__label">Принято к производству</label>
+                <input id="s2" class="__select__input" type="radio" name="sel-20" />
+                <label for="s2" class="__select__label">Принято к производству</label>
+                <input id="s3" class="__select__input" type="radio" name="sel-20" />
+              </div>
+            </div>
+          </div>
+          <div class="modal__row">
+            <div class="modal__label"> № дела</div>
+            <input type="text" value="0000003" class="input">
+          </div>
+          <div class="modal__row">
+            <div class="modal__label"> Дата регистрации</div>
+            <input type="text" value="01.01.2021" class="input">
+          </div>
+        </div>
+        <div class="modal__foot">
+          <div class="modal__row">
+            <button class="modal__foot-button">Применить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sms__start window__start sms__good">
+      <h3 class="window__start__title">
+        Отправка SMS выбранным должникам успешно завершена
+      </h3>
+    </div>
+    <div class="voice__start window__start voice__good">
+     <h3 class="window__start__title">
+      Отправка голосовых уведомлений выбранным должникам успешно завершена
+     </h3>
+    </div>
+
+
+    <div class="modal print__modal">
+      <div class="modal__form">
+        <span class="modal__close"></span>
+        <div class="print__modal__item">
+          <h3 class="print__modal__item__title">Сформировать досудебное требование</h3>
+          
+          <a href="#" class="print__modal__item__btn">
+              Просмотр и печать
+              <img src="img/eye.png" alt="eye">
+              <img src="img/eye__white.png" alt="eye" class="eye__white">
+          </a>
+      </div>
+      </div>
+     
+    </div>
+    <div class="modal house__modal">
+      <div class="modal__form">
+        <span class="modal__close"></span>
+        <div class="modal__body">
+          <h3 class="house__modal__title">Первод должников в раздел “Судебное производство”</h3>
+          <h4 class="house__modal__subtitle">Перевести выбранных должников в раздел “Судебное производство”?</h4>
+          <div class="house__modal__btns">
+              <a href="#" class="btn__drop">Отмена</a>
+              <a href="#" class="btn__apply">Перевести</a>
+              
+          </div>
+        </div>
+      </div>
+   </div>
+
+    <div class="modal modal-print">
+      <div class="modal__form">
+        <span class="modal__close"></span>
+        <div class="modal__head">
+          <div class="modal__head-title">Работа с печатной формой</div>
+        </div>
+        <div class="modal__body">
+          <div class="modal__printeform">
+            <div class="modal__printeform__left">
+              <div class="modal__printeform__title"> Список документов в приложении</div>
+
+              <ul class="modal__printeform__printsett">
+                <li><span></span></li>
+                <li><span></span></li>
+                <li>Настройка печати</li>
+              </ul>
+              <div class="modal__printeform__row">
+                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-1" />
+                <label for="toggle-1">1. Устав</label>
+              </div>
+              <div class="modal__printeform__row">
+                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-2" />
+                <label for="toggle-2">2. Свидетельство о гос. регистрации</label>
+              </div>
+              <div class="modal__printeform__row">
+                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-3" />
+                <label for="toggle-3">4. ЕГРЮЛ</label>
+              </div>
+              <div class="modal__printeform__row">
+                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-4" />
+                <label for="toggle-4">5. Представитель по доверенности</label>
+              </div>
+              <div class="modal__printeform__row">
+                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-5" />
+                <label for="toggle-5">3. Протокол</label>
+              </div>
+              <div class="modal__printeform__row">
+                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-6" />
+                <label for="toggle-6">6. Выписка из паспортного стола</label>
+              </div>
+              <div class="modal__printeform__row">
+                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-7" />
+                <label for="toggle-7">7. Выписка из ЕГРН</label>
+              </div>
+              <div class="modal__printeform__row">
+                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-8" />
+                <label for="toggle-8">8. ПП об оплате госпошлины</label>
+              </div>
+              <div class="modal__printeform__row">
+                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-9" />
+                <label for="toggle-9">9. История начислений за период</label>
+              </div>
+              <div class="modal__printeform__row">
+                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-10" />
+                <label for="toggle-10">10. Расчет пени за коммунальные услуги</label>
+              </div>
+              <div class="modal__printeform__row">
+                <input type="checkbox" class="modal__printeform__checkbox toggle" id="toggle-11" />
+                <label for="toggle-11">11. Выписка о переходе прав из ЕГРН</label>
+              </div>
+
+
+              <div class="modal__printeform__selservis">
+                <div class="modal__printeform__selservis-title">Выбор услуги</div>
+                <div class="modal__printeform__col">
+                  <div class="modal__printeform__row">
+                    <input type="checkbox" name="" id="selservis-1"
+                      class="modal__printeform__checkbox checkbox check-ser">
+                    <label for="selservis-1">Электроснабжение</label>
+                  </div>
+                  <div class="modal__printeform__row">
+                    <input type="checkbox" name="" id="selservis-2"
+                      class="modal__printeform__checkbox checkbox check-ser">
+                    <label for="selservis-2">Газоснабжение</label>
+                  </div>
+                  <div class="modal__printeform__row">
+                    <input type="checkbox" name="" id="selservis-3"
+                      class="modal__printeform__checkbox checkbox check-ser">
+                    <label for="selservis-3">Холодное в/с</label>
+                  </div>
+                  <div class="modal__printeform__row">
+                    <input type="checkbox" name="" id="selservis-4"
+                      class="modal__printeform__checkbox checkbox check-ser">
+                    <label for="selservis-4">Содержание ж/ф</label>
+                  </div>
+                </div>
+                <div class="modal__printeform__col">
+                  <div class="modal__printeform__row">
+                    <input type="checkbox" name="" id="selservis-5"
+                      class="modal__printeform__checkbox checkbox check-ser">
+                    <label for="selservis-5">Водоотведение</label>
+                  </div>
+                  <div class="modal__printeform__row">
+                    <input type="checkbox" name="" id="selservis-6"
+                      class="modal__printeform__checkbox checkbox check-ser">
+                    <label for="selservis-6">Отопление</label>
+                  </div>
+                  <div class="modal__printeform__row">
+                    <input type="checkbox" name="" id="selservis-7"
+                      class="modal__printeform__checkbox checkbox check-ser">
+                    <label for="selservis-7">Горячее в/с</label>
+                  </div>
+                  <div class="modal__printeform__row">
+                    <input type="checkbox" name="" id="selservis-8"
+                      class="modal__printeform__checkbox checkbox check-ser">
+                    <label for="selservis-8">ТКО</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal__printeform__right">
+              <div class="modal__printeform__title"> Период расчета</div>
+              <div class="modal__printeform__row">
+                <input type="checkbox" name="all" id="all"
+                  class="modal__printeform__checkbox checkbox for-entire-period">
+                <label for="all">За весь период</label>
+              </div>
+              <div class="modal__printeform__period">
+                <div class="modal__printeform__period-row">
+                  <div class="modal__printeform__period-select">
+                    <div class="__select __select--full" data-state="">
+                      <div class="__select__title" data-default="Январь">Январь</div>
+                      <div class="__select__content">
+                        <input id="s0" class="__select__input" type="radio" name="sel-6" checked />
+                        <label for="s0" class="__select__label">Январь</label>
+
+                        <input id="s1" class="__select__input" type="radio" name="sel-6" />
+                        <label for="s1" class="__select__label">Февраль</label>
+
+                        <input id="s2" class="__select__input" type="radio" name="sel-6" />
+                        <label for="s2" class="__select__label">Март</label>
+
+                        <input id="s3" class="__select__input" type="radio" name="sel-6" />
+                        <label for="s3" class="__select__label">Апрель</label>
+
+                        <input id="s4" class="__select__input" type="radio" name="sel-6" />
+                        <label for="s4" class="__select__label">Май</label>
+
+                        <input id="s5" class="__select__input" type="radio" name="sel-6" />
+                        <label for="s5" class="__select__label">Июнь</label>
+
+                        <input id="s6" class="__select__input" type="radio" name="sel-6" />
+                        <label for="s6" class="__select__label">Апрель</label>
+
+                        <input id="s7" class="__select__input" type="radio" name="sel-6" />
+                        <label for="s7" class="__select__label">Июль</label>
+
+                        <input id="s8" class="__select__input" type="radio" name="sel-6" />
+                        <label for="s8" class="__select__label">Август</label>
+
+                        <input id="s9" class="__select__input" type="radio" name="sel-6" />
+                        <label for="s9" class="__select__label">Сентябрь</label>
+
+                        <input id="s10" class="__select__input" type="radio" name="sel-6" />
+                        <label for="s10" class="__select__label">Октябрь</label>
+
+                        <input id="s11" class="__select__input" type="radio" name="sel-6" />
+                        <label for="s11" class="__select__label">Ноябрь</label>
+
+                        <input id="s12" class="__select__input" type="radio" name="sel-6" />
+                        <label for="s12" class="__select__label">Декабрь</label>
+
+                      </div>
+                    </div>
+                  </div>
+                  <span class="modal__printeform__period-span">По</span>
+                  <div class="modal__printeform__period-select">
+                    <div class="__select __select--full" data-state="">
+                      <div class="__select__title" data-default="Январь">Январь</div>
+                      <div class="__select__content">
+                        <input id="s0" class="__select__input" type="radio" name="sel-7" checked />
+                        <label for="s0" class="__select__label">Январь</label>
+                        <input id="s1" class="__select__input" type="radio" name="sel-7" />
+                        <label for="s1" class="__select__label">Февраль</label>
+                        <input id="s2" class="__select__input" type="radio" name="sel-7" />
+                        <label for="s2" class="__select__label">Март</label>
+                        <input id="s3" class="__select__input" type="radio" name="sel-7" />
+                        <label for="s3" class="__select__label">Апрель</label>
+                        <input id="s4" class="__select__input" type="radio" name="sel-7" />
+                        <label for="s4" class="__select__label">Май</label>
+                        <input id="s5" class="__select__input" type="radio" name="sel-7" />
+                        <label for="s5" class="__select__label">Июнь</label>
+                        <input id="s6" class="__select__input" type="radio" name="sel-7" />
+                        <label for="s6" class="__select__label">Апрель</label>
+                        <input id="s7" class="__select__input" type="radio" name="sel-7" />
+                        <label for="s7" class="__select__label">Июль</label>
+                        <input id="s8" class="__select__input" type="radio" name="sel-7" />
+                        <label for="s8" class="__select__label">Август</label>
+                        <input id="s9" class="__select__input" type="radio" name="sel-7" />
+                        <label for="s9" class="__select__label">Сентябрь</label>
+                        <input id="s10" class="__select__input" type="radio" name="sel-7" />
+                        <label for="s10" class="__select__label">Октябрь</label>
+                        <input id="s11" class="__select__input" type="radio" name="sel-7" />
+                        <label for="s11" class="__select__label">Ноябрь</label>
+                        <input id="s12" class="__select__input" type="radio" name="sel-7" />
+                        <label for="s12" class="__select__label">Декабрь</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal__printeform__period-row">
+                  <div class="modal__printeform__period-select">
+                    <div class="__select __select--full" data-state="">
+                      <div class="__select__title" data-default="2021">2021</div>
+                      <div class="__select__content">
+                        <input id="s0" class="__select__input" type="radio" name="sel-8" checked />
+                        <label for="s0" class="__select__label">2021</label>
+                        <input id="s1" class="__select__input" type="radio" name="sel-8" />
+                        <label for="s1" class="__select__label">2020</label>
+                        <input id="s2" class="__select__input" type="radio" name="sel-8" />
+                        <label for="s2" class="__select__label">2019</label>
+                        <input id="s3" class="__select__input" type="radio" name="sel-8" />
+                        <label for="s3" class="__select__label">2018</label>
+                        <input id="s4" class="__select__input" type="radio" name="sel-8" />
+                        <label for="s4" class="__select__label">2017</label>
+                        <input id="s5" class="__select__input" type="radio" name="sel-8" />
+                        <label for="s5" class="__select__label">2016</label>
+                        <input id="s6" class="__select__input" type="radio" name="sel-8" />
+                        <label for="s6" class="__select__label">2015</label>
+                        <input id="s7" class="__select__input" type="radio" name="sel-8" />
+                        <label for="s7" class="__select__label">2014</label>
+                        <input id="s8" class="__select__input" type="radio" name="sel-8" />
+                        <label for="s8" class="__select__label">2013</label>
+                        <input id="s9" class="__select__input" type="radio" name="sel-8" />
+                        <label for="s9" class="__select__label">2012</label>
+                        <input id="s10" class="__select__input" type="radio" name="sel-8" />
+                        <label for="s10" class="__select__label">2011</label>
+                        <input id="s11" class="__select__input" type="radio" name="sel-8" />
+                        <label for="s11" class="__select__label">2010</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal__printeform__period-select">
+                    <div class="__select __select--full" data-state="">
+                      <div class="__select__title" data-default="2021">2021</div>
+                      <div class="__select__content">
+                        <input id="s0" class="__select__input" type="radio" name="sel-9" checked />
+                        <label for="s0" class="__select__label">2021</label>
+                        <input id="s1" class="__select__input" type="radio" name="sel-9" />
+                        <label for="s1" class="__select__label">2020</label>
+                        <input id="s2" class="__select__input" type="radio" name="sel-9" />
+                        <label for="s2" class="__select__label">2019</label>
+                        <input id="s3" class="__select__input" type="radio" name="sel-9" />
+                        <label for="s3" class="__select__label">2018</label>
+                        <input id="s4" class="__select__input" type="radio" name="sel-9" />
+                        <label for="s4" class="__select__label">2017</label>
+                        <input id="s5" class="__select__input" type="radio" name="sel-9" />
+                        <label for="s5" class="__select__label">2016</label>
+                        <input id="s6" class="__select__input" type="radio" name="sel-9" />
+                        <label for="s6" class="__select__label">2015</label>
+                        <input id="s7" class="__select__input" type="radio" name="sel-9" />
+                        <label for="s7" class="__select__label">2014</label>
+                        <input id="s8" class="__select__input" type="radio" name="sel-9" />
+                        <label for="s8" class="__select__label">2013</label>
+                        <input id="s9" class="__select__input" type="radio" name="sel-9" />
+                        <label for="s9" class="__select__label">2012</label>
+                        <input id="s10" class="__select__input" type="radio" name="sel-9" />
+                        <label for="s10" class="__select__label">2011</label>
+                        <input id="s11" class="__select__input" type="radio" name="sel-9" />
+                        <label for="s11" class="__select__label">2010</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="modal__printeform__send-print">
+                <span class="modal__printeform-send"> Подписать и отправить по ЭЦП</span>
+                <span class="modal__printeform-print">Формирование и печать</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="modal modal-deb">
+      <div class="modal__form">
+        <span class="modal__close"></span>
+        <div class="modal__head">
+          <div class="modal__head-title">Данные должника: Иванова Ивана Ивановича</div>
+          <div class="modal-deb__rating"><span class="modal-deb__est">3/5</span> <span class="modal-deb__str"></span>
+          </div>
+        </div>
+        <div class="modal__body">
+          <div class="modal-deb__wrapper">
+            <ul class="modal-deb__mainlist debtor-tabs-list">
+              <li class="active">Общая информация</li>
+              <li>Документооборот</li>
+              <li>Финансовые данные</li>
+              <li>Карточка уведомлений</li>
+              <li>История</li>
+            </ul>
+          </div>
+          <div class="modal-deb__tabs-item debtor-tabs-el">
+            <ul class="modal-deb__info-list">
+              <li class="active">Главная</li>
+              <li>Список жильцов</li>
+   
+            </ul>
+            <div class="modal-deb__info-box active">
+              <table class="modal-deb__table">
+                <tr>
+                  <td>
+                    ФИО
+                  </td>
+                  <td>
+                    Иванов Иван Иванович
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Адрес
+                  </td>
+                  <td>
+                    г Москва,проезд Студёный, д. 12 кв. 82
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Адрес регистрации
+                  </td>
+                  <td>
+                    г Москва,проезд Студёный, д. 12 кв. 82
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Телефон
+                  </td>
+                  <td>
+                    8(496)5669956
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Email
+                  </td>
+                  <td>
+                    urrobot@gmail.com
+                  </td>
+                </tr>
+              </table>
+              <span class="modal-deb__edit-link"></span>
+            </div>
+            <div class="modal-deb__info-box select-min">
+              <div class="modal-deb__scroll">
+                <table class="modal-deb__table doc-tab">
+                  <tr>
+                    <th>
+                      ФИО
+                    </th>
+                    <th>Дата рождения</th>
+                    <th>Место рождения</th>
+                    <th>Граж-во</th>
+                    <th>Серия и № паспорта</th>
+                    <th>ИНН</th>
+                    <th>Дата выдачи</th>
+                    <th>Кем выдан паспорт</th>
+                    <th>Код подразделения</th>
+                    <th>Регистрация</th>
+                    <th>Дата регистрации</th>
+                    <th>Род.отношения</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>Иванов Иван<br>
+                      Иванович</td>
+                    <td>
+                      01.01.1984
+                    </td>
+                    <td>Страна,город</td>
+                    <td>РФ</td>
+                    <td>00 0000000</td>
+                    <td>5050026941</td>
+                    <td>01.01.2020</td>
+                    <td>Таким-то органом г. Москвы</td>
+                    <td>0000000</td>
+                    <td>
+                      <div class="__select __select--full" data-state="">
+                        <div class="__select__title" data-default="Долевая соб-ть">Временная
+                        </div>
+                        <div class="__select__content">
+                          <input id="s0" class="__select__input" type="radio" name="reg-1" checked />
+                          <label for="s0" class="__select__label">Временная</label>
+                          <input id="s1" class="__select__input" type="radio" name="reg-1" />
+                          <label for="s1" class="__select__label">Временная</label>
+                          <input id="s2" class="__select__input" type="radio" name="reg-1" />
+                          <label for="s2" class="__select__label">Временная</label>
+                          <input id="s3" class="__select__input" type="radio" name="reg-1" />
+
+                        </div>
+                      </div>
+                    </td>
+                    <td>01.01.2015</td>
+                    <td>
+                      <div class="__select __select--full" data-state="">
+                        <div class="__select__title" data-default="Долевая соб-ть">Сестра</div>
+                        <div class="__select__content">
+                          <input id="s0" class="__select__input" type="radio" name="rod-1" checked />
+                          <label for="s0" class="__select__label">Сестра</label>
+                          <input id="s1" class="__select__input" type="radio" name="rod-1" />
+                          <label for="s1" class="__select__label">Сестра</label>
+                          <input id="s2" class="__select__input" type="radio" name="rod-1" />
+                          <label for="s2" class="__select__label">Сестра</label>
+                          <input id="s3" class="__select__input" type="radio" name="rod-1" />
+
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="doc-tab__edit-del">
+                        <span class="doc-tab__edit"></span>
+                        <span class="doc-tab__del"></span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Иванов Иван<br>
+                      Иванович</td>
+                    <td>
+                      01.01.1984
+                    </td>
+                    <td>Страна,город</td>
+                    <td>РФ</td>
+                    <td>00 0000000</td>
+                    <td>5050026941</td>
+                    <td>01.01.2020</td>
+                    <td>Таким-то органом г. Москвы</td>
+                    <td>0000000</td>
+                    <td>
+                      <div class="__select __select--full" data-state="">
+                        <div class="__select__title" data-default="Долевая соб-ть">Временная
+                        </div>
+                        <div class="__select__content">
+                          <input id="s0" class="__select__input" type="radio" name="reg-1" checked />
+                          <label for="s0" class="__select__label">Временная</label>
+                          <input id="s1" class="__select__input" type="radio" name="reg-1" />
+                          <label for="s1" class="__select__label">Временная</label>
+                          <input id="s2" class="__select__input" type="radio" name="reg-1" />
+                          <label for="s2" class="__select__label">Временная</label>
+                          <input id="s3" class="__select__input" type="radio" name="reg-1" />
+
+                        </div>
+                      </div>
+                    </td>
+                    <td>01.01.2015</td>
+                    <td>
+                      <div class="__select __select--full" data-state="">
+                        <div class="__select__title" data-default="Долевая соб-ть">Сестра</div>
+                        <div class="__select__content">
+                          <input id="s0" class="__select__input" type="radio" name="rod-1" checked />
+                          <label for="s0" class="__select__label">Сестра</label>
+                          <input id="s1" class="__select__input" type="radio" name="rod-1" />
+                          <label for="s1" class="__select__label">Сестра</label>
+                          <input id="s2" class="__select__input" type="radio" name="rod-1" />
+                          <label for="s2" class="__select__label">Сестра</label>
+                          <input id="s3" class="__select__input" type="radio" name="rod-1" />
+
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="doc-tab__edit-del">
+                        <span class="doc-tab__edit"></span>
+                        <span class="doc-tab__del"></span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Иванов Иван<br>
+                      Иванович</td>
+                    <td>
+                      01.01.1984
+                    </td>
+                    <td>Страна,город</td>
+                    <td>РФ</td>
+                    <td>00 0000000</td>
+                    <td>5050026941</td>
+                    <td>01.01.2020</td>
+                    <td>Таким-то органом г. Москвы</td>
+                    <td>0000000</td>
+                    <td>
+                      <div class="__select __select--full" data-state="">
+                        <div class="__select__title" data-default="Долевая соб-ть">Временная
+                        </div>
+                        <div class="__select__content">
+                          <input id="s0" class="__select__input" type="radio" name="reg-1" checked />
+                          <label for="s0" class="__select__label">Временная</label>
+                          <input id="s1" class="__select__input" type="radio" name="reg-1" />
+                          <label for="s1" class="__select__label">Временная</label>
+                          <input id="s2" class="__select__input" type="radio" name="reg-1" />
+                          <label for="s2" class="__select__label">Временная</label>
+                          <input id="s3" class="__select__input" type="radio" name="reg-1" />
+
+                        </div>
+                      </div>
+                    </td>
+                    <td>01.01.2015</td>
+                    <td>
+                      <div class="__select __select--full" data-state="">
+                        <div class="__select__title" data-default="Долевая соб-ть">Сестра</div>
+                        <div class="__select__content">
+                          <input id="s0" class="__select__input" type="radio" name="rod-1" checked />
+                          <label for="s0" class="__select__label">Сестра</label>
+                          <input id="s1" class="__select__input" type="radio" name="rod-1" />
+                          <label for="s1" class="__select__label">Сестра</label>
+                          <input id="s2" class="__select__input" type="radio" name="rod-1" />
+                          <label for="s2" class="__select__label">Сестра</label>
+                          <input id="s3" class="__select__input" type="radio" name="rod-1" />
+
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="doc-tab__edit-del">
+                        <span class="doc-tab__edit"></span>
+                        <span class="doc-tab__del"></span>
+                      </span>
+                    </td>
+                  </tr>
+
+                </table>
+              </div>
+              <span class="modal-deb__plus-link"></span>
+            </div>
+
+          </div>
+          <div class="modal-deb__tabs-item debtor-tabs-el doc">
+            <ul class="modal-deb__info-list">
+              <li class="active">Общий</li>
+              <li>Досудебное требование</li>
+              <li>Уведомления</li>
+              <li>Голосовое оповещение</li>
+            </ul>
+            <div class="modal-deb__info-box active">
+              <div class="modal-deb__scroll">
+                <table class="modal-deb__table doc-tab">
+                  <tr>
+                    <th class="num-th">
+                      №
+                    </th>
+                    <th class="name-th">Название</th>
+                    <th>Дата</th>
+                    <th>Статус</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>01.01.2021</td>
+                    <td><span class="doc-tab__status">Формирование судебного приказа</span></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>01.01.2021</td>
+                    <td><span class="doc-tab__status">Формирование судебного приказа</span></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      3
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>01.01.2021</td>
+                    <td><span class="doc-tab__status">Формирование судебного приказа</span></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      4
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>01.01.2021</td>
+                    <td><span class="doc-tab__status">Формирование судебного приказа</span></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      5
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>01.01.2021</td>
+                    <td><span class="doc-tab__status">Формирование судебного приказа</span></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      5
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>01.01.2021</td>
+                    <td><span class="doc-tab__status">Формирование судебного приказа</span></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+
+                    </td>
+                  </tr>
+
+                </table>
+              </div>
+              <span class="modal-deb__plus-link additional-txt"></span>
+            </div>
+
+
+            <div class="modal-deb__info-box">
+              <div class="modal-deb__scroll">
+                <table class="modal-deb__table doc-tab">
+                  <tr>
+                    <th class="num-th">
+                      №
+                    </th>
+                    <th class="name-th">Название</th>
+                    <th>Дата</th>
+                    <th>Статус</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>01.01.2021</td>
+                    <td><span class="doc-tab__status">Формирование судебного приказа</span></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>01.01.2021</td>
+                    <td><span class="doc-tab__status">Формирование судебного приказа</span></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      3
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>01.01.2021</td>
+                    <td><span class="doc-tab__status">Формирование судебного приказа</span></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      4
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>01.01.2021</td>
+                    <td><span class="doc-tab__status">Формирование судебного приказа</span></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      5
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>01.01.2021</td>
+                    <td><span class="doc-tab__status">Формирование судебного приказа</span></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      5
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>01.01.2021</td>
+                    <td><span class="doc-tab__status">Формирование судебного приказа</span></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+
+                    </td>
+                  </tr>
+
+                </table>
+              </div>
+              <span class="modal-deb__plus-link additional-txt"></span>
+            </div>
+
+
+            <div class="modal-deb__info-box">
+              <div class="modal-deb__scroll">
+                <table class="modal-deb__table doc-tab egrn-stat">
+                  <tr>
+                    <th class="num-th">
+                      №
+                    </th>
+                    <th>
+                      № заказа выписки
+                    </th>
+                    <th class="name-th">
+                      Название
+                    </th>
+                    <th>Дата запроса</th>
+                    <th>Дата выгрузки</th>
+                    <th>Статус</th>
+                    <th>История статусов</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="doc-tab__numb"> 1</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__order-numb"> 397896</span>
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>
+                      <span class="doc-tab__data"> 01.01.2021</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__data"> 01.01.2021</span>
+                    </td>
+                    <td><span class="doc-tab__status">Выгружено</span></td>
+                    <td></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="doc-tab__numb"> 2</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__order-numb "> 397896</span>
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>
+                      <span class="doc-tab__data"> 01.01.2021</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__data "> 01.01.2021</span>
+                    </td>
+                    <td><span class="doc-tab__status ">Выгружено</span></td>
+                    <td></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="doc-tab__numb "> 3</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__order-numb "> 397896</span>
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>
+                      <span class="doc-tab__data"> 01.01.2021</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__data "> 01.01.2021</span>
+                    </td>
+                    <td><span class="doc-tab__status ">Выгружено</span></td>
+                    <td></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="doc-tab__numb"> 4</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__order-numb "> 397896</span>
+                    </td>
+                    <td>
+                      26_03_2021__12_35_3130116961.pdf
+                    </td>
+                    <td>
+                      <span class="doc-tab__data"> 01.01.2021</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__data "> 01.01.2021</span>
+                    </td>
+                    <td><span class="doc-tab__status ">Выгружено</span></td>
+                    <td></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+                    </td>
+
+                  </tr>
+                </table>
+              </div>
+              <span class="modal-deb__plus-link additional-txt"></span>
+            </div>
+            <div class="modal-deb__info-box">
+              <div class="modal-deb__scroll">
+                <table class="modal-deb__table doc-tab egrn-stat voice-stat">
+                  <tr>
+                    <th class="num-th">
+                      №
+                    </th>
+                    <th>
+                      Вид оповещения
+                    </th>
+                    <th class="name-th">
+                      Дата
+                    </th>
+                    <th>Стоимость услуги</th>
+                    <th>Статус</th>
+                    <th>История статусов</th>
+                    <th></th>
+                  </tr>
+                  <tr class=" voice-stat__item">
+                    <td>
+                      <span class="doc-tab__numb">1</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__order-numb "> SMS</span>
+                    </td>
+                    <td>
+                      01.01.2021
+                    </td>
+                    <td>
+                      <span class="doc-tab__data"> 72 ₽</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__status ">Отправлено</span>
+                    </td>
+                    <td><span class="doc-tab__status "></span></td>
+                    <td></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+                    </td>
+
+                  </tr>
+                  <tr class=" voice-stat__item">
+                    <td>
+                      <span class="doc-tab__numb">2</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__order-numb ">Голосовое</span>
+                    </td>
+                    <td>
+                      01.01.2021
+                    </td>
+                    <td>
+                      <span class="doc-tab__data"> 72 ₽</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__status ">Отправлено</span>
+                    </td>
+                    <td><span class="doc-tab__status "></span></td>
+                    <td></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+                    </td>
+
+                  </tr>
+                  <tr class=" voice-stat__item">
+                    <td>
+                      <span class="doc-tab__numb">1</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__order-numb "> SMS</span>
+                    </td>
+                    <td>
+                      01.01.2021
+                    </td>
+                    <td>
+                      <span class="doc-tab__data"> 72 ₽</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__status ">Отправлено</span>
+                    </td>
+                    <td><span class="doc-tab__status "></span></td>
+                    <td></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+                    </td>
+
+                  </tr>
+                  <tr class=" voice-stat__item">
+                    <td>
+                      <span class="doc-tab__numb">2</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__order-numb ">Голосовое</span>
+                    </td>
+                    <td>
+                      01.01.2021
+                    </td>
+                    <td>
+                      <span class="doc-tab__data"> 72 ₽</span>
+                    </td>
+                    <td>
+                      <span class="doc-tab__status ">Отправлено</span>
+                    </td>
+                    <td><span class="doc-tab__status "></span></td>
+                    <td></td>
+                    <td>
+                      <div class="doc-tab__buttons">
+                        <span class="doc-tab__view"></span>
+                        <span class="doc-tab__down"></span>
+                      </div>
+                    </td>
+
+                  </tr>
+            
+                </table>
+              </div>
+              <span class="modal-deb__plus-link additional-txt"></span>
+            </div>
+          </div>
+
+          <div class="modal-deb__tabs-item debtor-tabs-el fin">
+
+            <div class="modal-deb__fin-into">
+
+              <div>
+                <span> Начислено</span>
+                <span>30 873.72 ₽</span>
+              </div>
+              <div>
+                <span> Оплачено</span>
+                <span> 0.00 ₽</span>
+              </div>
+              <div>
+                <span>Задолженность</span>
+                <span> 26 545.97 ₽</span>
+              </div>
+              <div>
+                <span> Пеня</span>
+                <span>14 182.66 ₽</span>
+              </div>
+
+            </div>
+
+            <ul class="modal-deb__info-list">
+              <li class="active">Начислено</li>
+              <li>Оплачено</li>
+              <li>Задолженность</li>
+              <li>Пеня</li>
+            </ul>
+            <div class="modal-deb__info-box active">
+              <div class="modal-deb__scroll">
+                <table class="modal-deb__table fin-tab">
+
+                  <tr>
+                    <th>Дата</th>
+                    <th>Начислено</th>
+                    <th>Начисления разовые</th>
+                    <th>Доп. корректировка</th>
+                    <th>Субсидии</th>
+                  </tr>
+                  <tr>
+                    <td>01.01.2021</td>
+                    <td>30 873.72 ₽</td>
+                    <td>30 873.72 ₽</td>
+                    <td>30 873.72 ₽</td>
+                    <td>30 873.72 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>01.01.2021</td>
+                    <td>30 873.72 ₽</td>
+                    <td>30 873.72 ₽</td>
+                    <td>30 873.72 ₽</td>
+                    <td>30 873.72 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>01.01.2021</td>
+                    <td>30 873.72 ₽</td>
+                    <td>30 873.72 ₽</td>
+                    <td>30 873.72 ₽</td>
+                    <td>30 873.72 ₽</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="modal-deb__info-box">
+              <table class="modal-deb__table fin-tab">
+
+                <tr>
+                  <th>Месяц оплаты</th>
+                  <th>Сумма оплаты</th>
+                  <th>&nbsp;</th>
+                  <th>&nbsp;</th>
+                  <th>&nbsp;</th>
+                </tr>
+                <tr>
+                  <td>01.2021</td>
+                  <td>30 873.72 ₽</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td>01.2021</td>
+                  <td>30 873.72 ₽</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+              </table>
+            </div>
+            <div class="modal-deb__info-box">
+
+              <table class="modal-deb__table fin-tab">
+
+                <tr>
+                  <th>Начало просрочки</th>
+                  <th>Конец просрочки</th>
+                  <th>Задолженность</th>
+                  <th>&nbsp;</th>
+                  <th>&nbsp;</th>
+                </tr>
+                <tr>
+                  <td>01.01.2021</td>
+                  <td>01.01.2021</td>
+                  <td>30 873.72 ₽</td>
+                  <td></td>
+                  <td></td>
+
+                </tr>
+                <tr>
+                  <td>01.01.2021</td>
+                  <td>01.01.2021</td>
+                  <td>30 873.72 ₽</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>01.01.2021</td>
+                  <td>01.01.2021</td>
+                  <td>30 873.72 ₽</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+              </table>
+
+            </div>
+            <div class="modal-deb__info-box">
+
+              <table class="modal-deb__table fin-tab">
+
+                <tr>
+                  <th>Начало просрочки</th>
+                  <th>Пеня</th>
+                  <th>&nbsp;</th>
+                  <th>&nbsp;</th>
+                  <th>&nbsp;</th>
+
+                </tr>
+                <tr>
+                  <td>01.01.2021</td>
+                  <td>14 182.66 ₽</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>01.01.2021</td>
+                  <td>14 182.66 ₽</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>01.01.2021</td>
+                  <td>14 182.66 ₽</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+
+          <div class="modal-deb__tabs-item debtor-tabs-el">
+            <ul class="modal-deb__info-list">
+              <li class="active">SMS</li>
+              <li>Голосовые</li>
+            </ul>
+
+            <div class="modal-deb__info-box active">
+
+              <div class="modal-deb__scroll">
+                <div class="modal-deb__jud">
+                  <span class="modal-deb__jud__card modal-deb__jud__card__solo ">Карточка истории уведомлений</span>
+                </div>
+
+
+                <div class="modal-deb__el">
+                  <div class="modal-deb__pr">
+                    <span>Период:</span>
+                    <span>01.01.2021</span>
+                    <span>по </span>
+                    <span>01.01.2021</span>
+                  </div>
+
+                  <table class="modal-deb__table doc-tab">
+                    <tr>
+                      <th class="num-th">№</th>
+                      <th>Идентификатор
+                        дела</th>
+                      <th>№ дела</th>
+                      <th>Дата поступления</th>
+                      <th>Дата рассмотрения</th>
+                      <th>Дата вступления
+                        решения в силу</th>
+                      <th>ФИО судьи</th>
+                      <th>Статус оплаты</th>
+                      <th>История статусов</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>000000000</td>
+                      <td>0000000</td>
+                      <td>01.01.2021</td>
+                      <td>01.01.2021</td>
+                      <td>01.01.2021</td>
+                      <td>Иванов Иван Иванович</td>
+                      <td>Оплачено</td>
+                      <td></td>
+                      <td>
+                        <div class="doc-tab__buttons">
+                          <span class="doc-tab__view"></span>
+                          <span class="doc-tab__down"></span>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                </div>
+
+
+                <div class="modal-deb__el">
+                  <div class="modal-deb__pr">
+                    <span>Период:</span>
+                    <span>01.01.2021</span>
+                    <span>по </span>
+                    <span>01.01.2021</span>
+                  </div>
+
+                  <table class="modal-deb__table doc-tab">
+                    <tr>
+                      <th class="num-th">№</th>
+                      <th>Идентификатор
+                        дела</th>
+                      <th>№ дела</th>
+                      <th>Дата поступления</th>
+                      <th>Дата рассмотрения</th>
+                      <th>Дата вступления
+                        решения в силу</th>
+                      <th>ФИО судьи</th>
+                      <th>Статус оплаты</th>
+                      <th>История статусов</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>000000000</td>
+                      <td>0000000</td>
+                      <td>01.01.2021</td>
+                      <td>01.01.2021</td>
+                      <td>01.01.2021</td>
+                      <td>Иванов Иван Иванович</td>
+                      <td>Оплачено</td>
+                      <td></td>
+                      <td>
+                        <div class="doc-tab__buttons">
+                          <span class="doc-tab__view"></span>
+                          <span class="doc-tab__down"></span>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                </div>
+                <div class="modal-deb__el">
+                  <div class="modal-deb__pr">
+                    <span>Период:</span>
+                    <span>01.01.2021</span>
+                    <span>по </span>
+                    <span>01.01.2021</span>
+                  </div>
+
+                  <table class="modal-deb__table doc-tab">
+                    <tr>
+                      <th class="num-th">№</th>
+                      <th>Идентификатор
+                        дела</th>
+                      <th>№ дела</th>
+                      <th>Дата поступления</th>
+                      <th>Дата рассмотрения</th>
+                      <th>Дата вступления
+                        решения в силу</th>
+                      <th>ФИО судьи</th>
+                      <th>Статус оплаты</th>
+                      <th>История статусов</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>000000000</td>
+                      <td>0000000</td>
+                      <td>01.01.2021</td>
+                      <td>01.01.2021</td>
+                      <td>01.01.2021</td>
+                      <td>Иванов Иван Иванович</td>
+                      <td>Оплачено</td>
+                      <td></td>
+                      <td>
+                        <div class="doc-tab__buttons">
+                          <span class="doc-tab__view"></span>
+                          <span class="doc-tab__down"></span>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="modal-deb__info-box">
+
+              <div class="modal-deb__scroll">
+                <div class="modal-deb__jud">
+                  <span class="modal-deb__jud__card modal-deb__jud__card__solo ">Карточка истории уведомлений</span>
+                </div>
+
+
+                <div class="modal-deb__el">
+                  <div class="modal-deb__pr">
+                    <span>Период:</span>
+                    <span>01.01.2021</span>
+                    <span>по </span>
+                    <span>01.01.2021</span>
+                  </div>
+
+                  <table class="modal-deb__table doc-tab">
+                    <tr>
+                      <th class="num-th">№</th>
+                      <th>Идентификатор
+                        дела</th>
+                      <th>№ дела</th>
+                      <th>Дата поступления</th>
+                      <th>Дата рассмотрения</th>
+                      <th>Дата вступления
+                        решения в силу</th>
+                      <th>ФИО судьи</th>
+                      <th>Статус оплаты</th>
+                      <th>История статусов</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>000000000</td>
+                      <td>0000000</td>
+                      <td>01.01.2021</td>
+                      <td>01.01.2021</td>
+                      <td>01.01.2021</td>
+                      <td>Иванов Иван Иванович</td>
+                      <td>Оплачено</td>
+                      <td></td>
+                      <td>
+                        <div class="doc-tab__buttons">
+                          <span class="doc-tab__view"></span>
+                          <span class="doc-tab__down"></span>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                </div>
+
+
+                <div class="modal-deb__el">
+                  <div class="modal-deb__pr">
+                    <span>Период:</span>
+                    <span>01.01.2021</span>
+                    <span>по </span>
+                    <span>01.01.2021</span>
+                  </div>
+
+                  <table class="modal-deb__table doc-tab">
+                    <tr>
+                      <th class="num-th">№</th>
+                      <th>Идентификатор
+                        дела</th>
+                      <th>№ дела</th>
+                      <th>Дата поступления</th>
+                      <th>Дата рассмотрения</th>
+                      <th>Дата вступления
+                        решения в силу</th>
+                      <th>ФИО судьи</th>
+                      <th>Статус оплаты</th>
+                      <th>История статусов</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>000000000</td>
+                      <td>0000000</td>
+                      <td>01.01.2021</td>
+                      <td>01.01.2021</td>
+                      <td>01.01.2021</td>
+                      <td>Иванов Иван Иванович</td>
+                      <td>Оплачено</td>
+                      <td></td>
+                      <td>
+                        <div class="doc-tab__buttons">
+                          <span class="doc-tab__view"></span>
+                          <span class="doc-tab__down"></span>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                </div>
+                <div class="modal-deb__el">
+                  <div class="modal-deb__pr">
+                    <span>Период:</span>
+                    <span>01.01.2021</span>
+                    <span>по </span>
+                    <span>01.01.2021</span>
+                  </div>
+
+                  <table class="modal-deb__table doc-tab">
+                    <tr>
+                      <th class="num-th">№</th>
+                      <th>Идентификатор
+                        дела</th>
+                      <th>№ дела</th>
+                      <th>Дата поступления</th>
+                      <th>Дата рассмотрения</th>
+                      <th>Дата вступления
+                        решения в силу</th>
+                      <th>ФИО судьи</th>
+                      <th>Статус оплаты</th>
+                      <th>История статусов</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>000000000</td>
+                      <td>0000000</td>
+                      <td>01.01.2021</td>
+                      <td>01.01.2021</td>
+                      <td>01.01.2021</td>
+                      <td>Иванов Иван Иванович</td>
+                      <td>Оплачено</td>
+                      <td></td>
+                      <td>
+                        <div class="doc-tab__buttons">
+                          <span class="doc-tab__view"></span>
+                          <span class="doc-tab__down"></span>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-deb__tabs-item debtor-tabs-el">
+
+            <div class="modal-deb__info-box active">
+              <div class="modal-deb__scroll">
+                <table class="modal-deb__table doc-tab">
+                  <tr>
+                    <th class="num-th">
+                      №
+                    </th>
+                    <th>Название</th>
+                    <th>Дата и время</th>
+                    <th>Статус</th>
+                    <th>Ссылка на файл</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      1
+                    </td>
+                    <td>
+                      Формирование судебного приказа
+                    </td>
+                    <td>01.01.2021 12:08</td>
+                    <td><span class="doc-tab__status">Загружено</span></td>
+                    <td> <span class="doc-tab__file">Название файла</span> </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      Формирование судебного приказа
+                    </td>
+                    <td>01.01.2021 12:08</td>
+                    <td><span class="doc-tab__status">Формирование бланка ПД-4сб</span></td>
+                    <td> </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      3
+                    </td>
+                    <td>
+                      Печать бланка ПД-4сб
+                    </td>
+                    <td>01.01.2021 12:08</td>
+                    <td><span class="doc-tab__status">Загружено</span></td>
+                    <td> </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      4
+                    </td>
+                    <td>
+                      Формирование судебного приказа
+                    </td>
+                    <td>01.01.2021 12:08</td>
+                    <td><span class="doc-tab__status">Загружено</span></td>
+                    <td> </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          
+          </div>
+
+        </div>
+        <div class="modal__foot">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="notif__voice__modal">
+        <span class="modal__close"></span>
+        <h3 class="notif__voice__modal__title">
+          <span>Название записи</span>
+          <span>02:39</span>
+        </h3>
+        <span class="notif__voice__modal__time">00:36</span>
+        <div class="notif__voice__modal__panel">
+          <img src="img/play-button.png" alt="">
+          <img src="img/stop-button.png" alt="">
+          <img src="img/sound_wave.png" alt="">
+        </div>
+    </div>
+
+    <div class="modal keyboard-shortcuts">
+      <div class="modal__form">
+        <span class="modal__close"></span>
+        <div class="modal__head">
+          <div class="modal__head-title">Быстрые клавиши</div>
+        </div>
+        <div class="modal__body ">
+          <div class="keyboard-shortcuts__list">
+            <div class="keyboard-shortcuts__row">
+              <span class="keyboard-shortcuts__span doc notif"><span>Уведомления</span></span>
+              <span class="keyboard-shortcuts__span claim"><span>Сформировать досудебное требование</span></span>
+              <span class="keyboard-shortcuts__span send__sms"><span>Отправить SMS</span></span>
+            </div>
+            <div class="keyboard-shortcuts__row">
+              <span class="keyboard-shortcuts__span mic bott"><span>Отправить голосовое уведомление</span></span>
+              <span class="keyboard-shortcuts__span send__court bott"><span>Перевод в “Судебное производство”</span></span>
+              <span class="keyboard-shortcuts__span order bott"><span>Свод начислений по ЛС</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="modal__foot">
+          <div class="modal__row">
+            <button class="modal__foot-button">Применить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="modal d-sett">
+      <div class="modal__form">
+        <span class="modal__close"></span>
+        <div class="modal__head">
+          <div class="modal__head-title">Настройка отображения</div>
+        </div>
+        <div class="modal__body ">
+          <div class="d-sett__title">Записей на странице</div>
+          <div class="d-sett__txt">Введите число от 1 до 500</div>
+          <input type="text" class="d-sett__input input">
+          <div class="d-sett__row">
+            <div class="d-sett__col">
+              <div class="d-sett__col__tit"> Порядок и отбражение колонок </div>
+              <div class="d-sett__col-box">
+                <span class="d-sett__col-box__span enab">Статус</span>
+                <span class="d-sett__col-box__span disab">ФИО</span>
+                <span class="d-sett__col-box__span enab">Адрес</span>
+                <span class="d-sett__col-box__span enab">Начислено</span>
+                <span class="d-sett__col-box__span enab">Оплачено</span>
+                <span class="d-sett__col-box__span enab">Задолженность</span>
+                <span class="d-sett__col-box__span disab">Пеня</span>
+                <span class="d-sett__col-box__span enab">Пошлина</span>
+              </div>
+            </div>
+            <span class="d-sett__col__span-drag"></span>
+            <div class="d-sett__col">
+              <div class="d-sett__col__tit"> Скрытые/Фиксированные колонки</div>
+              <div class="d-sett__col-box">
+                <span class="d-sett__col-box__span enab">Выбор</span>
+                <span class="d-sett__col-box__span enab">№ ЛС</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__foot">
+          <div class="modal__row">
+            <button class="modal__foot-button button-reset">Сбросить</button>
+            <button class="modal__foot-button ">Применить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- popup 1 -->
+    <div id="popup1" class="popup">
+      <a href="#section" class="popup__area"></a>
+      <div class="popup__content message">
+        <div class="popup__content-header">
+          <p class="content__header-title">Сообщение</p>
+          <a href="#section" class="popup__close">
+            <img src="img/close-icon.png" alt="close-icon" />
+          </a>
+        </div>
+        <div class="popup__content-items">
+          <div class="item selected">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item selected">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item selected">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-title">ЮРРОБОТ</p>
+                <p class="item__description-text">
+                  Кузовенковой Л.Н выставлен счет на оплату
+                </p>
+              </div>
+              <div class="item__time">
+                <p>19.01.1970 08:39</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup__content-footer">
+          <button type="button" class="btn btn-bright">Удалить все</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- popup 2 -->
+    <div id="popup2" class="popup">
+      <a href="#section" class="popup__area"></a>
+      <div class="popup__content message">
+        <div class="popup__content-header">
+          <p class="content__header-title">Сообщение</p>
+          <a href="#section" class="popup__close">
+            <img src="img/close-icon.png" alt="close-icon" />
+          </a>
+        </div>
+
+        <div class="popup__content-items">
+          <div class="item selected">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item selected">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item selected">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-inner">
+              <div class="item__icon"></div>
+              <div class="item__description">
+                <p class="item__description-text">
+                  Подписание судебного приказа по ЭЦП
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup__content-footer">
+          <button type="button" class="btn btn-bright">Удалить все</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="libs/nouislider.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+
+</html>
