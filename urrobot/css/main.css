@@ -1859,7 +1859,7 @@ button:focus {
 }
 
 .p-select {
-  display: none;
+  display: block;
 }
 
 .checkbox {
