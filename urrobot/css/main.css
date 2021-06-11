@@ -1381,7 +1381,7 @@ button:focus {
   color: #828282;
   font-size: 12px;
   margin-left: 40px;
-  display: block;
+  display: none;
 }
 
 .main__user-panel__edit-status.absolute {
@@ -1860,7 +1860,7 @@ button:focus {
 }
 
 .p-select {
-  display: block;
+  display: none;
 }
 
 .checkbox {
