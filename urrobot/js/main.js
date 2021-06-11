@@ -260,9 +260,9 @@ tabsWrap[1].addEventListener('scroll', function (enet) {
 
 let message = document.querySelector('.main__message');
 
-setTimeout(function () {
-  message.classList.add('hidden');
-}, 3000);
+// setTimeout(function () {
+//   message.classList.add('hidden');
+// }, 3000);
 
 let searchButton = document.querySelectorAll('.link-popup');
 

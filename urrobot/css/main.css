@@ -560,6 +560,7 @@ button:focus {
   line-height: 22px;
   color: #ffffff;
   padding: 25px 66px;
+  display: none;
 }
 
 .main__message.error {
