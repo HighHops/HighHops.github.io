@@ -483,7 +483,7 @@ statusButton();
 // ! Dropdown header
 function dropdownUser() {
   document.getElementById('dropdown-user').classList.toggle('show');
-  document.getElementById('dropdown-user').style.display = 'block';
+
 }
 
 window.onclick = function (event) {
