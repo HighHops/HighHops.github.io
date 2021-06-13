@@ -3,29 +3,29 @@ let body = document.querySelector('.body');
 let satusSelect = document.querySelectorAll('.main__tabs__select');
 let main = document.querySelector('.main');
 
-// let darkThemsCheck = document.querySelector('#dark__theme');
+let darkThemsCheck = document.querySelector('#dark__theme');
 
-// darkThemsCheck.addEventListener('change', function () {
-//   if (darkThemsCheck.checked) {
-//     localStorage.setItem('dark__theme', true);
-//     console.log(localStorage);
-//     body.classList.add('dark');
-//   } else {
-//     body.classList.remove('dark');
-//     localStorage.setItem('dark__theme', false);
-//   }
-// });
+darkThemsCheck.addEventListener('change', function () {
+  if (darkThemsCheck.checked) {
+    localStorage.setItem('dark__theme', true);
+    console.log(localStorage);
+    body.classList.add('dark');
+  } else {
+    body.classList.remove('dark');
+    localStorage.setItem('dark__theme', false);
+  }
+});
 
-// if (localStorage.dark__theme == 'true') {
-//   darkThemsCheck.checked = true;
-//   if (!body.classList.contains('dark')) {
-//     body.classList.add('dark');
-//   }
-// } else {
-//   if (body.classList.contains('dark')) {
-//     body.classList.remove('dark');
-//   }
-// }
+if (localStorage.dark__theme == 'true') {
+  darkThemsCheck.checked = true;
+  if (!body.classList.contains('dark')) {
+    body.classList.add('dark');
+  }
+} else {
+  if (body.classList.contains('dark')) {
+    body.classList.remove('dark');
+  }
+}
 
 function sidebarStatusCheck() {
   if (localStorage.sidebarStatus == 'open') body.classList.add('open');
@@ -597,3 +597,15 @@ sumInputs.forEach(item => {
 })
 
 
+
+setInterval(function () {
+  if (windowsWidth < 720) {
+    if(document.querySelector('.sms__start').classList.contains('active') 
+    ||  document.querySelector('.voice__start').classList.contains('active')) {
+      document.querySelector('.main__download-tabs').style.marginTop = 110 + 'px'
+    } else {
+      document.querySelector('.main__download-tabs').style.marginTop = 10 + 'px'
+    }
+  }
+ 
+}, 0)
