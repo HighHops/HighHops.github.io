@@ -4528,7 +4528,6 @@ ul.modal__printeform__printsett > li:nth-child(2) > span {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 15px;
 }
 
 .header .header-right .header__email .header__email-1 {
@@ -4673,6 +4672,7 @@ ul.modal__printeform__printsett > li:nth-child(2) > span {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  margin-top: 3px;
 }
 .header .header-right .header__bell:hover {
   background-image: url('../img/notification_4.png');
