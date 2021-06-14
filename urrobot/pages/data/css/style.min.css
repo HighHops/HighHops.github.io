@@ -198,7 +198,7 @@ h6 {
 }
 .page.navbar-open .page__inner-section {
   padding-left: 330px;
-  padding-left: 300px;
+
 }
 [data-theme="dark"] .page__inner::after {
   background-image: url(../img/18.png);
@@ -1699,12 +1699,7 @@ h6 {
   -webkit-box-shadow: 0 9px 18px rgba(0, 0, 0, 0.18),
     0 5.5px 5px rgba(0, 0, 0, 0.23);
   box-shadow: 0 9px 18px rgba(0, 0, 0, 0.18), 0 5.5px 5px rgba(0, 0, 0, 0.23);
-  -webkit-transition: background-color 0.1s linear, width 0.19s linear,
-    padding 0.2s linear;
-  -o-transition: background-color 0.1s linear, width 0.19s linear,
-    padding 0.2s linear;
-  transition: background-color 0.1s linear, width 0.19s linear,
-    padding 0.2s linear;
+
 }
 .navbar__list {
  
