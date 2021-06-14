@@ -8,11 +8,13 @@ let darkThemsCheck = document.querySelector('#dark__theme');
 darkThemsCheck.addEventListener('change', function () {
   if (darkThemsCheck.checked) {
     localStorage.setItem('dark__theme', true);
+    localStorage.setItem("theme", "dark")
     console.log(localStorage);
     body.classList.add('dark');
   } else {
     body.classList.remove('dark');
     localStorage.setItem('dark__theme', false);
+    localStorage.setItem("theme", "light")
   }
 });
 

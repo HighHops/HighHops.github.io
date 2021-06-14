@@ -329,7 +329,4 @@ $(document).ready(function () {
     downloaded.removeClass('downloaded');
   });
 });
-var datepickerFirst = new Datepicker('#datepickerone');
-var datepickerSecond = new Datepicker('#datepickertwo'); // var datepicker = new Datepicker('#datepickerone', {
-// 	inline: true
-//   });
+
