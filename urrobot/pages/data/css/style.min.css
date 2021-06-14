@@ -3839,9 +3839,13 @@ h6 {
 
 @media screen and (max-width: 992px) {
   .header [data-toggle="dropdown"] {
-    height: 120px;
+    height: 60px;
   }
   .header {
     padding: 0 10px;
+    height: 60px;
+  }
+  .header__actions  {
+    margin-left: 20px;
   }
 }
