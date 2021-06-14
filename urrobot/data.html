@@ -11,160 +11,152 @@
     <link rel="stylesheet" href="pages/data/css/style.min.css">
 </head>
 
-<body>
+<body class="body">
     <div class="page">
-        <div class="header">
-            <div class="header__inner">
-                <a href="index.html" class="header__logo logo"></a>
-                <div class="header__items">
-                    <div class="header__item">
-                        <span>132178469</span>
-                        <span>Вынесено решение</span>
-                    </div>
-                    <div class="header__item">
-                        <span>16537</span>
-                        <span>Подано в суд</span>
-                    </div>
-                    <div class="header__item">
-                        <span>73648</span>
-                        <span>В работе</span>
-                    </div>
-                    <div class="header__item">
-                        <span>726487</span>
-                        <span>Новый</span>
-                    </div>
-                    <div class="header__item">
-                        <span>3142536</span>
-                        <span>Отозвано</span>
-                    </div>
-                </div>
-                <div class="header__actions">
-                    <div class="header__actions-item dropdown">
-                        <a href="#" class="header__actions-btn has" data-toggle="dropdown">
-                            <div class="dropdown-toggle-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
-                                    <use xlink:href="pages/data/img/icons/sprite.svg#message" />
-                                </svg>
-                            </div>
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="#" class="dropdown-item">
-                                <div class="header__actions-title">
-                                    ЮРРОБОТ
-                                </div>
-                                <div class="header__actions-text">
-                                    Кузовенковой Л.Н. выставлен счет на оплату
-                                </div>
-                                <div class="header__actions-date">
-                                    <span>19.03.2021</span>
-                                    <span>09:43</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="header__actions-item dropdown">
-                        <a href="#" class="header__actions-btn header__actions-btn--notify has" data-toggle="dropdown">
-                            <div class="dropdown-toggle-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
-                                    <use xlink:href="pages/data/img/icons/sprite.svg#notify" />
-                                </svg>
-                            </div>
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="#" class="dropdown-item">
-                                <div class="header__actions-title">
-                                    ЮРРОБОТ
-                                </div>
-                                <div class="header__actions-text">
-                                    Кузовенковой Л.Н. выставлен счет на оплату
-                                </div>
-                                <div class="header__actions-date">
-                                    <span>19.03.2021</span>
-                                    <span>09:43</span>
-                                </div>
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                <div class="header__actions-title">
-                                    ЮРРОБОТ
-                                </div>
-                                <div class="header__actions-text">
-                                    Кузовенковой Л.Н. выставлен счет на оплату
-                                </div>
-                                <div class="header__actions-date">
-                                    <span>19.03.2021</span>
-                                    <span>09:43</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="header__menu dropdown dropdown__header" >
-                    <a href="#" class="header__menu-link" data-toggle="dropdown">
-                        <div class="header__profile-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon">
-                                <use xlink:href="pages/data/img/icons/sprite.svg#user" />
-                            </svg>
-                        </div>
-                        <div class="header__menu-text">
-                            <span>МП ГПЩ "ДЕЗ ЖКХ"</span>
-                            <span>50 300 ₽</span>
-                        </div>
-                        <div class="dropdown-arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon">
-                                <use xlink:href="pages/data/img/icons/sprite.svg#arrow-down" />
-                            </svg>
-                        </div>
-                    </a>
-                    <div class="dropdown-content">
-                        <div class="header__items">
-                            <div class="header__item">
-                                <span>132178469</span>
-                                <span>Вынесено решение</span>
-                            </div>
-                            <div class="header__item">
-                                <span>16537</span>
-                                <span>Подано в суд</span>
-                            </div>
-                            <div class="header__item">
-                                <span>73648</span>
-                                <span>В работе</span>
-                            </div>
-                            <div class="header__item">
-                                <span>726487</span>
-                                <span>Новый</span>
-                            </div>
-                            <div class="header__item">
-                                <span>3142536</span>
-                                <span>Отозвано</span>
-                            </div>
-                        </div>
-                        <a href="#" class="dropdown-item">
-                            <span>Темная тема</span>
-                            <div class="theme-changer">
-                                <input type="checkbox" name="theme-changer" title="Change Theme" id="theme-changer">
-                                <label for="theme-changer"></label>
-                            </div>
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Сменить пароль
-                        </a>
-                        <a href="#" class="dropdown-item">
-                            Выход
-                        </a>
-                    </div>
-                </div>
-                <a href="#" class="header__logout">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
-                        <use xlink:href="pages/data/img/icons/sprite.svg#logout" />
-                    </svg>
-                </a>
+        <header class="header">
+            <div class="header__logo"><img src="img/logo.png" class="logo" alt=""></div>
+            <div class="header__info-block">
+              <div>
+                <span>132178469</span>
+                <span>Вынесено решение</span>
+              </div>
+              <div>
+                <span>16537</span>
+                <span>Подано в суд</span>
+              </div>
+              <div>
+                <span>73648</span>
+                <span>В работе</span>
+              </div>
+              <div>
+                <span>726487</span>
+                <span>Новый</span>
+              </div>
+              <div>
+                <span>3142536</span>
+                <span>Отозвано</span>
+              </div>
             </div>
-        </div>
+            <div class="header__lk">
+              <div class="header-right">
+                <div class="header__email dropdown-email">
+                  <button class="def-btn" onclick="renderPopup('#popup1')" type="button">
+                    <div class="header__email-1"></div>
+                  </button>
+      
+                  <div class="dropdown-email__content">
+                    <div class="dropdown-email__item">
+                      <div class="dropdown-email__item-left">
+                        <img src="img/Ellipse_8.png" alt="ellipse" />
+                      </div>
+                      <div class="dropdown-email__item-right">
+                        <div class="dropdown-email__item-heading">ЮРРОБОТ</div>
+                        <div class="dropdown-email__item-text">
+                          <p>Кузовенковой Л.Н. выставлен счет на оплату</p>
+                        </div>
+                        <div class="dropdown-email__item-date">
+                          <p class="dropdown-email__item-day">19.03.2021</p>
+                          <p class="dropdown-email__item-time">09:43</p>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="dropdown-email__item">
+                      <div class="dropdown-email__item-left">
+                        <img src="img/Ellipse_8.png" alt="ellipse" />
+                      </div>
+                      <div class="dropdown-email__item-right">
+                        <div class="dropdown-email__item-heading">ЮРРОБОТ</div>
+                        <div class="dropdown-email__item-text">
+                          <p>Кузовенковой Л.Н. выставлен счет на оплату</p>
+                        </div>
+                        <div class="dropdown-email__item-date">
+                          <p class="dropdown-email__item-day">19.03.2021</p>
+                          <p class="dropdown-email__item-time">09:43</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="dropdown-message  dropdown-email">
+                  <button class="def-btn" onclick="renderPopup('#popup2')" type="button">
+                    <div class="header__bell"></div>
+                  </button>
+                  <div class="dropdown-email__content">
+                    <div class="dropdown-email__item">
+                      <div class="dropdown-email__item-left">
+                        <img src="img/Ellipse_8.png" alt="ellipse" />
+                      </div>
+                      <div class="dropdown-email__item-right">
+                        <div class="dropdown-email__item-heading">ЮРРОБОТ</div>
+                        <div class="dropdown-email__item-text">
+                          <p>
+                            Подписание судебного приказа по ЭЦП
+                          </p>
+                        </div>
+                        <div class="dropdown-email__item-date">
+                          <p class="dropdown-email__item-day">19.03.2021</p>
+                          <p class="dropdown-email__item-time">09:43</p>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="dropdown-email__item">
+                      <div class="dropdown-email__item-left">
+                        <img src="img/Ellipse_8.png" alt="ellipse" />
+                      </div>
+                      <div class="dropdown-email__item-right">
+                        <div class="dropdown-email__item-heading">ЮРРОБОТ</div>
+                        <div class="dropdown-email__item-text">
+                          <p>Кузовенковой Л.Н. выставлен счет на оплату</p>
+                        </div>
+                        <div class="dropdown-email__item-date">
+                          <p class="dropdown-email__item-day">19.03.2021</p>
+                          <p class="dropdown-email__item-time">09:43</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="header__user dropdown__user">
+                <div class="header__user-data header__my-info">
+                  <img src="img/avatar.svg" class="header__avatar" alt="" />
+                  <div class="header__name-summ">
+                    <p class="header__name">МП ГПЩ "ДЕЗ ЖКХ"</p>
+                    <p class="header__summ">50 300 ₽</p>
+                  </div>
+                  <button onclick="dropdownUser()" class="header__user-arrow"></button>
+                </div>
+      
+                <div id="dropdown-user" class="dropdown__user-content">
+                  <div class="chekbox">
+                    <p class="dropdown__user-content--name">Тёмная тема</p>
+                    <label class="switch" for="theme-changer">
+                      <input id="theme-changer" type="checkbox">
+                      <span class="slider round header__dark__theme-span"></span>
+                    </label>
+                  </div>
+                  <div>
+                    <button class="dropdown__user-btn" type="button">
+                      Сменить пароль
+                    </button>
+                  </div>
+                  <div>
+                    <button class="dropdown__user-btn" type="button">Выход</button>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="header__exit"></a>
+            </div>
+          </header>
         <div class="navbar">
             <ul class="navbar__list">
-                <li class="navbar__item"><a href="#" class="navbar__link">
+                <li class="navbar__item picture1__item"><a href="#" class="navbar__link">
                         <div class="navbar__icon-container">
-                            <picture>
+                            <picture class="picture1">
                                 <source media="(max-width:992px)" srcset="pages/data/img/desktop-white.png" type="image/png">
                                 <source srcset="pages/data/img//desktop.png" type="image/png">
                                 <img class="navbar__icon" src="pages/data/img//desktop.png" alt="Рабочий стол">
@@ -177,7 +169,7 @@
                     </a></li>
                 <li class="navbar__item"><a href="#" class="navbar__link">
                         <div class="navbar__icon-container">
-                            <picture>
+                            <picture >
                                 <source media="(max-width:992px)" srcset="pages/data/img//organizations-white.png" type="image/png">
                                 <source srcset="pages/data/img//organizations.png" type="image/png">
                                 <img class="navbar__icon" src="pages/data/img//organizations.png" alt="Рабочий стол">
@@ -188,7 +180,7 @@
                     </a></li>
                 <li class="navbar__item"><a href="index.html" class="navbar__link">
                         <div class="navbar__icon-container">
-                            <picture>
+                            <picture class="picture2">
                                 <source media="(max-width:992px)" srcset="pages/data/img//work-bag-white.png" type="image/png">
                                 <source srcset="pages/data/img//work-bag.png" type="image/png">
                                 <img class="navbar__icon" src="pages/data/img//work-bag.png" alt="Рабочий стол">
@@ -200,7 +192,7 @@
                     </a></li>
                 <li class="navbar__item"><a href="#" class="navbar__link active">
                         <div class="navbar__icon-container">
-                            <picture>
+                            <picture class="picture3">
                                 <source media="(max-width:992px)" srcset="pages/data/img//change-data-white.png" type="image/png">
                                 <source srcset="pages/data/img//change-data.png" type="image/png">
                                 <img class="navbar__icon" src="pages/data/img//change-data.png" alt="Рабочий стол">
@@ -212,7 +204,7 @@
                     </a></li>
                 <li class="navbar__item"><a href="#" class="navbar__link">
                         <div class="navbar__icon-container">
-                            <picture>
+                            <picture class="picture4">
                                 <source media="(max-width:992px)" srcset="pages/data/img//control-panel-white.png" type="image/png">
                                 <source srcset="pages/data/img//control-panel.png" type="image/png">
                                 <img class="navbar__icon" src="pages/data/img//control-panel.png" alt="Рабочий стол">
@@ -5816,6 +5808,385 @@
             </div>
         </div>
     </div>
+    <div id="popup1" class="popup">
+        <a href="#section" class="popup__area"></a>
+        <div class="popup__content message">
+          <div class="popup__content-header">
+            <p class="content__header-title">Сообщение</p>
+            <a href="#section" class="popup__close">
+              <img src="img/close-icon.png" alt="close-icon" />
+            </a>
+          </div>
+          <div class="popup__content-items">
+            <div class="item selected">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item selected">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item selected">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-title">ЮРРОБОТ</p>
+                  <p class="item__description-text">
+                    Кузовенковой Л.Н выставлен счет на оплату
+                  </p>
+                </div>
+                <div class="item__time">
+                  <p>19.01.1970 08:39</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="popup__content-footer">
+            <button type="button" class="btn btn-bright">Удалить все</button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- popup 2 -->
+      <div id="popup2" class="popup">
+        <a href="#section" class="popup__area"></a>
+        <div class="popup__content message">
+          <div class="popup__content-header">
+            <p class="content__header-title">Сообщение</p>
+            <a href="#section" class="popup__close">
+              <img src="img/close-icon.png" alt="close-icon" />
+            </a>
+          </div>
+  
+          <div class="popup__content-items">
+            <div class="item selected">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item selected">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item selected">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="item-inner">
+                <div class="item__icon"></div>
+                <div class="item__description">
+                  <p class="item__description-text">
+                    Подписание судебного приказа по ЭЦП
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="popup__content-footer">
+            <button type="button" class="btn btn-bright">Удалить все</button>
+          </div>
+        </div>
+      </div>
+  
+      <div id="popup5" class="popup">
+        
+        <a href="#section" class="popup__area"></a>
+        <div class="popup__content info info__load">
+          <div class="popup__content-header">
+            <a href="#section" class="popup__close">
+              <img src="img/close-icon.png" alt="close-icon">
+            </a>
+          </div>
+          <div class="popup__content-items">
+            <div class="item">
+              <div class="item__description">
+                <p class="item__description-text item__description-text--size">
+                  Работа с печатной формой
+                </p>
+                <button type="button" class="action-print item__description--button"
+                  onClick="javascript:CallPrint('print-content');" title="Распечатать проект">
+                  <div class="item__description--icon">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10 0.0390625C6.17879 0.0390625 2.71351 2.12968 0.15649 5.52541C-0.0521632 5.80361 -0.0521632 6.19228 0.15649 6.47048C2.71351 9.8703 6.17879 11.9609 10 11.9609C13.8212 11.9609 17.2865 9.8703 19.8435 6.47458C20.0522 6.19637 20.0522 5.8077 19.8435 5.5295C17.2865 2.12968 13.8212 0.0390625 10 0.0390625ZM10.2741 10.1976C7.73755 10.3572 5.64284 8.26654 5.80239 5.72588C5.93331 3.63117 7.63118 1.9333 9.72589 1.80238C12.2625 1.64283 14.3572 3.73345 14.1976 6.2741C14.0626 8.36473 12.3647 10.0626 10.2741 10.1976ZM10.1473 8.25835C8.78081 8.34427 7.65163 7.21918 7.74164 5.85271C7.81119 4.72353 8.72763 3.81118 9.85681 3.73754C11.2233 3.65162 12.3525 4.77671 12.2625 6.14319C12.1888 7.27646 11.2724 8.1888 10.1473 8.25835Z"
+                        fill="#21317A" />
+                    </svg>
+                  </div>
+                  Просмотр и печать
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     <script src="pages/data/js/jquery.min.js"></script>
     <script src="pages/data/js/datepicker.js"></script>
     <script src="pages/data/js/main.min.js"></script>
