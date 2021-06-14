@@ -1400,6 +1400,9 @@ h6 {
 .header [data-toggle="dropdown"] {
   height: 120px;
 }
+.header__menu .dropdown {
+  width: 280px;
+}
 .header .dropdown-content {
   border-radius: 0 0 10px 10px;
   -webkit-box-shadow: 0 9px 18px rgba(0, 0, 0, 0.18),
