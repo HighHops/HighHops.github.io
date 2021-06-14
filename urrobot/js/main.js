@@ -362,18 +362,7 @@ let selservisTitle = document.querySelector(
 );
 let checkSer = document.querySelectorAll('.check-ser');
 
-// selservisTitle.addEventListener('click', function () {
-//   this.classList.toggle('active');
-//   if (this.classList.contains('active')) {
-//     for (let i = 0; i < checkSer.length; i++) {
-//       checkSer[i].checked = true;
-//     }
-//   } else {
-//     for (let i = 0; i < checkSer.length; i++) {
-//       checkSer[i].checked = false;
-//     }
-//   }
-// });
+
 
 let printSett = document.querySelectorAll(
   'ul.modal__printeform__printsett > li > span'

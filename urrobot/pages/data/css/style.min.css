@@ -1710,7 +1710,9 @@ h6 {
  
 }
 .navbar__item {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  width: 24px;
+  height: 30px;
 }
 .navbar__item:last-child {
   margin-bottom: 0;
@@ -1828,8 +1830,8 @@ h6 {
   border-radius: 50%;
   position: fixed;
   z-index: 9;
-  top: 110px;
-  left: 0;
+  top: 130px;
+  left: -12px;
   color: #fff;
   -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.12);
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.12);
@@ -3832,5 +3834,14 @@ h6 {
   }
   [data-theme="dark"] .integration__nav {
     background: 0 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header [data-toggle="dropdown"] {
+    height: 120px;
+  }
+  .header {
+    padding: 0 10px;
   }
 }
